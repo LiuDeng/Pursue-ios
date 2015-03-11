@@ -1,0 +1,6 @@
+#Xcode
+*.xccheckout
+
+#Cocoapods
+Pods
+*.lock 

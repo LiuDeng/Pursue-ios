@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A130DFD1AA84B5100874EE7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A130DF91AA84B5100874EE7 /* MainViewController.swift */; };
-		4A130E011AA9366F00874EE7 /* FocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A130E001AA9366F00874EE7 /* FocusView.xib */; };
-		4A130E031AA936F900874EE7 /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A130E021AA936F900874EE7 /* FocusViewController.swift */; };
-		4A130E071AA9382D00874EE7 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A130E061AA9382D00874EE7 /* SearchView.xib */; };
-		4A130E121AA93F2600874EE7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A130E111AA93F2600874EE7 /* SearchViewController.swift */; };
-		4A130E161AAD985600874EE7 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A130E151AAD985600874EE7 /* RecordViewController.swift */; };
-		4A130E181AAD987A00874EE7 /* RecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A130E171AAD987A00874EE7 /* RecordView.xib */; };
-		4A1B779D1AAFFA8A008BF9A4 /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1B779C1AAFFA8A008BF9A4 /* MessageView.xib */; };
-		4A1B77A11AAFFAC4008BF9A4 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77A01AAFFAC4008BF9A4 /* MessageViewController.swift */; };
-		4A1B77A31AAFFB3E008BF9A4 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1B77A21AAFFB3E008BF9A4 /* ProfileView.xib */; };
-		4A1B77A51AAFFB4C008BF9A4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77A41AAFFB4C008BF9A4 /* ProfileViewController.swift */; };
+		4A0AE8DF1AB1742000A637FE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8DE1AB1742000A637FE /* MainViewController.swift */; };
+		4A0AE8F91AB1742F00A637FE /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8E21AB1742F00A637FE /* FocusViewController.swift */; };
+		4A0AE8FA1AB1742F00A637FE /* FocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8E41AB1742F00A637FE /* FocusView.xib */; };
+		4A0AE8FB1AB1742F00A637FE /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8E71AB1742F00A637FE /* MessageViewController.swift */; };
+		4A0AE8FC1AB1742F00A637FE /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8E91AB1742F00A637FE /* MessageView.xib */; };
+		4A0AE8FD1AB1742F00A637FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8EC1AB1742F00A637FE /* ProfileViewController.swift */; };
+		4A0AE8FE1AB1742F00A637FE /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8EE1AB1742F00A637FE /* ProfileView.xib */; };
+		4A0AE8FF1AB1742F00A637FE /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F11AB1742F00A637FE /* RecordViewController.swift */; };
+		4A0AE9001AB1742F00A637FE /* RecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F31AB1742F00A637FE /* RecordView.xib */; };
+		4A0AE9011AB1742F00A637FE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F61AB1742F00A637FE /* SearchViewController.swift */; };
+		4A0AE9021AB1742F00A637FE /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F81AB1742F00A637FE /* SearchView.xib */; };
 		4A1B77C21AAFFD4F008BF9A4 /* FaceppAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77A91AAFFD4F008BF9A4 /* FaceppAPI.m */; };
 		4A1B77C31AAFFD4F008BF9A4 /* FaceppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77AC1AAFFD4F008BF9A4 /* FaceppClient.m */; };
 		4A1B77C41AAFFD4F008BF9A4 /* FaceppDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77AE1AAFFD4F008BF9A4 /* FaceppDetection.m */; };
@@ -49,17 +49,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A130DF91AA84B5100874EE7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		4A130E001AA9366F00874EE7 /* FocusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FocusView.xib; sourceTree = "<group>"; };
-		4A130E021AA936F900874EE7 /* FocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
-		4A130E061AA9382D00874EE7 /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
-		4A130E111AA93F2600874EE7 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		4A130E151AAD985600874EE7 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
-		4A130E171AAD987A00874EE7 /* RecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordView.xib; sourceTree = "<group>"; };
-		4A1B779C1AAFFA8A008BF9A4 /* MessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
-		4A1B77A01AAFFAC4008BF9A4 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
-		4A1B77A21AAFFB3E008BF9A4 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
-		4A1B77A41AAFFB4C008BF9A4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4A0AE8DE1AB1742000A637FE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4A0AE8E21AB1742F00A637FE /* FocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
+		4A0AE8E41AB1742F00A637FE /* FocusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FocusView.xib; sourceTree = "<group>"; };
+		4A0AE8E71AB1742F00A637FE /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		4A0AE8E91AB1742F00A637FE /* MessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
+		4A0AE8EC1AB1742F00A637FE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4A0AE8EE1AB1742F00A637FE /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		4A0AE8F11AB1742F00A637FE /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		4A0AE8F31AB1742F00A637FE /* RecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordView.xib; sourceTree = "<group>"; };
+		4A0AE8F61AB1742F00A637FE /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4A0AE8F81AB1742F00A637FE /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		4A1B77A81AAFFD4F008BF9A4 /* FaceppAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppAPI.h; sourceTree = "<group>"; };
 		4A1B77A91AAFFD4F008BF9A4 /* FaceppAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppAPI.m; sourceTree = "<group>"; };
 		4A1B77AB1AAFFD4F008BF9A4 /* FaceppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppClient.h; sourceTree = "<group>"; };
@@ -130,14 +130,139 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		4A130DFF1AA9365F00874EE7 /* Views */ = {
+		4A0AE8D61AB1735200A637FE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				4A130E061AA9382D00874EE7 /* SearchView.xib */,
-				4A1B77A21AAFFB3E008BF9A4 /* ProfileView.xib */,
-				4A1B779C1AAFFA8A008BF9A4 /* MessageView.xib */,
-				4A130E171AAD987A00874EE7 /* RecordView.xib */,
-				4A130E001AA9366F00874EE7 /* FocusView.xib */,
+				4A0AE8E01AB1742F00A637FE /* Focus */,
+				4A0AE8E51AB1742F00A637FE /* Message */,
+				4A0AE8EA1AB1742F00A637FE /* Profile */,
+				4A0AE8EF1AB1742F00A637FE /* Record */,
+				4A0AE8F41AB1742F00A637FE /* Search */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4A0AE8E01AB1742F00A637FE /* Focus */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8E11AB1742F00A637FE /* ViewController */,
+				4A0AE8E31AB1742F00A637FE /* Views */,
+			);
+			path = Focus;
+			sourceTree = "<group>";
+		};
+		4A0AE8E11AB1742F00A637FE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8E21AB1742F00A637FE /* FocusViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4A0AE8E31AB1742F00A637FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8E41AB1742F00A637FE /* FocusView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4A0AE8E51AB1742F00A637FE /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8E61AB1742F00A637FE /* ViewController */,
+				4A0AE8E81AB1742F00A637FE /* Views */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		4A0AE8E61AB1742F00A637FE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8E71AB1742F00A637FE /* MessageViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4A0AE8E81AB1742F00A637FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8E91AB1742F00A637FE /* MessageView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4A0AE8EA1AB1742F00A637FE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8EB1AB1742F00A637FE /* ViewController */,
+				4A0AE8ED1AB1742F00A637FE /* Views */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4A0AE8EB1AB1742F00A637FE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8EC1AB1742F00A637FE /* ProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4A0AE8ED1AB1742F00A637FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8EE1AB1742F00A637FE /* ProfileView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4A0AE8EF1AB1742F00A637FE /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8F01AB1742F00A637FE /* ViewController */,
+				4A0AE8F21AB1742F00A637FE /* Views */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		4A0AE8F01AB1742F00A637FE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8F11AB1742F00A637FE /* RecordViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4A0AE8F21AB1742F00A637FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8F31AB1742F00A637FE /* RecordView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4A0AE8F41AB1742F00A637FE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8F51AB1742F00A637FE /* ViewController */,
+				4A0AE8F71AB1742F00A637FE /* Views */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		4A0AE8F51AB1742F00A637FE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8F61AB1742F00A637FE /* SearchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4A0AE8F71AB1742F00A637FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A0AE8F81AB1742F00A637FE /* SearchView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,11 +353,12 @@
 		4A8CB5B91AA5958700BE8F5E /* Pursue */ = {
 			isa = PBXGroup;
 			children = (
+				4A0AE8D61AB1735200A637FE /* Modules */,
 				4A1B77CE1AAFFF17008BF9A4 /* Data */,
+				4AA2FAE21AB1527F00146CC6 /* Component */,
 				4A1B77A61AAFFD4F008BF9A4 /* Vendors */,
-				4A130DFF1AA9365F00874EE7 /* Views */,
-				4AD7DAF31AA59DBE00CE2AB2 /* ViewController */,
 				4A8CB5DC1AA5999700BE8F5E /* Bridging-Header.h */,
+				4A0AE8DE1AB1742000A637FE /* MainViewController.swift */,
 				4A8CB5BC1AA5958700BE8F5E /* AppDelegate.swift */,
 				4A8CB5C31AA5958700BE8F5E /* Images.xcassets */,
 				4A8CB5C51AA5958700BE8F5E /* LaunchScreen.xib */,
@@ -266,17 +392,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4AD7DAF31AA59DBE00CE2AB2 /* ViewController */ = {
+		4AA2FAE21AB1527F00146CC6 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				4A130E151AAD985600874EE7 /* RecordViewController.swift */,
-				4A1B77A41AAFFB4C008BF9A4 /* ProfileViewController.swift */,
-				4A130E111AA93F2600874EE7 /* SearchViewController.swift */,
-				4A1B77A01AAFFAC4008BF9A4 /* MessageViewController.swift */,
-				4A130E021AA936F900874EE7 /* FocusViewController.swift */,
-				4A130DF91AA84B5100874EE7 /* MainViewController.swift */,
 			);
-			path = ViewController;
+			path = Component;
 			sourceTree = "<group>";
 		};
 		DCF130E15EF85FBE6C1A552B /* Frameworks */ = {
@@ -372,13 +492,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A1B779D1AAFFA8A008BF9A4 /* MessageView.xib in Resources */,
-				4A130E181AAD987A00874EE7 /* RecordView.xib in Resources */,
-				4A1B77A31AAFFB3E008BF9A4 /* ProfileView.xib in Resources */,
+				4A0AE9021AB1742F00A637FE /* SearchView.xib in Resources */,
 				4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */,
-				4A130E071AA9382D00874EE7 /* SearchView.xib in Resources */,
+				4A0AE8FA1AB1742F00A637FE /* FocusView.xib in Resources */,
+				4A0AE8FE1AB1742F00A637FE /* ProfileView.xib in Resources */,
+				4A0AE9001AB1742F00A637FE /* RecordView.xib in Resources */,
+				4A0AE8FC1AB1742F00A637FE /* MessageView.xib in Resources */,
 				4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */,
-				4A130E011AA9366F00874EE7 /* FocusView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,19 +551,19 @@
 			files = (
 				4A1B77C61AAFFD4F008BF9A4 /* FaceppGroup.m in Sources */,
 				4A8CB5BD1AA5958700BE8F5E /* AppDelegate.swift in Sources */,
-				4A130E031AA936F900874EE7 /* FocusViewController.swift in Sources */,
 				4A1B77CC1AAFFD4F008BF9A4 /* FaceppError.m in Sources */,
 				4A1B77C71AAFFD4F008BF9A4 /* FaceppGrouping.m in Sources */,
 				4A1B77C51AAFFD4F008BF9A4 /* FaceppFaceset.m in Sources */,
 				4A1B77C41AAFFD4F008BF9A4 /* FaceppDetection.m in Sources */,
-				4A130E161AAD985600874EE7 /* RecordViewController.swift in Sources */,
-				4A130E121AA93F2600874EE7 /* SearchViewController.swift in Sources */,
 				4A1B77C81AAFFD4F008BF9A4 /* FaceppInfo.m in Sources */,
-				4A1B77A51AAFFB4C008BF9A4 /* ProfileViewController.swift in Sources */,
-				4A1B77A11AAFFAC4008BF9A4 /* MessageViewController.swift in Sources */,
-				4A130DFD1AA84B5100874EE7 /* MainViewController.swift in Sources */,
+				4A0AE8FF1AB1742F00A637FE /* RecordViewController.swift in Sources */,
+				4A0AE8F91AB1742F00A637FE /* FocusViewController.swift in Sources */,
+				4A0AE8DF1AB1742000A637FE /* MainViewController.swift in Sources */,
+				4A0AE8FD1AB1742F00A637FE /* ProfileViewController.swift in Sources */,
 				4A1B77CB1AAFFD4F008BF9A4 /* FaceppTrainer.m in Sources */,
+				4A0AE8FB1AB1742F00A637FE /* MessageViewController.swift in Sources */,
 				4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */,
+				4A0AE9011AB1742F00A637FE /* SearchViewController.swift in Sources */,
 				4A1B77C31AAFFD4F008BF9A4 /* FaceppClient.m in Sources */,
 				4A1B77D01AAFFF37008BF9A4 /* CommonConfig.swift in Sources */,
 				4A1B77C21AAFFD4F008BF9A4 /* FaceppAPI.m in Sources */,

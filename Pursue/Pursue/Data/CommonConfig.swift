@@ -10,12 +10,12 @@ import Foundation
 
 class CommonConfig {
     
-    static var AVOSCloudApplicationId = "batp95muq8nmw7tpuyohpzjcj96qcjjr0jnf13lo7opr5ayc"
-    static var AVOSCloudKey = "3f7trwlm9g97yu4y520tu60jb3tni1fyo1np96i8qovjeppl"
+    static var AVOSCloudApplicationId = ""
+    static var AVOSCloudKey = ""
     
     
-    static var FaceppKey = "64e3af550767be8e2aee0f3b41e70aaf"
-    static var FaceppSecret = "sTjfmhNwDPXLFc_jcvKzuzRzvZb9rCBe"
+    static var FaceppKey = ""
+    static var FaceppSecret = ""
     
     
     

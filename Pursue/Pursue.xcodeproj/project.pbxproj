@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A130DFD1AA84B5100874EE7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A130DF91AA84B5100874EE7 /* MainViewController.swift */; };
+		4A130E011AA9366F00874EE7 /* FocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A130E001AA9366F00874EE7 /* FocusView.xib */; };
+		4A130E031AA936F900874EE7 /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A130E021AA936F900874EE7 /* FocusViewController.swift */; };
+		4A130E071AA9382D00874EE7 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A130E061AA9382D00874EE7 /* SearchView.xib */; };
+		4A130E121AA93F2600874EE7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A130E111AA93F2600874EE7 /* SearchViewController.swift */; };
+		4A130E161AAD985600874EE7 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A130E151AAD985600874EE7 /* RecordViewController.swift */; };
+		4A130E181AAD987A00874EE7 /* RecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A130E171AAD987A00874EE7 /* RecordView.xib */; };
+		4A1B779D1AAFFA8A008BF9A4 /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1B779C1AAFFA8A008BF9A4 /* MessageView.xib */; };
+		4A1B77A11AAFFAC4008BF9A4 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77A01AAFFAC4008BF9A4 /* MessageViewController.swift */; };
+		4A1B77A31AAFFB3E008BF9A4 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1B77A21AAFFB3E008BF9A4 /* ProfileView.xib */; };
+		4A1B77A51AAFFB4C008BF9A4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77A41AAFFB4C008BF9A4 /* ProfileViewController.swift */; };
+		4A1B77C21AAFFD4F008BF9A4 /* FaceppAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77A91AAFFD4F008BF9A4 /* FaceppAPI.m */; };
+		4A1B77C31AAFFD4F008BF9A4 /* FaceppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77AC1AAFFD4F008BF9A4 /* FaceppClient.m */; };
+		4A1B77C41AAFFD4F008BF9A4 /* FaceppDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77AE1AAFFD4F008BF9A4 /* FaceppDetection.m */; };
+		4A1B77C51AAFFD4F008BF9A4 /* FaceppFaceset.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77B01AAFFD4F008BF9A4 /* FaceppFaceset.m */; };
+		4A1B77C61AAFFD4F008BF9A4 /* FaceppGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77B21AAFFD4F008BF9A4 /* FaceppGroup.m */; };
+		4A1B77C71AAFFD4F008BF9A4 /* FaceppGrouping.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77B41AAFFD4F008BF9A4 /* FaceppGrouping.m */; };
+		4A1B77C81AAFFD4F008BF9A4 /* FaceppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77B61AAFFD4F008BF9A4 /* FaceppInfo.m */; };
+		4A1B77C91AAFFD4F008BF9A4 /* FaceppPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77B81AAFFD4F008BF9A4 /* FaceppPerson.m */; };
+		4A1B77CA1AAFFD4F008BF9A4 /* FaceppRecognition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77BA1AAFFD4F008BF9A4 /* FaceppRecognition.m */; };
+		4A1B77CB1AAFFD4F008BF9A4 /* FaceppTrainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77BC1AAFFD4F008BF9A4 /* FaceppTrainer.m */; };
+		4A1B77CC1AAFFD4F008BF9A4 /* FaceppError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77BF1AAFFD4F008BF9A4 /* FaceppError.m */; };
+		4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77C11AAFFD4F008BF9A4 /* FaceppResult.m */; };
+		4A1B77D01AAFFF37008BF9A4 /* CommonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77CF1AAFFF37008BF9A4 /* CommonConfig.swift */; };
+		4A8CB5BD1AA5958700BE8F5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CB5BC1AA5958700BE8F5E /* AppDelegate.swift */; };
+		4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C31AA5958700BE8F5E /* Images.xcassets */; };
+		4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C51AA5958700BE8F5E /* LaunchScreen.xib */; };
+		4A8CB5D31AA5958700BE8F5E /* PursueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */; };
+		B86CB0E85FF7DB258B90F316 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9A3A84537473FDBBAD0C7F /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A8CB5CD1AA5958700BE8F5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A8CB5AF1AA5958700BE8F5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A8CB5B61AA5958700BE8F5E;
+			remoteInfo = Pursue;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A130DF91AA84B5100874EE7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4A130E001AA9366F00874EE7 /* FocusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FocusView.xib; sourceTree = "<group>"; };
+		4A130E021AA936F900874EE7 /* FocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
+		4A130E061AA9382D00874EE7 /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		4A130E111AA93F2600874EE7 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4A130E151AAD985600874EE7 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		4A130E171AAD987A00874EE7 /* RecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordView.xib; sourceTree = "<group>"; };
+		4A1B779C1AAFFA8A008BF9A4 /* MessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
+		4A1B77A01AAFFAC4008BF9A4 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		4A1B77A21AAFFB3E008BF9A4 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		4A1B77A41AAFFB4C008BF9A4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4A1B77A81AAFFD4F008BF9A4 /* FaceppAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppAPI.h; sourceTree = "<group>"; };
+		4A1B77A91AAFFD4F008BF9A4 /* FaceppAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppAPI.m; sourceTree = "<group>"; };
+		4A1B77AB1AAFFD4F008BF9A4 /* FaceppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppClient.h; sourceTree = "<group>"; };
+		4A1B77AC1AAFFD4F008BF9A4 /* FaceppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppClient.m; sourceTree = "<group>"; };
+		4A1B77AD1AAFFD4F008BF9A4 /* FaceppDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppDetection.h; sourceTree = "<group>"; };
+		4A1B77AE1AAFFD4F008BF9A4 /* FaceppDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppDetection.m; sourceTree = "<group>"; };
+		4A1B77AF1AAFFD4F008BF9A4 /* FaceppFaceset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppFaceset.h; sourceTree = "<group>"; };
+		4A1B77B01AAFFD4F008BF9A4 /* FaceppFaceset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppFaceset.m; sourceTree = "<group>"; };
+		4A1B77B11AAFFD4F008BF9A4 /* FaceppGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppGroup.h; sourceTree = "<group>"; };
+		4A1B77B21AAFFD4F008BF9A4 /* FaceppGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppGroup.m; sourceTree = "<group>"; };
+		4A1B77B31AAFFD4F008BF9A4 /* FaceppGrouping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppGrouping.h; sourceTree = "<group>"; };
+		4A1B77B41AAFFD4F008BF9A4 /* FaceppGrouping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppGrouping.m; sourceTree = "<group>"; };
+		4A1B77B51AAFFD4F008BF9A4 /* FaceppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppInfo.h; sourceTree = "<group>"; };
+		4A1B77B61AAFFD4F008BF9A4 /* FaceppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppInfo.m; sourceTree = "<group>"; };
+		4A1B77B71AAFFD4F008BF9A4 /* FaceppPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppPerson.h; sourceTree = "<group>"; };
+		4A1B77B81AAFFD4F008BF9A4 /* FaceppPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppPerson.m; sourceTree = "<group>"; };
+		4A1B77B91AAFFD4F008BF9A4 /* FaceppRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppRecognition.h; sourceTree = "<group>"; };
+		4A1B77BA1AAFFD4F008BF9A4 /* FaceppRecognition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppRecognition.m; sourceTree = "<group>"; };
+		4A1B77BB1AAFFD4F008BF9A4 /* FaceppTrainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppTrainer.h; sourceTree = "<group>"; };
+		4A1B77BC1AAFFD4F008BF9A4 /* FaceppTrainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppTrainer.m; sourceTree = "<group>"; };
+		4A1B77BE1AAFFD4F008BF9A4 /* FaceppError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppError.h; sourceTree = "<group>"; };
+		4A1B77BF1AAFFD4F008BF9A4 /* FaceppError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppError.m; sourceTree = "<group>"; };
+		4A1B77C01AAFFD4F008BF9A4 /* FaceppResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppResult.h; sourceTree = "<group>"; };
+		4A1B77C11AAFFD4F008BF9A4 /* FaceppResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppResult.m; sourceTree = "<group>"; };
+		4A1B77CF1AAFFF37008BF9A4 /* CommonConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonConfig.swift; sourceTree = "<group>"; };
+		4A32610C1AB009D1009E705F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		4A32610E1AB009DB009E705F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		4A3261101AB00A19009E705F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4A8CB5B71AA5958700BE8F5E /* Pursue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pursue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A8CB5BB1AA5958700BE8F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A8CB5BC1AA5958700BE8F5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A8CB5C31AA5958700BE8F5E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4A8CB5C61AA5958700BE8F5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4A8CB5CC1AA5958700BE8F5E /* PursueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PursueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A8CB5D11AA5958700BE8F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PursueTests.swift; sourceTree = "<group>"; };
+		4A8CB5DC1AA5999700BE8F5E /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		AEA428CCDD7D74DB76D9666D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CB9A3A84537473FDBBAD0C7F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0CE534FD793BA35B6C43C5E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A8CB5B41AA5958700BE8F5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B86CB0E85FF7DB258B90F316 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A8CB5C91AA5958700BE8F5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28C62BFE9B991F1E2BB9B2DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0CE534FD793BA35B6C43C5E /* Pods.debug.xcconfig */,
+				AEA428CCDD7D74DB76D9666D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4A130DFF1AA9365F00874EE7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A130E061AA9382D00874EE7 /* SearchView.xib */,
+				4A1B77A21AAFFB3E008BF9A4 /* ProfileView.xib */,
+				4A1B779C1AAFFA8A008BF9A4 /* MessageView.xib */,
+				4A130E171AAD987A00874EE7 /* RecordView.xib */,
+				4A130E001AA9366F00874EE7 /* FocusView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4A1B77A61AAFFD4F008BF9A4 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B77A71AAFFD4F008BF9A4 /* FaceppSDK_ARC */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		4A1B77A71AAFFD4F008BF9A4 /* FaceppSDK_ARC */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B77A81AAFFD4F008BF9A4 /* FaceppAPI.h */,
+				4A1B77A91AAFFD4F008BF9A4 /* FaceppAPI.m */,
+				4A1B77AA1AAFFD4F008BF9A4 /* FaceppAPISource */,
+				4A1B77BD1AAFFD4F008BF9A4 /* FaceppResult */,
+			);
+			path = FaceppSDK_ARC;
+			sourceTree = "<group>";
+		};
+		4A1B77AA1AAFFD4F008BF9A4 /* FaceppAPISource */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B77AB1AAFFD4F008BF9A4 /* FaceppClient.h */,
+				4A1B77AC1AAFFD4F008BF9A4 /* FaceppClient.m */,
+				4A1B77AD1AAFFD4F008BF9A4 /* FaceppDetection.h */,
+				4A1B77AE1AAFFD4F008BF9A4 /* FaceppDetection.m */,
+				4A1B77AF1AAFFD4F008BF9A4 /* FaceppFaceset.h */,
+				4A1B77B01AAFFD4F008BF9A4 /* FaceppFaceset.m */,
+				4A1B77B11AAFFD4F008BF9A4 /* FaceppGroup.h */,
+				4A1B77B21AAFFD4F008BF9A4 /* FaceppGroup.m */,
+				4A1B77B31AAFFD4F008BF9A4 /* FaceppGrouping.h */,
+				4A1B77B41AAFFD4F008BF9A4 /* FaceppGrouping.m */,
+				4A1B77B51AAFFD4F008BF9A4 /* FaceppInfo.h */,
+				4A1B77B61AAFFD4F008BF9A4 /* FaceppInfo.m */,
+				4A1B77B71AAFFD4F008BF9A4 /* FaceppPerson.h */,
+				4A1B77B81AAFFD4F008BF9A4 /* FaceppPerson.m */,
+				4A1B77B91AAFFD4F008BF9A4 /* FaceppRecognition.h */,
+				4A1B77BA1AAFFD4F008BF9A4 /* FaceppRecognition.m */,
+				4A1B77BB1AAFFD4F008BF9A4 /* FaceppTrainer.h */,
+				4A1B77BC1AAFFD4F008BF9A4 /* FaceppTrainer.m */,
+			);
+			path = FaceppAPISource;
+			sourceTree = "<group>";
+		};
+		4A1B77BD1AAFFD4F008BF9A4 /* FaceppResult */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B77BE1AAFFD4F008BF9A4 /* FaceppError.h */,
+				4A1B77BF1AAFFD4F008BF9A4 /* FaceppError.m */,
+				4A1B77C01AAFFD4F008BF9A4 /* FaceppResult.h */,
+				4A1B77C11AAFFD4F008BF9A4 /* FaceppResult.m */,
+			);
+			path = FaceppResult;
+			sourceTree = "<group>";
+		};
+		4A1B77CE1AAFFF17008BF9A4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B77CF1AAFFF37008BF9A4 /* CommonConfig.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4A8CB5AE1AA5958700BE8F5E = {
+			isa = PBXGroup;
+			children = (
+				4A8CB5B91AA5958700BE8F5E /* Pursue */,
+				4A8CB5CF1AA5958700BE8F5E /* PursueTests */,
+				4A8CB5B81AA5958700BE8F5E /* Products */,
+				28C62BFE9B991F1E2BB9B2DF /* Pods */,
+				DCF130E15EF85FBE6C1A552B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4A8CB5B81AA5958700BE8F5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A8CB5B71AA5958700BE8F5E /* Pursue.app */,
+				4A8CB5CC1AA5958700BE8F5E /* PursueTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A8CB5B91AA5958700BE8F5E /* Pursue */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B77CE1AAFFF17008BF9A4 /* Data */,
+				4A1B77A61AAFFD4F008BF9A4 /* Vendors */,
+				4A130DFF1AA9365F00874EE7 /* Views */,
+				4AD7DAF31AA59DBE00CE2AB2 /* ViewController */,
+				4A8CB5DC1AA5999700BE8F5E /* Bridging-Header.h */,
+				4A8CB5BC1AA5958700BE8F5E /* AppDelegate.swift */,
+				4A8CB5C31AA5958700BE8F5E /* Images.xcassets */,
+				4A8CB5C51AA5958700BE8F5E /* LaunchScreen.xib */,
+				4A8CB5BA1AA5958700BE8F5E /* Supporting Files */,
+			);
+			path = Pursue;
+			sourceTree = "<group>";
+		};
+		4A8CB5BA1AA5958700BE8F5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A8CB5BB1AA5958700BE8F5E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A8CB5CF1AA5958700BE8F5E /* PursueTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */,
+				4A8CB5D01AA5958700BE8F5E /* Supporting Files */,
+			);
+			path = PursueTests;
+			sourceTree = "<group>";
+		};
+		4A8CB5D01AA5958700BE8F5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A8CB5D11AA5958700BE8F5E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4AD7DAF31AA59DBE00CE2AB2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A130E151AAD985600874EE7 /* RecordViewController.swift */,
+				4A1B77A41AAFFB4C008BF9A4 /* ProfileViewController.swift */,
+				4A130E111AA93F2600874EE7 /* SearchViewController.swift */,
+				4A1B77A01AAFFAC4008BF9A4 /* MessageViewController.swift */,
+				4A130E021AA936F900874EE7 /* FocusViewController.swift */,
+				4A130DF91AA84B5100874EE7 /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DCF130E15EF85FBE6C1A552B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A3261101AB00A19009E705F /* Security.framework */,
+				4A32610E1AB009DB009E705F /* Crashlytics.framework */,
+				4A32610C1AB009D1009E705F /* Fabric.framework */,
+				CB9A3A84537473FDBBAD0C7F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A8CB5B61AA5958700BE8F5E /* Pursue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A8CB5D61AA5958700BE8F5E /* Build configuration list for PBXNativeTarget "Pursue" */;
+			buildPhases = (
+				999282A4CC74C1C1F9B820A3 /* Check Pods Manifest.lock */,
+				4A8CB5B31AA5958700BE8F5E /* Sources */,
+				4A8CB5B41AA5958700BE8F5E /* Frameworks */,
+				4A8CB5B51AA5958700BE8F5E /* Resources */,
+				D19DEED4890860BD195DFA06 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pursue;
+			productName = Pursue;
+			productReference = 4A8CB5B71AA5958700BE8F5E /* Pursue.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A8CB5CB1AA5958700BE8F5E /* PursueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A8CB5D91AA5958700BE8F5E /* Build configuration list for PBXNativeTarget "PursueTests" */;
+			buildPhases = (
+				4A8CB5C81AA5958700BE8F5E /* Sources */,
+				4A8CB5C91AA5958700BE8F5E /* Frameworks */,
+				4A8CB5CA1AA5958700BE8F5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A8CB5CE1AA5958700BE8F5E /* PBXTargetDependency */,
+			);
+			name = PursueTests;
+			productName = PursueTests;
+			productReference = 4A8CB5CC1AA5958700BE8F5E /* PursueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A8CB5AF1AA5958700BE8F5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Luce Studio";
+				TargetAttributes = {
+					4A8CB5B61AA5958700BE8F5E = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					4A8CB5CB1AA5958700BE8F5E = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 4A8CB5B61AA5958700BE8F5E;
+					};
+				};
+			};
+			buildConfigurationList = 4A8CB5B21AA5958700BE8F5E /* Build configuration list for PBXProject "Pursue" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A8CB5AE1AA5958700BE8F5E;
+			productRefGroup = 4A8CB5B81AA5958700BE8F5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A8CB5B61AA5958700BE8F5E /* Pursue */,
+				4A8CB5CB1AA5958700BE8F5E /* PursueTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A8CB5B51AA5958700BE8F5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A1B779D1AAFFA8A008BF9A4 /* MessageView.xib in Resources */,
+				4A130E181AAD987A00874EE7 /* RecordView.xib in Resources */,
+				4A1B77A31AAFFB3E008BF9A4 /* ProfileView.xib in Resources */,
+				4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */,
+				4A130E071AA9382D00874EE7 /* SearchView.xib in Resources */,
+				4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */,
+				4A130E011AA9366F00874EE7 /* FocusView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A8CB5CA1AA5958700BE8F5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		999282A4CC74C1C1F9B820A3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D19DEED4890860BD195DFA06 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A8CB5B31AA5958700BE8F5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A1B77C61AAFFD4F008BF9A4 /* FaceppGroup.m in Sources */,
+				4A8CB5BD1AA5958700BE8F5E /* AppDelegate.swift in Sources */,
+				4A130E031AA936F900874EE7 /* FocusViewController.swift in Sources */,
+				4A1B77CC1AAFFD4F008BF9A4 /* FaceppError.m in Sources */,
+				4A1B77C71AAFFD4F008BF9A4 /* FaceppGrouping.m in Sources */,
+				4A1B77C51AAFFD4F008BF9A4 /* FaceppFaceset.m in Sources */,
+				4A1B77C41AAFFD4F008BF9A4 /* FaceppDetection.m in Sources */,
+				4A130E161AAD985600874EE7 /* RecordViewController.swift in Sources */,
+				4A130E121AA93F2600874EE7 /* SearchViewController.swift in Sources */,
+				4A1B77C81AAFFD4F008BF9A4 /* FaceppInfo.m in Sources */,
+				4A1B77A51AAFFB4C008BF9A4 /* ProfileViewController.swift in Sources */,
+				4A1B77A11AAFFAC4008BF9A4 /* MessageViewController.swift in Sources */,
+				4A130DFD1AA84B5100874EE7 /* MainViewController.swift in Sources */,
+				4A1B77CB1AAFFD4F008BF9A4 /* FaceppTrainer.m in Sources */,
+				4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */,
+				4A1B77C31AAFFD4F008BF9A4 /* FaceppClient.m in Sources */,
+				4A1B77D01AAFFF37008BF9A4 /* CommonConfig.swift in Sources */,
+				4A1B77C21AAFFD4F008BF9A4 /* FaceppAPI.m in Sources */,
+				4A1B77CA1AAFFD4F008BF9A4 /* FaceppRecognition.m in Sources */,
+				4A1B77C91AAFFD4F008BF9A4 /* FaceppPerson.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A8CB5C81AA5958700BE8F5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A8CB5D31AA5958700BE8F5E /* PursueTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A8CB5CE1AA5958700BE8F5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A8CB5B61AA5958700BE8F5E /* Pursue */;
+			targetProxy = 4A8CB5CD1AA5958700BE8F5E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A8CB5C51AA5958700BE8F5E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A8CB5C61AA5958700BE8F5E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A8CB5D41AA5958700BE8F5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4A8CB5D51AA5958700BE8F5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A8CB5D71AA5958700BE8F5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0CE534FD793BA35B6C43C5E /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Pursue/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pursue/Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		4A8CB5D81AA5958700BE8F5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEA428CCDD7D74DB76D9666D /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Pursue/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pursue/Bridging-Header.h";
+			};
+			name = Release;
+		};
+		4A8CB5DA1AA5958700BE8F5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PursueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pursue.app/Pursue";
+			};
+			name = Debug;
+		};
+		4A8CB5DB1AA5958700BE8F5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PursueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pursue.app/Pursue";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A8CB5B21AA5958700BE8F5E /* Build configuration list for PBXProject "Pursue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A8CB5D41AA5958700BE8F5E /* Debug */,
+				4A8CB5D51AA5958700BE8F5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A8CB5D61AA5958700BE8F5E /* Build configuration list for PBXNativeTarget "Pursue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A8CB5D71AA5958700BE8F5E /* Debug */,
+				4A8CB5D81AA5958700BE8F5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A8CB5D91AA5958700BE8F5E /* Build configuration list for PBXNativeTarget "PursueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A8CB5DA1AA5958700BE8F5E /* Debug */,
+				4A8CB5DB1AA5958700BE8F5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A8CB5AF1AA5958700BE8F5E /* Project object */;
+}

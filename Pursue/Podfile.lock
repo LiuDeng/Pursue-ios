@@ -1,0 +1,39 @@
+PODS:
+  - AVOSCloud (2.6.10.2)
+  - AVOSCloudSNS (2.6.10.2):
+    - AVOSCloud
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - FMDBHelpers (0.0.7):
+    - FMDB (~> 2.3)
+  - MJRefresh (0.0.1)
+  - SDWebImage (3.7.1):
+    - SDWebImage/Core (= 3.7.1)
+  - SDWebImage/Core (3.7.1)
+  - SSKeychain (1.2.2)
+  - TMCache (1.2.3)
+
+DEPENDENCIES:
+  - AVOSCloud
+  - AVOSCloudSNS
+  - FMDB
+  - FMDBHelpers
+  - MJRefresh
+  - SDWebImage
+  - SSKeychain
+  - TMCache
+
+SPEC CHECKSUMS:
+  AVOSCloud: 903429163bce9feabb4473ab07ea30ed47ba5db1
+  AVOSCloudSNS: b8cbe390aa147f2915dfd29b41082382902ef6e6
+  FMDB: 0efa188cf0dd1ce82c27a478cd5f5fa245308677
+  FMDBHelpers: 418755fc89a6a6f43140c103fddc0e0f4658b707
+  MJRefresh: 02638d90855109026754562b7507e5c5eabfcc65
+  SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
+  SSKeychain: cc48bd3ad24fcd9125adb9e0d23dd50b8bbd08b9
+  TMCache: 11589ef8c40909114a5e60132711c9a559e01d97
+
+COCOAPODS: 0.35.0

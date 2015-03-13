@@ -16,7 +16,6 @@
 		4A0AE8FE1AB1742F00A637FE /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8EE1AB1742F00A637FE /* ProfileView.xib */; };
 		4A0AE8FF1AB1742F00A637FE /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F11AB1742F00A637FE /* RecordViewController.swift */; };
 		4A0AE9001AB1742F00A637FE /* RecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F31AB1742F00A637FE /* RecordView.xib */; };
-		4A0AE9011AB1742F00A637FE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F61AB1742F00A637FE /* SearchViewController.swift */; };
 		4A0AE9021AB1742F00A637FE /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F81AB1742F00A637FE /* SearchView.xib */; };
 		4A1B77C21AAFFD4F008BF9A4 /* FaceppAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77A91AAFFD4F008BF9A4 /* FaceppAPI.m */; };
 		4A1B77C31AAFFD4F008BF9A4 /* FaceppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77AC1AAFFD4F008BF9A4 /* FaceppClient.m */; };
@@ -36,6 +35,10 @@
 		4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C51AA5958700BE8F5E /* LaunchScreen.xib */; };
 		4A8CB5D31AA5958700BE8F5E /* PursueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */; };
 		B86CB0E85FF7DB258B90F316 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9A3A84537473FDBBAD0C7F /* libPods.a */; };
+		F39DEADD1AB34B9D00BED9DA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DEADB1AB34B9D00BED9DA /* SearchViewController.swift */; };
+		F39DEADE1AB34B9D00BED9DA /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39DEADC1AB34B9D00BED9DA /* SearchViewController.xib */; };
+		F39DEAE51AB353F500BED9DA /* AddSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DEAE31AB353F500BED9DA /* AddSearchViewController.swift */; };
+		F39DEAE61AB353F500BED9DA /* AddSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39DEAE41AB353F500BED9DA /* AddSearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +61,6 @@
 		4A0AE8EE1AB1742F00A637FE /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		4A0AE8F11AB1742F00A637FE /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		4A0AE8F31AB1742F00A637FE /* RecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordView.xib; sourceTree = "<group>"; };
-		4A0AE8F61AB1742F00A637FE /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4A0AE8F81AB1742F00A637FE /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		4A1B77A81AAFFD4F008BF9A4 /* FaceppAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppAPI.h; sourceTree = "<group>"; };
 		4A1B77A91AAFFD4F008BF9A4 /* FaceppAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppAPI.m; sourceTree = "<group>"; };
@@ -100,6 +102,10 @@
 		AEA428CCDD7D74DB76D9666D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CB9A3A84537473FDBBAD0C7F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CE534FD793BA35B6C43C5E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F39DEADB1AB34B9D00BED9DA /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F39DEADC1AB34B9D00BED9DA /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		F39DEAE31AB353F500BED9DA /* AddSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSearchViewController.swift; sourceTree = "<group>"; };
+		F39DEAE41AB353F500BED9DA /* AddSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,7 +260,10 @@
 		4A0AE8F51AB1742F00A637FE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4A0AE8F61AB1742F00A637FE /* SearchViewController.swift */,
+				F39DEADB1AB34B9D00BED9DA /* SearchViewController.swift */,
+				F39DEADC1AB34B9D00BED9DA /* SearchViewController.xib */,
+				F39DEAE31AB353F500BED9DA /* AddSearchViewController.swift */,
+				F39DEAE41AB353F500BED9DA /* AddSearchViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -498,6 +507,8 @@
 				4A0AE8FE1AB1742F00A637FE /* ProfileView.xib in Resources */,
 				4A0AE9001AB1742F00A637FE /* RecordView.xib in Resources */,
 				4A0AE8FC1AB1742F00A637FE /* MessageView.xib in Resources */,
+				F39DEADE1AB34B9D00BED9DA /* SearchViewController.xib in Resources */,
+				F39DEAE61AB353F500BED9DA /* AddSearchViewController.xib in Resources */,
 				4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,11 +570,12 @@
 				4A0AE8FF1AB1742F00A637FE /* RecordViewController.swift in Sources */,
 				4A0AE8F91AB1742F00A637FE /* FocusViewController.swift in Sources */,
 				4A0AE8DF1AB1742000A637FE /* MainViewController.swift in Sources */,
+				F39DEADD1AB34B9D00BED9DA /* SearchViewController.swift in Sources */,
 				4A0AE8FD1AB1742F00A637FE /* ProfileViewController.swift in Sources */,
 				4A1B77CB1AAFFD4F008BF9A4 /* FaceppTrainer.m in Sources */,
+				F39DEAE51AB353F500BED9DA /* AddSearchViewController.swift in Sources */,
 				4A0AE8FB1AB1742F00A637FE /* MessageViewController.swift in Sources */,
 				4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */,
-				4A0AE9011AB1742F00A637FE /* SearchViewController.swift in Sources */,
 				4A1B77C31AAFFD4F008BF9A4 /* FaceppClient.m in Sources */,
 				4A1B77D01AAFFF37008BF9A4 /* CommonConfig.swift in Sources */,
 				4A1B77C21AAFFD4F008BF9A4 /* FaceppAPI.m in Sources */,

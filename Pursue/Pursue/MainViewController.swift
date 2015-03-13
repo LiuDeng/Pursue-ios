@@ -19,7 +19,7 @@ class MainViewController: UITabBarController {
         
         //寻人
         var searchBarItem = UITabBarItem(title: "寻人", image: nil, selectedImage: nil)
-        var searchViewController = UINavigationController(rootViewController: SearchViewController(nibName: "SearchView", bundle: nil))
+        var searchViewController = UINavigationController(rootViewController: SearchViewController(nibName: "SearchViewController", bundle: nil))
         searchViewController.tabBarItem = searchBarItem
         
         //随拍

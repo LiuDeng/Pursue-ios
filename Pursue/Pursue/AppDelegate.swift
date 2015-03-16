@@ -20,13 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         AVOSCloud.setApplicationId(CommonConfig.AVOSCloudApplicationId, clientKey: CommonConfig.AVOSCloudKey)
-        
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        var nvc = UINavigationController(rootViewController: MainViewController())
-        nvc.navigationBarHidden = true
-        self.window!.rootViewController = nvc
-        self.window!.backgroundColor = UIColor.whiteColor()
-        self.window!.makeKeyAndVisible()
+
+        toMainView()
         
 //        Fabric.with([Crashlytics()])
         return true
@@ -54,6 +49,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
+    func toLoginView(){
+        
+    }
+    
+    func toMainView(){
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        var nvc = UINavigationController(rootViewController: MainViewController())
+        nvc.navigationBarHidden = true
+        self.window!.rootViewController = nvc
+        self.window!.backgroundColor = UIColor.whiteColor()
+        self.window!.makeKeyAndVisible()
+        
+    }
 
 }
 

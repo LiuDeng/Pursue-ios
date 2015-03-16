@@ -24,7 +24,11 @@ class MessageViewController: UIViewController {
         super.viewDidLoad()
         self.title = "消息"
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "联系人", style: UIBarButtonItemStyle.Done, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "联系人", style: UIBarButtonItemStyle.Done, target: self, action: "toContactListView:")
+    }
+    
+    func toContactListView(sender: AnyObject?){
+        self.navigationController?.pushViewController(ContactListViewController(nibName: "ContactListView", bundle: nil), animated: true)
     }
     
 }

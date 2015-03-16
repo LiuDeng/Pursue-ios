@@ -8,3 +8,6 @@
 
 #import "FaceppAPI.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import <SSKeychain/SSKeychain.h>
+#import <TMCache/TMCache.h>
+#import <MJRefresh/MJRefresh.h>

@@ -16,7 +16,7 @@ class MainViewController: UITabBarController {
 //        var focusBarItem = UITabBarItem(title: "关注", image: nil, selectedImage: nil)
 //        var focusViewController = UINavigationController(rootViewController: FocusViewController(nibName: "FocusView", bundle: nil))
 //        focusViewController.tabBarItem = focusBarItem
-        
+
         //寻人
         var searchBarItem = UITabBarItem(title: "寻人", image: nil, selectedImage: nil)
         var searchViewController = UINavigationController(rootViewController: SearchViewController(nibName: "SearchViewController", bundle: nil))

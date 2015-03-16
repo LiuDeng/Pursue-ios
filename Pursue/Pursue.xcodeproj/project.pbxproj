@@ -17,6 +17,9 @@
 		4A0AE8FF1AB1742F00A637FE /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F11AB1742F00A637FE /* RecordViewController.swift */; };
 		4A0AE9001AB1742F00A637FE /* RecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F31AB1742F00A637FE /* RecordView.xib */; };
 		4A0AE9021AB1742F00A637FE /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F81AB1742F00A637FE /* SearchView.xib */; };
+		4A108A531AB4314E00FE1FCD /* PursueUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A108A521AB4314E00FE1FCD /* PursueUser.swift */; };
+		4A1707971AB555EE0030FD27 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1707961AB555EE0030FD27 /* ContactListViewController.swift */; };
+		4A1707991AB556130030FD27 /* ContactListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1707981AB556130030FD27 /* ContactListView.xib */; };
 		4A1B77C21AAFFD4F008BF9A4 /* FaceppAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77A91AAFFD4F008BF9A4 /* FaceppAPI.m */; };
 		4A1B77C31AAFFD4F008BF9A4 /* FaceppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77AC1AAFFD4F008BF9A4 /* FaceppClient.m */; };
 		4A1B77C41AAFFD4F008BF9A4 /* FaceppDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77AE1AAFFD4F008BF9A4 /* FaceppDetection.m */; };
@@ -62,6 +65,9 @@
 		4A0AE8F11AB1742F00A637FE /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		4A0AE8F31AB1742F00A637FE /* RecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordView.xib; sourceTree = "<group>"; };
 		4A0AE8F81AB1742F00A637FE /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		4A108A521AB4314E00FE1FCD /* PursueUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PursueUser.swift; sourceTree = "<group>"; };
+		4A1707961AB555EE0030FD27 /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		4A1707981AB556130030FD27 /* ContactListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactListView.xib; sourceTree = "<group>"; };
 		4A1B77A81AAFFD4F008BF9A4 /* FaceppAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppAPI.h; sourceTree = "<group>"; };
 		4A1B77A91AAFFD4F008BF9A4 /* FaceppAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppAPI.m; sourceTree = "<group>"; };
 		4A1B77AB1AAFFD4F008BF9A4 /* FaceppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppClient.h; sourceTree = "<group>"; };
@@ -186,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				4A0AE8E71AB1742F00A637FE /* MessageViewController.swift */,
+				4A1707961AB555EE0030FD27 /* ContactListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -194,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				4A0AE8E91AB1742F00A637FE /* MessageView.xib */,
+				4A1707981AB556130030FD27 /* ContactListView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -276,6 +284,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4A108A511AB4311600FE1FCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4A108A521AB4314E00FE1FCD /* PursueUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4A1B77A61AAFFD4F008BF9A4 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +350,7 @@
 		4A1B77CE1AAFFF17008BF9A4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4A108A511AB4311600FE1FCD /* Models */,
 				4A1B77CF1AAFFF37008BF9A4 /* CommonConfig.swift */,
 			);
 			path = Data;
@@ -502,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A0AE9021AB1742F00A637FE /* SearchView.xib in Resources */,
+				4A1707991AB556130030FD27 /* ContactListView.xib in Resources */,
 				4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */,
 				4A0AE8FA1AB1742F00A637FE /* FocusView.xib in Resources */,
 				4A0AE8FE1AB1742F00A637FE /* ProfileView.xib in Resources */,
@@ -572,7 +590,9 @@
 				4A0AE8DF1AB1742000A637FE /* MainViewController.swift in Sources */,
 				F39DEADD1AB34B9D00BED9DA /* SearchViewController.swift in Sources */,
 				4A0AE8FD1AB1742F00A637FE /* ProfileViewController.swift in Sources */,
+				4A108A531AB4314E00FE1FCD /* PursueUser.swift in Sources */,
 				4A1B77CB1AAFFD4F008BF9A4 /* FaceppTrainer.m in Sources */,
+				4A1707971AB555EE0030FD27 /* ContactListViewController.swift in Sources */,
 				F39DEAE51AB353F500BED9DA /* AddSearchViewController.swift in Sources */,
 				4A0AE8FB1AB1742F00A637FE /* MessageViewController.swift in Sources */,
 				4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */,

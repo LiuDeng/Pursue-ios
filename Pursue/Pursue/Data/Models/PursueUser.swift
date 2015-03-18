@@ -10,15 +10,23 @@ import Foundation
 
 class PursueUser{
     
-    class var currentUser: PursueUser {
-        struct Static {
-            // 定义静态的常量属性
-            static let instance: PursueUser = PursueUser()
+    var avUser: AVUser?
+    
+    var userName: String {
+        get{
+            if(avUser == nil){
+                return ""
+            }
+            return avUser!.username
         }
-        return Static.instance
     }
     
-    init(){
+    /**
+    基于 UUID 创建一个未注册认证的用户
+    
+    :returns: PursueUser
+    */
+    func initUnregisteredUser(){
         
         if(AVUser.currentUser() == nil){
             var userName: AnyObject? = TMCache.sharedCache().objectForKey("CurrentUserName")
@@ -32,30 +40,24 @@ class PursueUser{
             }
             login(userName as! String, password: password)
         }else{
-            var u = AVUser.currentUser()
-            println(u.username)
+            avUser = AVUser.currentUser()
+            println(avUser!.username)
         }
     }
     
-    var avUser: AVUser{
-        get{
-            return AVUser.currentUser()
-        }
-    }
+    /**
+    登录 此逻辑之后需要移动到用户登录模块
     
-    var userName: String {
-        get{
-            return avUser.username
-        }
-    }
-    
-    //登录
+    :param: userName <#userName description#>
+    :param: password <#password description#>
+    */
     func login(userName: String, password: String ){
         AVUser.logInWithUsernameInBackground(userName, password: password) { (user: AVUser?, error) -> Void in
             if((user) != nil){
                 TMCache.sharedCache().setObject(userName, forKey: "CurrentUserName")
                 SSKeychain.setPassword(password, forService: "PursueUser", account: userName)
-
+                
+                self.avUser = AVUser.currentUser()
                 var delegate = UIApplication.sharedApplication().delegate as! AppDelegate
                 delegate.toMainView()
                 

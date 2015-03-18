@@ -8,9 +8,11 @@
 
 import Foundation
 
-class ContactListViewController: UIViewController {
+class ContactListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var contactsTableView: UITableView!
+    
+    var contactViewModel: ContactViewModel = ContactViewModel()
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -24,7 +26,26 @@ class ContactListViewController: UIViewController {
         super.viewDidLoad()
         self.title = "联系人"
         
+        contactsTableView.delegate = self
+        contactsTableView.dataSource = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
+        self.contactsTableView.reloadData()
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contactViewModel.contacts.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
     
 }

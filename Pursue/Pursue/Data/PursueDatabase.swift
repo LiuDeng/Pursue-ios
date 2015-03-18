@@ -39,6 +39,12 @@ class PursueDatabase{
         
     }
     
+    /// FMDB 对象
+    static var FMDB: FMDatabase{
+        get{
+            return sharedInstance.db
+        }
+    }
     
     var db: FMDatabase
     

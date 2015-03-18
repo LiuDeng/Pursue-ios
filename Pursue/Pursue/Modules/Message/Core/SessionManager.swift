@@ -31,17 +31,45 @@ class SessionManager:NSObject, AVSessionDelegate, AVSignatureDelegate, AVGroupDe
         session = AVSession()
         super.init()
         
-        PursueDatabase.createTable("messages", createSql: "create table \"messages\" (\"fromid\" text, \"toid\" text, \"type\" text, \"message\" text, \"object\" text, \"time\" integer)")
-        PursueDatabase.createTable("sessions", createSql: "create table \"sessions\" (\"type\" integer, \"otherid\" text)")
+        PursueDatabase.createTable("messages", createSql: "create table \"messages\" (\"from_id\" text, \"to_id\" text, \"type\" text, \"message\" text, \"object\" text, \"time\" integer)", overWrite: true)
+        PursueDatabase.createTable("sessions", createSql: "create table \"sessions\" (\"type\" integer, \"self_id\" text, \"other_id\" text)", overWrite: true)
         
         session.sessionDelegate = self
         session.signatureDelegate = self
         
         AVGroup.setDefaultDelegate(self)
-        session.openWithPeerId(PursueUser.currentUser.userName)
+        session.openWithPeerId(Current.User.userName)
+        
+        loadSessionsFromDb()
+        
     }
     
-    
+    func loadSessionsFromDb(){
+        var results = PursueDatabase.FMDB.executeQuery("select type, self_id, other_id from sessions ", withArgumentsInArray: [])
+        var peerIds = NSMutableArray();
+        while(results.next()){
+            var type = results.intForColumn("type").hashValue
+            var otherId = results.stringForColumn("other_id")
+            
+            var dic = NSMutableDictionary()
+            dic.setObject(type, forKey: "type")
+            dic.setObject(otherId, forKey: "otherId")
+            
+            if (type == ChatRoomType.Single.rawValue) {
+                peerIds.addObject(otherId)
+            } else if (type == ChatRoomType.Group.rawValue) {
+                var group = AVGroup.getGroupWithGroupId(otherId, session: session)
+                group.delegate = self
+                group.join()
+            }
+            
+            chatRooms.addObject(dic)
+        }
+        
+        session.watchPeerIds(peerIds as [AnyObject], callback: { (success, error) -> Void in
+            println(success)
+        })
+    }
     
     
     //pragma mark - AVSessionDelegate

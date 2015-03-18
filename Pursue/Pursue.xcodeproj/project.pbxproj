@@ -33,6 +33,9 @@
 		4A1B77CC1AAFFD4F008BF9A4 /* FaceppError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77BF1AAFFD4F008BF9A4 /* FaceppError.m */; };
 		4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77C11AAFFD4F008BF9A4 /* FaceppResult.m */; };
 		4A1B77D01AAFFF37008BF9A4 /* CommonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77CF1AAFFF37008BF9A4 /* CommonConfig.swift */; };
+		4A2E77531AB6C35300A46F45 /* PursueDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E77521AB6C35300A46F45 /* PursueDatabase.swift */; };
+		4A5EE0781AB6C680004FA336 /* PursueIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EE0771AB6C680004FA336 /* PursueIO.swift */; };
+		4A5EE07C1AB6D99B004FA336 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EE07B1AB6D99B004FA336 /* SessionManager.swift */; };
 		4A8CB5BD1AA5958700BE8F5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CB5BC1AA5958700BE8F5E /* AppDelegate.swift */; };
 		4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C31AA5958700BE8F5E /* Images.xcassets */; };
 		4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C51AA5958700BE8F5E /* LaunchScreen.xib */; };
@@ -93,9 +96,12 @@
 		4A1B77C01AAFFD4F008BF9A4 /* FaceppResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppResult.h; sourceTree = "<group>"; };
 		4A1B77C11AAFFD4F008BF9A4 /* FaceppResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppResult.m; sourceTree = "<group>"; };
 		4A1B77CF1AAFFF37008BF9A4 /* CommonConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonConfig.swift; sourceTree = "<group>"; };
+		4A2E77521AB6C35300A46F45 /* PursueDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PursueDatabase.swift; sourceTree = "<group>"; };
 		4A32610C1AB009D1009E705F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		4A32610E1AB009DB009E705F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		4A3261101AB00A19009E705F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4A5EE0771AB6C680004FA336 /* PursueIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PursueIO.swift; sourceTree = "<group>"; };
+		4A5EE07B1AB6D99B004FA336 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		4A8CB5B71AA5958700BE8F5E /* Pursue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pursue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A8CB5BB1AA5958700BE8F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A8CB5BC1AA5958700BE8F5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 		4A0AE8E51AB1742F00A637FE /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				4A5EE07A1AB6D979004FA336 /* Core */,
 				4A0AE8E61AB1742F00A637FE /* ViewController */,
 				4A0AE8E81AB1742F00A637FE /* Views */,
 			);
@@ -352,8 +359,18 @@
 			children = (
 				4A108A511AB4311600FE1FCD /* Models */,
 				4A1B77CF1AAFFF37008BF9A4 /* CommonConfig.swift */,
+				4A2E77521AB6C35300A46F45 /* PursueDatabase.swift */,
+				4A5EE0771AB6C680004FA336 /* PursueIO.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		4A5EE07A1AB6D979004FA336 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4A5EE07B1AB6D99B004FA336 /* SessionManager.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		4A8CB5AE1AA5958700BE8F5E = {
@@ -586,10 +603,13 @@
 				4A1B77C41AAFFD4F008BF9A4 /* FaceppDetection.m in Sources */,
 				4A1B77C81AAFFD4F008BF9A4 /* FaceppInfo.m in Sources */,
 				4A0AE8FF1AB1742F00A637FE /* RecordViewController.swift in Sources */,
+				4A2E77531AB6C35300A46F45 /* PursueDatabase.swift in Sources */,
 				4A0AE8F91AB1742F00A637FE /* FocusViewController.swift in Sources */,
 				4A0AE8DF1AB1742000A637FE /* MainViewController.swift in Sources */,
 				F39DEADD1AB34B9D00BED9DA /* SearchViewController.swift in Sources */,
+				4A5EE07C1AB6D99B004FA336 /* SessionManager.swift in Sources */,
 				4A0AE8FD1AB1742F00A637FE /* ProfileViewController.swift in Sources */,
+				4A5EE0781AB6C680004FA336 /* PursueIO.swift in Sources */,
 				4A108A531AB4314E00FE1FCD /* PursueUser.swift in Sources */,
 				4A1B77CB1AAFFD4F008BF9A4 /* FaceppTrainer.m in Sources */,
 				4A1707971AB555EE0030FD27 /* ContactListViewController.swift in Sources */,

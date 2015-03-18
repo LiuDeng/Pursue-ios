@@ -10,7 +10,7 @@ import Foundation
 
 class PursueUser{
     
-    class var sharedInstance: PursueUser {
+    class var currentUser: PursueUser {
         struct Static {
             // 定义静态的常量属性
             static let instance: PursueUser = PursueUser()
@@ -40,6 +40,12 @@ class PursueUser{
     var avUser: AVUser{
         get{
             return AVUser.currentUser()
+        }
+    }
+    
+    var userName: String {
+        get{
+            return avUser.username
         }
     }
     

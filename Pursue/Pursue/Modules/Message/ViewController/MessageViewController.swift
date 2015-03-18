@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MessageViewController: UIViewController {
+class MessageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var messageListTableView: UITableView!
     
@@ -25,10 +25,43 @@ class MessageViewController: UIViewController {
         self.title = "消息"
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "联系人", style: UIBarButtonItemStyle.Done, target: self, action: "toContactListView:")
+        
+        messageListTableView.delegate = self
+        messageListTableView.dataSource = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.messageListTableView.reloadData()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "sessionUpdated:", name: "NOTIFICATION_SESSION_UPDATED", object: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    func sessionUpdated(notification: NSNotification){
+        messageListTableView.reloadData()
     }
     
     func toContactListView(sender: AnyObject?){
         self.navigationController?.pushViewController(ContactListViewController(nibName: "ContactListView", bundle: nil), animated: true)
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return SessionManager.sharedInstance.chatRooms.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
     
 }

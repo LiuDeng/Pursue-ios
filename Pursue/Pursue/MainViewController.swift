@@ -29,13 +29,13 @@ class MainViewController: UITabBarController {
         
         //消息
         var messageBarItem = UITabBarItem(title: "消息", image: nil, selectedImage: nil)
-        var messageViewController = UINavigationController(rootViewController: MessageViewController(nibName: "RecordView", bundle: nil))
+        var messageViewController = UINavigationController(rootViewController: MessageViewController(nibName: "MessageView", bundle: nil))
 //        messageBarItem.badgeValue = "3"
         messageViewController.tabBarItem = messageBarItem
         
         //我的资料
         var profileBarItem = UITabBarItem(title: "我的资料", image: nil, selectedImage: nil)
-        var profileViewController = UINavigationController(rootViewController: ProfileViewController(nibName: "RecordView", bundle: nil))
+        var profileViewController = UINavigationController(rootViewController: ProfileViewController(nibName: "ProfileView", bundle: nil))
         profileViewController.tabBarItem = profileBarItem
         
         self.viewControllers = [searchViewController, recordViewController, messageViewController, profileViewController]

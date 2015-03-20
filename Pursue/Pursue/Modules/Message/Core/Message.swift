@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Message : NSObject, JSQMessageData {
+class Message : NSObject {//JSQMessageData
     var text_: String
     var sender_: String
     var date_: NSDate

@@ -11,6 +11,8 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    let UserInfoCellIdentifier = "Profile User Info Cell"
+    
     @IBOutlet weak var tableView: UITableView!
     
     //  MARK:初始化
@@ -37,6 +39,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     //  MARK:基本设置
     func basicSetup() {
+        self.tableView.registerNib(UINib(nibName: "ProfileUserInfoCell", bundle: nil),
+            forCellReuseIdentifier: UserInfoCellIdentifier)
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
@@ -60,11 +64,45 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let CellIdentifier = "Cell"
-        var cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as? UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell?
+        
         if cell == nil {
             cell = UITableViewCell(style: .Default, reuseIdentifier: CellIdentifier)
         }
+        
+        if indexPath.section == 0 {
+            switch indexPath.row {
+//            case 0:
+                
+            case 1:
+                cell?.textLabel?.text = "我的寻人"
+            case 2:
+                cell?.textLabel?.text = "我的随拍"
+            default:break
+            }
+        } else {
+            switch indexPath.row {
+            case 0:
+                cell?.textLabel?.text = "分享一下"
+            case 1:
+                cell?.textLabel?.text = "关于"
+            default:
+                break
+            }
+        }
+        
+        cell?.accessoryType = .DisclosureIndicator
+        
         return cell!
+    }
+    
+    //  MARK:Table View Delegate
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            return 80
+        } else {
+            return 44
+        }
     }
     
 }

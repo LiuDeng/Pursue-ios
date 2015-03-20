@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0348061ABA5C5A00D3B7B3 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0348051ABA5C5A00D3B7B3 /* ContactDetailViewController.swift */; };
+		4A0348081ABA5CAD00D3B7B3 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0348071ABA5CAD00D3B7B3 /* ChatRoomViewController.swift */; };
+		4A03480A1ABA61E500D3B7B3 /* ContactDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0348091ABA61E500D3B7B3 /* ContactDetailView.xib */; };
 		4A0AE8DF1AB1742000A637FE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8DE1AB1742000A637FE /* MainViewController.swift */; };
 		4A0AE8F91AB1742F00A637FE /* FocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8E21AB1742F00A637FE /* FocusViewController.swift */; };
 		4A0AE8FA1AB1742F00A637FE /* FocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8E41AB1742F00A637FE /* FocusView.xib */; };
@@ -42,6 +45,7 @@
 		4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C31AA5958700BE8F5E /* Images.xcassets */; };
 		4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C51AA5958700BE8F5E /* LaunchScreen.xib */; };
 		4A8CB5D31AA5958700BE8F5E /* PursueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */; };
+		4AC56BE31ABACEED002D1598 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC56BE21ABACEED002D1598 /* Message.swift */; };
 		B86CB0E85FF7DB258B90F316 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9A3A84537473FDBBAD0C7F /* libPods.a */; };
 		F39DEADD1AB34B9D00BED9DA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DEADB1AB34B9D00BED9DA /* SearchViewController.swift */; };
 		F39DEADE1AB34B9D00BED9DA /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39DEADC1AB34B9D00BED9DA /* SearchViewController.xib */; };
@@ -60,6 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A0348051ABA5C5A00D3B7B3 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		4A0348071ABA5CAD00D3B7B3 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		4A0348091ABA61E500D3B7B3 /* ContactDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactDetailView.xib; sourceTree = "<group>"; };
 		4A0AE8DE1AB1742000A637FE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4A0AE8E21AB1742F00A637FE /* FocusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusViewController.swift; sourceTree = "<group>"; };
 		4A0AE8E41AB1742F00A637FE /* FocusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FocusView.xib; sourceTree = "<group>"; };
@@ -115,6 +122,7 @@
 		4A8CB5D11AA5958700BE8F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PursueTests.swift; sourceTree = "<group>"; };
 		4A8CB5DC1AA5999700BE8F5E /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		4AC56BE21ABACEED002D1598 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		AEA428CCDD7D74DB76D9666D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CB9A3A84537473FDBBAD0C7F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CE534FD793BA35B6C43C5E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +212,8 @@
 			children = (
 				4A0AE8E71AB1742F00A637FE /* MessageViewController.swift */,
 				4A1707961AB555EE0030FD27 /* ContactListViewController.swift */,
+				4A0348051ABA5C5A00D3B7B3 /* ContactDetailViewController.swift */,
+				4A0348071ABA5CAD00D3B7B3 /* ChatRoomViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -213,6 +223,7 @@
 			children = (
 				4A0AE8E91AB1742F00A637FE /* MessageView.xib */,
 				4A1707981AB556130030FD27 /* ContactListView.xib */,
+				4A0348091ABA61E500D3B7B3 /* ContactDetailView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -375,6 +386,7 @@
 			children = (
 				4A5EE07B1AB6D99B004FA336 /* SessionManager.swift */,
 				4A681CCE1AB96D3F00B68611 /* ContactViewModel.swift */,
+				4AC56BE21ABACEED002D1598 /* Message.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -548,6 +560,7 @@
 				4A0AE8FE1AB1742F00A637FE /* ProfileView.xib in Resources */,
 				4A0AE9001AB1742F00A637FE /* RecordView.xib in Resources */,
 				4A0AE8FC1AB1742F00A637FE /* MessageView.xib in Resources */,
+				4A03480A1ABA61E500D3B7B3 /* ContactDetailView.xib in Resources */,
 				F39DEADE1AB34B9D00BED9DA /* SearchViewController.xib in Resources */,
 				F39DEAE61AB353F500BED9DA /* AddSearchViewController.xib in Resources */,
 				4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */,
@@ -618,8 +631,10 @@
 				4A5EE0781AB6C680004FA336 /* PursueIO.swift in Sources */,
 				4A108A531AB4314E00FE1FCD /* PursueUser.swift in Sources */,
 				4A681CCF1AB96D3F00B68611 /* ContactViewModel.swift in Sources */,
+				4A0348081ABA5CAD00D3B7B3 /* ChatRoomViewController.swift in Sources */,
 				4A1B77CB1AAFFD4F008BF9A4 /* FaceppTrainer.m in Sources */,
 				4A1707971AB555EE0030FD27 /* ContactListViewController.swift in Sources */,
+				4AC56BE31ABACEED002D1598 /* Message.swift in Sources */,
 				F39DEAE51AB353F500BED9DA /* AddSearchViewController.swift in Sources */,
 				4A0AE8FB1AB1742F00A637FE /* MessageViewController.swift in Sources */,
 				4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */,
@@ -629,6 +644,7 @@
 				4A1B77CA1AAFFD4F008BF9A4 /* FaceppRecognition.m in Sources */,
 				4A1B77C91AAFFD4F008BF9A4 /* FaceppPerson.m in Sources */,
 				4A681CD11AB96DEA00B68611 /* Current.swift in Sources */,
+				4A0348061ABA5C5A00D3B7B3 /* ContactDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

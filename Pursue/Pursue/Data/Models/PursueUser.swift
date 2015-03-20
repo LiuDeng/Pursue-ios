@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PursueUser{
+class PursueUser: NSObject {
     
     var avUser: AVUser?
     
@@ -20,6 +20,16 @@ class PursueUser{
             return avUser!.username
         }
     }
+    
+    override init(){
+        super.init()
+    }
+    
+    init(avUser user:AVUser){
+        super.init()
+        avUser = user
+    }
+    
     
     /**
     基于 UUID 创建一个未注册认证的用户

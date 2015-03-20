@@ -28,6 +28,10 @@ class ContactListViewController: UIViewController, UITableViewDelegate, UITableV
         
         contactsTableView.delegate = self
         contactsTableView.dataSource = self
+        
+        contactViewModel.startFetchContactList { () -> () in
+            self.contactsTableView.reloadData()
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -45,7 +49,13 @@ class ContactListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        var cell = UITableViewCell()
+        cell.textLabel?.text = contactViewModel.contacts[indexPath.row].userName
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.navigationController?.pushViewController(ContactDetailViewController(nibName: "ContactDetailView", bundle: nil), animated: true)
     }
     
 }

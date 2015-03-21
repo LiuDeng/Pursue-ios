@@ -45,26 +45,18 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         self.tableView.delegate = self
     }
     
-    //  MARK:Table View Data Source
+    //  MARK: - Table View Data Source
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-            
-        case 0:
-            return 3
-
-        default:
-            return 2
-            
-        }
+        return 2
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let CellIdentifier = "Cell"
-        var cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell?
+        var cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as UITableViewCell?
         
         if cell == nil {
             cell = UITableViewCell(style: .Default, reuseIdentifier: CellIdentifier)
@@ -72,11 +64,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         if indexPath.section == 0 {
             switch indexPath.row {
-//            case 0:
-                
-            case 1:
+            case 0:
                 cell?.textLabel?.text = "我的寻人"
-            case 2:
+            case 1:
                 cell?.textLabel?.text = "我的随拍"
             default:break
             }
@@ -98,11 +88,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     //  MARK:Table View Delegate
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.section == 0 && indexPath.row == 0 {
-            return 80
-        } else {
-            return 44
-        }
+        return 44
     }
     
 }

@@ -15,7 +15,6 @@ class ProfileUserInfoCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         RGCommonTools.customViewAddBorder(headImageView, width: 1.0, cornerRadius: headImageView.frame.size.width / 2, color: UIColor.clearColor())
     }
 

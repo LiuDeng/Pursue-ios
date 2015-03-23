@@ -45,7 +45,7 @@
 		4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C31AA5958700BE8F5E /* Images.xcassets */; };
 		4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C51AA5958700BE8F5E /* LaunchScreen.xib */; };
 		4A8CB5D31AA5958700BE8F5E /* PursueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */; };
-		4AC56BE31ABACEED002D1598 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC56BE21ABACEED002D1598 /* Message.swift */; };
+		4AC56BE31ABACEED002D1598 /* PursueMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC56BE21ABACEED002D1598 /* PursueMessage.swift */; };
 		B7D9B54C1ABBA35A0068B759 /* RGCommonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B54B1ABBA35A0068B759 /* RGCommonTools.swift */; };
 		B7D9B54E1ABBA37B0068B759 /* ProfileUserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B54D1ABBA37B0068B759 /* ProfileUserInfoCell.swift */; };
 		B7D9B5501ABBA3840068B759 /* ProfileUserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D9B54F1ABBA3840068B759 /* ProfileUserInfoCell.xib */; };
@@ -125,7 +125,7 @@
 		4A8CB5D11AA5958700BE8F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PursueTests.swift; sourceTree = "<group>"; };
 		4A8CB5DC1AA5999700BE8F5E /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		4AC56BE21ABACEED002D1598 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		4AC56BE21ABACEED002D1598 /* PursueMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PursueMessage.swift; sourceTree = "<group>"; };
 		AEA428CCDD7D74DB76D9666D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B7D9B54B1ABBA35A0068B759 /* RGCommonTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGCommonTools.swift; sourceTree = "<group>"; };
 		B7D9B54D1ABBA37B0068B759 /* ProfileUserInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserInfoCell.swift; sourceTree = "<group>"; };
@@ -395,7 +395,7 @@
 			children = (
 				4A5EE07B1AB6D99B004FA336 /* SessionManager.swift */,
 				4A681CCE1AB96D3F00B68611 /* ContactViewModel.swift */,
-				4AC56BE21ABACEED002D1598 /* Message.swift */,
+				4AC56BE21ABACEED002D1598 /* PursueMessage.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -654,7 +654,7 @@
 				4A1B77CB1AAFFD4F008BF9A4 /* FaceppTrainer.m in Sources */,
 				B7D9B54C1ABBA35A0068B759 /* RGCommonTools.swift in Sources */,
 				4A1707971AB555EE0030FD27 /* ContactListViewController.swift in Sources */,
-				4AC56BE31ABACEED002D1598 /* Message.swift in Sources */,
+				4AC56BE31ABACEED002D1598 /* PursueMessage.swift in Sources */,
 				F39DEAE51AB353F500BED9DA /* AddSearchViewController.swift in Sources */,
 				4A0AE8FB1AB1742F00A637FE /* MessageViewController.swift in Sources */,
 				4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */,

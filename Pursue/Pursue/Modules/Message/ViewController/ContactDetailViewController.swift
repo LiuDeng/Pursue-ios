@@ -20,20 +20,18 @@ class ContactDetailViewController: UIViewController{
     }
     
     @IBAction func sendMessage(sender: AnyObject) {
-//        self.tabBarController?.childViewControllers.first?.popToRootViewControllerAnimated(false)
-
-//        CDChatRoomController *controller = [[CDChatRoomController alloc] init];
+        var rootController = self.tabBarController?.childViewControllers[2] as! UINavigationController
+        
+        var nav = rootController
+        var controller = ChatRoomViewController()
+        controller.hidesBottomBarWhenPushed = true
 //        [[CDSessionManager sharedInstance] addChatWithPeerId:self.user.username];
 //        controller.otherId = self.user.username;
 //        controller.type = CDChatRoomTypeSingle;
-//        self.tabBarController.selectedIndex = 0;
-//        [nav popToRootViewControllerAnimated:NO];
-//        
-//        [self.tabBarController.childViewControllers.firstObject pushViewController:controller animated:YES];
-//        [self.navigationController popToRootViewControllerAnimated:NO];
-//        self.navigationController?.popToRootViewControllerAnimated(false)
-//        self.tabBarController?.childViewControllers.first?.pushViewController(ChatRoomViewController(), animated: true)
+        self.tabBarController?.selectedIndex = 2;
+        nav.popToRootViewControllerAnimated(false)
         
-        self.navigationController?.pushViewController(ChatRoomViewController(), animated: true)
+        rootController.pushViewController(controller, animated: true)
+        self.navigationController?.popToRootViewControllerAnimated(false)
     }
 }

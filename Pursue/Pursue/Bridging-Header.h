@@ -15,3 +15,4 @@
 #import <FMDBHelpers/FMDBHelpers.h>
 #import <JSQMessagesViewController/JSQMessages.h>
 #import <JSQSystemSoundPlayer/JSQSystemSoundPlayer.h>
+#import "HFStretchableTableHeaderView.h"

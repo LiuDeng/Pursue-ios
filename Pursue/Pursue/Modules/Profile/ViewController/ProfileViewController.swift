@@ -14,6 +14,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     let UserInfoCellIdentifier = "Profile User Info Cell"
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var stretchView: UIView!
+    var stretchableTableHeaderView:HFStretchableTableHeaderView?
     
     //  MARK:初始化
     required init(coder aDecoder: NSCoder) {
@@ -35,6 +37,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     //  MARK:界面绘制
     func buildUI() {
         self.navigationItem.title = "我的资料"
+        
+        stretchableTableHeaderView = HFStretchableTableHeaderView()
+        stretchableTableHeaderView?.stretchHeaderForTableView(self.tableView, withView: stretchView)
     }
     
     //  MARK:基本设置
@@ -89,6 +94,14 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     //  MARK:Table View Delegate
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 44
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        stretchableTableHeaderView?.scrollViewDidScroll(scrollView)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        stretchableTableHeaderView?.resizeView()
     }
     
 }

@@ -49,6 +49,7 @@
 		4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C51AA5958700BE8F5E /* LaunchScreen.xib */; };
 		4A8CB5D31AA5958700BE8F5E /* PursueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */; };
 		4AC56BE31ABACEED002D1598 /* PursueMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC56BE21ABACEED002D1598 /* PursueMessage.swift */; };
+		B7493B6B1AC2162D00BA9790 /* HFStretchableTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7493B6A1AC2162D00BA9790 /* HFStretchableTableHeaderView.m */; };
 		B7D9B54C1ABBA35A0068B759 /* RGCommonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B54B1ABBA35A0068B759 /* RGCommonTools.swift */; };
 		B7D9B54E1ABBA37B0068B759 /* ProfileUserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B54D1ABBA37B0068B759 /* ProfileUserInfoCell.swift */; };
 		B7D9B5501ABBA3840068B759 /* ProfileUserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D9B54F1ABBA3840068B759 /* ProfileUserInfoCell.xib */; };
@@ -133,6 +134,8 @@
 		4A8CB5DC1AA5999700BE8F5E /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		4AC56BE21ABACEED002D1598 /* PursueMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PursueMessage.swift; sourceTree = "<group>"; };
 		AEA428CCDD7D74DB76D9666D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B7493B691AC2162D00BA9790 /* HFStretchableTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFStretchableTableHeaderView.h; sourceTree = "<group>"; };
+		B7493B6A1AC2162D00BA9790 /* HFStretchableTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFStretchableTableHeaderView.m; sourceTree = "<group>"; };
 		B7D9B54B1ABBA35A0068B759 /* RGCommonTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGCommonTools.swift; sourceTree = "<group>"; };
 		B7D9B54D1ABBA37B0068B759 /* ProfileUserInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserInfoCell.swift; sourceTree = "<group>"; };
 		B7D9B54F1ABBA3840068B759 /* ProfileUserInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileUserInfoCell.xib; sourceTree = "<group>"; };
@@ -332,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				4A1B77A71AAFFD4F008BF9A4 /* FaceppSDK_ARC */,
+				B7493B681AC2162D00BA9790 /* HFStretchableTableHeaderView */,
 				B7D9B54A1ABBA35A0068B759 /* RGCommonTools */,
 			);
 			path = Vendors;
@@ -492,6 +496,15 @@
 			children = (
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		B7493B681AC2162D00BA9790 /* HFStretchableTableHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				B7493B691AC2162D00BA9790 /* HFStretchableTableHeaderView.h */,
+				B7493B6A1AC2162D00BA9790 /* HFStretchableTableHeaderView.m */,
+			);
+			path = HFStretchableTableHeaderView;
 			sourceTree = "<group>";
 		};
 		B7D9B54A1ABBA35A0068B759 /* RGCommonTools */ = {
@@ -662,6 +675,7 @@
 				4A8CB5BD1AA5958700BE8F5E /* AppDelegate.swift in Sources */,
 				4A1B77CC1AAFFD4F008BF9A4 /* FaceppError.m in Sources */,
 				4A1B77C71AAFFD4F008BF9A4 /* FaceppGrouping.m in Sources */,
+				B7493B6B1AC2162D00BA9790 /* HFStretchableTableHeaderView.m in Sources */,
 				4A1B77C51AAFFD4F008BF9A4 /* FaceppFaceset.m in Sources */,
 				4A1B77C41AAFFD4F008BF9A4 /* FaceppDetection.m in Sources */,
 				4A1B77C81AAFFD4F008BF9A4 /* FaceppInfo.m in Sources */,

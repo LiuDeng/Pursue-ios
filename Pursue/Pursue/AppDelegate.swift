@@ -14,8 +14,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    let iosVersion : NSString = UIDevice.currentDevice().systemVersion
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
 
@@ -24,6 +24,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         toMainView()
         
 //        Fabric.with([Crashlytics()])
+        
+        
+        //注册消息推送
+        if(iosVersion.doubleValue < 8.0){
+            application.registerForRemoteNotificationTypes(.Badge | .Alert | .Sound)
+        }else{
+            let types: UIUserNotificationType = .Badge | .Sound | .Alert
+            let pushSettings = UIUserNotificationSettings(forTypes: types, categories: nil)
+            UIApplication.sharedApplication().registerUserNotificationSettings(pushSettings)
+            UIApplication.sharedApplication().registerForRemoteNotifications()
+        }
+        
         return true
     }
 
@@ -47,6 +59,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        //聊天接收推送消息必需
+        var currentInstallation = AVInstallation.currentInstallation()
+        currentInstallation.setDeviceTokenFromData(deviceToken)
+        currentInstallation.saveInBackgroundWithBlock { (successed, error) -> Void in
+            if(error != nil){
+                println("开启推送失败")
+            }
+        }
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        if (application.applicationState == UIApplicationState.Active) {
+            // 转换成一个本地通知，显示到通知栏
+            var localNotification = UILocalNotification()
+            localNotification.userInfo = userInfo
+            localNotification.soundName = UILocalNotificationDefaultSoundName
+            localNotification.alertBody = ""//[[userInfo objectForKey"aps"] objectForKey"alert"];
+            localNotification.fireDate = NSDate()
+            UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        } else {
+            //可选 通过统计功能追踪通过提醒打开应用的行为
+            AVAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
+        }
+        
     }
 
     

@@ -10,35 +10,19 @@ import Foundation
 
 class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSource, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var chatRoomViewModel = ChatRoomViewModel()
+    
     var timer: NSTimer = NSTimer()
-    var isLoading: Bool = false
     
-    var groupId: String = ""
+//    var groupId: String = ""
     
-    var users = [PursueUser]()
-    var messages = [PursueMessage]()
-    var avatars = Dictionary<String, JSQMessagesAvatarImage>()
     
     var bubbleFactory = JSQMessagesBubbleImageFactory()
     var outgoingBubbleImage: JSQMessagesBubbleImage!
     var incomingBubbleImage: JSQMessagesBubbleImage!
     
-    var blankAvatarImage: JSQMessagesAvatarImage!
-    
     var senderImageUrl: String!
     var batchMessages = true
-    
-//    override init() {
-//        super.init()
-//        self.tabBarController?.hidesBottomBarWhenPushed = true
-//    }
-//
-//    required init(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//        self.tabBarController?.hidesBottomBarWhenPushed = true
-//    }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,17 +34,20 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
         outgoingBubbleImage = bubbleFactory.outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleBlueColor())
         incomingBubbleImage = bubbleFactory.incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleLightGrayColor())
         
-//        blankAvatarImage = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "profile_blank"), diameter: 30)
+        chatRoomViewModel.isLoading = false
+        chatRoomViewModel.loadMessagesWithBlock(loadedMessage)
         
-        isLoading = false
-        self.loadMessages()
-//        Messages.clearMessageCounter(groupId);
+        //        Messages.clearMessageCounter(groupId);
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         self.collectionView.collectionViewLayout.springinessEnabled = true
         timer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "loadMessages", userInfo: nil, repeats: true)
+    }
+    
+    func loadMessages(){
+        chatRoomViewModel.loadMessagesWithBlock(loadedMessage)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -71,36 +58,21 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
     
     // Mark: - Backend methods
     
-    func loadMessages() {
-//        if self.isLoading == false {
-//            self.isLoading = true
-//            var lastMessage = messages.last
-//            
-//            var query = PFQuery(className: PF_CHAT_CLASS_NAME)
-//            query.whereKey(PF_CHAT_GROUPID, equalTo: groupId)
-//            if lastMessage != nil {
-//                query.whereKey(PF_CHAT_CREATEDAT, greaterThan: lastMessage?.date)
-//            }
-//            query.includeKey(PF_CHAT_USER)
-//            query.orderByDescending(PF_CHAT_CREATEDAT)
-//            query.limit = 50
-//            query.findObjectsInBackgroundWithBlock({ (objects: [AnyObject]!, error: NSError!) -> Void in
-//                if error == nil {
-                    self.automaticallyScrollsToMostRecentMessage = false
-//                    for object in (objects as [PFObject]!).reverse() {
-//                        self.addMessage(object)
-//                    }
-//                    if objects.count > 0 {
-                        self.finishReceivingMessage()
-                        self.scrollToBottomAnimated(false)
-//                    }
-                    self.automaticallyScrollsToMostRecentMessage = true
-//                } else {
-//                    ProgressHUD.showError("Network error")
-//                }
-//                self.isLoading = false;
-//            })
-//        }
+    func loadedMessage(objects: [AnyObject]!, error: NSError!){
+        if error == nil {
+            self.automaticallyScrollsToMostRecentMessage = false
+            for object in (objects as! [AVObject]!).reverse() {
+                self.addMessage(object)
+            }
+            if objects.count > 0 {
+                self.finishReceivingMessage()
+                self.scrollToBottomAnimated(false)
+            }
+            self.automaticallyScrollsToMostRecentMessage = true
+        } else {
+            println("Network error")
+        }
+
     }
     
     func addMessage(object: AnyObject) {
@@ -140,8 +112,8 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
 //        }
         
         message = PursueMessage(text: "新消息", senderId: Current.User.userName, senderDisplayName: "Luce", isMediaMessage: false)
-        users.append(Current.User)
-        messages.append(message)
+        chatRoomViewModel.users.append(Current.User)
+        chatRoomViewModel.messages.append(message)
     }
     
     func sendMessage(var text: String, video: NSURL?, picture: UIImage?) {
@@ -191,13 +163,13 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
 //        PushNotication.sendPushNotification(groupId, text: text)
 //        Messages.updateMessageCounter(groupId, lastMessage: text)
         
-        
         var message = PursueMessage(text: text, senderId: Current.User.userName, senderDisplayName: "Luce", isMediaMessage: false)
-        users.append(Current.User)
-        messages.append(message)
-        self.loadMessages()
-        
-        self.finishSendingMessage()
+        chatRoomViewModel.users.append(Current.User)
+        chatRoomViewModel.saveMessage(message, block: { (success, error) -> () in
+            self.chatRoomViewModel.messages.append(message)
+            self.loadMessages()
+            self.finishSendingMessage()
+        })
     }
     
     // MARK: - JSQMessagesViewController method overrides
@@ -214,11 +186,11 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
     // MARK: - JSQMessages CollectionView DataSource
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
-        return self.messages[indexPath.item]
+        return chatRoomViewModel.messages[indexPath.item]
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageBubbleImageDataSource! {
-        var message = self.messages[indexPath.item]
+        var message = chatRoomViewModel.messages[indexPath.item]
         if message.senderId() == self.senderId {
             return outgoingBubbleImage
         }
@@ -226,8 +198,8 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
-        var user = self.users[indexPath.item]
-        if self.avatars[user.userName] == nil {
+        var user = chatRoomViewModel.users[indexPath.item]
+        if chatRoomViewModel.avatars[user.userName] == nil {
 //            var thumbnailFile = user[PF_USER_THUMBNAIL] as? PFFile
 //            thumbnailFile?.getDataInBackgroundWithBlock({ (imageData: NSData!, error: NSError!) -> Void in
 //                if error == nil {
@@ -235,28 +207,28 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
 //                    self.collectionView.reloadData()
 //                }
 //            })
-            return blankAvatarImage
+            return chatRoomViewModel.blankAvatarImage
         } else {
-            return self.avatars[user.userName]
+            return chatRoomViewModel.avatars[user.userName]
         }
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, attributedTextForCellTopLabelAtIndexPath indexPath: NSIndexPath!) -> NSAttributedString! {
         if indexPath.item % 3 == 0 {
-            var message = self.messages[indexPath.item]
+            var message = chatRoomViewModel.messages[indexPath.item]
             return JSQMessagesTimestampFormatter.sharedFormatter().attributedTimestampForDate(message.date())
         }
         return nil;
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAtIndexPath indexPath: NSIndexPath!) -> NSAttributedString! {
-        var message = self.messages[indexPath.item]
+        var message = chatRoomViewModel.messages[indexPath.item]
         if message.senderId() == self.senderId {
             return nil
         }
         
         if indexPath.item - 1 > 0 {
-            var previousMessage = self.messages[indexPath.item - 1]
+            var previousMessage = chatRoomViewModel.messages[indexPath.item - 1]
             if previousMessage.senderId() == message.senderId() {
                 return nil
             }
@@ -271,13 +243,13 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
     // MARK: - UICollectionView DataSource
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.messages.count
+        return chatRoomViewModel.messages.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath) as! JSQMessagesCollectionViewCell
         
-        var message = self.messages[indexPath.item]
+        var message = chatRoomViewModel.messages[indexPath.item]
         if message.senderId() == self.senderId {
             cell.textView?.textColor = UIColor.whiteColor()
         } else {
@@ -296,13 +268,13 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForMessageBubbleTopLabelAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
-        var message = self.messages[indexPath.item]
+        var message = chatRoomViewModel.messages[indexPath.item]
         if message.senderId() == self.senderId {
             return 0
         }
         
         if indexPath.item - 1 > 0 {
-            var previousMessage = self.messages[indexPath.item - 1]
+            var previousMessage = chatRoomViewModel.messages[indexPath.item - 1]
             if previousMessage.senderId() == message.senderId() {
                 return 0
             }
@@ -326,7 +298,7 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, didTapMessageBubbleAtIndexPath indexPath: NSIndexPath!) {
-        var message = self.messages[indexPath.item] as JSQMessageData
+        var message = chatRoomViewModel.messages[indexPath.item] as JSQMessageData
         if message.isMediaMessage() {
             if let mediaItem = message.media as? JSQVideoMediaItem {
 //                var moviePlayer = MPMoviePlayerViewController(contentURL: mediaItem.fileURL)

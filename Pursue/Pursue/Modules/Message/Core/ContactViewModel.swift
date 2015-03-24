@@ -17,8 +17,11 @@ class ContactViewModel {
         query.cachePolicy = AVCachePolicy.IgnoreCache
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if(error == nil){
-                for user in objects {
-                    self.contacts.append(PursueUser(avUser: user as! AVUser))
+                for item in objects {
+                    var user = item as! AVUser
+                    if(user.username != Current.User.userName){
+                        self.contacts.append(PursueUser(avUser: user))
+                    }
                 }
                 block()
             }else{

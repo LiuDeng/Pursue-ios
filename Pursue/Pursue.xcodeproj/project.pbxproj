@@ -36,6 +36,9 @@
 		4A1B77CC1AAFFD4F008BF9A4 /* FaceppError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77BF1AAFFD4F008BF9A4 /* FaceppError.m */; };
 		4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77C11AAFFD4F008BF9A4 /* FaceppResult.m */; };
 		4A1B77D01AAFFF37008BF9A4 /* CommonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B77CF1AAFFF37008BF9A4 /* CommonConfig.swift */; };
+		4A22FB071AC1355F00A855B1 /* ChatRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A22FB061AC1355F00A855B1 /* ChatRoomViewModel.swift */; };
+		4A22FB0F1AC13A6600A855B1 /* profile_blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A22FB0E1AC13A6600A855B1 /* profile_blank.png */; };
+		4A22FB111AC1468A00A855B1 /* RemoteObjectDefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A22FB101AC1468A00A855B1 /* RemoteObjectDefined.swift */; };
 		4A2E77531AB6C35300A46F45 /* PursueDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2E77521AB6C35300A46F45 /* PursueDatabase.swift */; };
 		4A5EE0781AB6C680004FA336 /* PursueIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EE0771AB6C680004FA336 /* PursueIO.swift */; };
 		4A5EE07C1AB6D99B004FA336 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EE07B1AB6D99B004FA336 /* SessionManager.swift */; };
@@ -108,6 +111,9 @@
 		4A1B77C01AAFFD4F008BF9A4 /* FaceppResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceppResult.h; sourceTree = "<group>"; };
 		4A1B77C11AAFFD4F008BF9A4 /* FaceppResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceppResult.m; sourceTree = "<group>"; };
 		4A1B77CF1AAFFF37008BF9A4 /* CommonConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonConfig.swift; sourceTree = "<group>"; };
+		4A22FB061AC1355F00A855B1 /* ChatRoomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewModel.swift; sourceTree = "<group>"; };
+		4A22FB0E1AC13A6600A855B1 /* profile_blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_blank.png; sourceTree = "<group>"; };
+		4A22FB101AC1468A00A855B1 /* RemoteObjectDefined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteObjectDefined.swift; sourceTree = "<group>"; };
 		4A2E77521AB6C35300A46F45 /* PursueDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PursueDatabase.swift; sourceTree = "<group>"; };
 		4A32610C1AB009D1009E705F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		4A32610E1AB009DB009E705F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
@@ -386,8 +392,25 @@
 				4A2E77521AB6C35300A46F45 /* PursueDatabase.swift */,
 				4A5EE0771AB6C680004FA336 /* PursueIO.swift */,
 				4A681CD01AB96DEA00B68611 /* Current.swift */,
+				4A22FB101AC1468A00A855B1 /* RemoteObjectDefined.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		4A22FB0C1AC13A6600A855B1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4A22FB0D1AC13A6600A855B1 /* Images */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		4A22FB0D1AC13A6600A855B1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4A22FB0E1AC13A6600A855B1 /* profile_blank.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		4A5EE07A1AB6D979004FA336 /* Core */ = {
@@ -396,6 +419,7 @@
 				4A5EE07B1AB6D99B004FA336 /* SessionManager.swift */,
 				4A681CCE1AB96D3F00B68611 /* ContactViewModel.swift */,
 				4AC56BE21ABACEED002D1598 /* PursueMessage.swift */,
+				4A22FB061AC1355F00A855B1 /* ChatRoomViewModel.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -423,6 +447,7 @@
 		4A8CB5B91AA5958700BE8F5E /* Pursue */ = {
 			isa = PBXGroup;
 			children = (
+				4A22FB0C1AC13A6600A855B1 /* Assets */,
 				4A0AE8D61AB1735200A637FE /* Modules */,
 				4A1B77CE1AAFFF17008BF9A4 /* Data */,
 				4AA2FAE21AB1527F00146CC6 /* Component */,
@@ -572,6 +597,7 @@
 			files = (
 				4A0AE9021AB1742F00A637FE /* SearchView.xib in Resources */,
 				4A1707991AB556130030FD27 /* ContactListView.xib in Resources */,
+				4A22FB0F1AC13A6600A855B1 /* profile_blank.png in Resources */,
 				4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */,
 				4A0AE8FA1AB1742F00A637FE /* FocusView.xib in Resources */,
 				4A0AE8FE1AB1742F00A637FE /* ProfileView.xib in Resources */,
@@ -647,6 +673,7 @@
 				F39DEADD1AB34B9D00BED9DA /* SearchViewController.swift in Sources */,
 				4A5EE07C1AB6D99B004FA336 /* SessionManager.swift in Sources */,
 				4A0AE8FD1AB1742F00A637FE /* ProfileViewController.swift in Sources */,
+				4A22FB111AC1468A00A855B1 /* RemoteObjectDefined.swift in Sources */,
 				4A5EE0781AB6C680004FA336 /* PursueIO.swift in Sources */,
 				4A108A531AB4314E00FE1FCD /* PursueUser.swift in Sources */,
 				4A681CCF1AB96D3F00B68611 /* ContactViewModel.swift in Sources */,
@@ -658,6 +685,7 @@
 				F39DEAE51AB353F500BED9DA /* AddSearchViewController.swift in Sources */,
 				4A0AE8FB1AB1742F00A637FE /* MessageViewController.swift in Sources */,
 				4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */,
+				4A22FB071AC1355F00A855B1 /* ChatRoomViewModel.swift in Sources */,
 				4A1B77C31AAFFD4F008BF9A4 /* FaceppClient.m in Sources */,
 				4A1B77D01AAFFF37008BF9A4 /* CommonConfig.swift in Sources */,
 				4A1B77C21AAFFD4F008BF9A4 /* FaceppAPI.m in Sources */,

@@ -75,8 +75,8 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
 
     }
     
-    func addMessage(object: AnyObject) {
-        var message: PursueMessage!
+    func addMessage(object: AVObject) {
+        var message = PursueMessage(text: object.objectForKey("content") as! String, senderId: "222222", senderDisplayName: "Luce", isMediaMessage: false)
         
 //        var user = object[PF_CHAT_USER] as PFUser
 //        var name = user[PF_USER_FULLNAME] as String
@@ -111,7 +111,6 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
 //            })
 //        }
         
-        message = PursueMessage(text: "新消息", senderId: Current.User.userName, senderDisplayName: "Luce", isMediaMessage: false)
         chatRoomViewModel.users.append(Current.User)
         chatRoomViewModel.messages.append(message)
     }

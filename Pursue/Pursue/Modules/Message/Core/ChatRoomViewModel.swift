@@ -32,6 +32,9 @@ class ChatRoomViewModel{
             isLoading = true
             var lastMessage = messages.last
             var query = AVQuery(className: RemoteObjectDefined.ChatMessage)
+            if(lastMessage != nil){
+                query.whereKey("createdAt", greaterThan: lastMessage!.date())
+            }
             query.findObjectsInBackgroundWithBlock({ (objects: [AnyObject]!, error: NSError!) -> Void in
                 block(objects: objects, error: error)
                 self.isLoading = false

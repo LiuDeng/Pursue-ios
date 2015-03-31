@@ -16,6 +16,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var stretchView: UIView!
     var stretchableTableHeaderView:HFStretchableTableHeaderView?
+    @IBOutlet weak var headImageView: UIImageView!
+    @IBOutlet weak var nickNameLabel: UILabel!
     
     //  MARK:初始化
     required init(coder aDecoder: NSCoder) {
@@ -40,6 +42,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         stretchableTableHeaderView = HFStretchableTableHeaderView()
         stretchableTableHeaderView?.stretchHeaderForTableView(self.tableView, withView: stretchView)
+        
+        RGCommonTools.customViewAddBorder(headImageView, width: 1.0, cornerRadius: headImageView.frame.size.width / 2, color: UIColor.clearColor())
     }
     
     //  MARK:基本设置
@@ -48,6 +52,14 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             forCellReuseIdentifier: UserInfoCellIdentifier)
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        var tapGR:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapAction:")
+        stretchView.addGestureRecognizer(tapGR)
+    }
+    
+    //  MARK:响应方法
+    func tapAction(#sender:UITapGestureRecognizer) {
+        println("tap action")
     }
     
     //  MARK: - Table View Data Source
@@ -61,7 +73,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let CellIdentifier = "Cell"
-        var cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell?
+        var cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as UITableViewCell?
         
         if cell == nil {
             cell = UITableViewCell(style: .Default, reuseIdentifier: CellIdentifier)
@@ -85,7 +97,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
                 break
             }
         }
-        
+
         cell?.accessoryType = .DisclosureIndicator
         
         return cell!

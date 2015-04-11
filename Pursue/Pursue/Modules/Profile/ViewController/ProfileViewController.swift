@@ -2,7 +2,7 @@
 //  ProfileViewController.swift
 //  Pursue
 //
-//  Created by 罗嗣宝 on 15/3/6.
+//  Created by RAIN on 15/3/6.
 //  Copyright (c) 2015年 Luce Studio. All rights reserved.
 //
 

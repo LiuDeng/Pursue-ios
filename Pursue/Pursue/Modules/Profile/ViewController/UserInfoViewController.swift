@@ -9,6 +9,15 @@
 import UIKit
 
 class UserInfoViewController: UIViewController {
+    
+    //  MARK: 初始化
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

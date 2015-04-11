@@ -52,8 +52,8 @@
 		B7D7FDA41AD8B6A300224026 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7FDA21AD8B6A300224026 /* UserInfoViewController.swift */; };
 		B7D7FDA51AD8B6A300224026 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D7FDA31AD8B6A300224026 /* UserInfoViewController.xib */; };
 		B7D7FDA71AD8F9DB00224026 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D7FDA61AD8F9DB00224026 /* ProfileViewController.xib */; };
-		B7D7FDAA1AD8FA2500224026 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7FDA81AD8FA2500224026 /* UserInfoTableViewCell.swift */; };
-		B7D7FDAB1AD8FA2500224026 /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D7FDA91AD8FA2500224026 /* UserInfoTableViewCell.xib */; };
+		B7D7FDAA1AD8FA2500224026 /* ProfileUserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7FDA81AD8FA2500224026 /* ProfileUserInfoTableViewCell.swift */; };
+		B7D7FDAB1AD8FA2500224026 /* ProfileUserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D7FDA91AD8FA2500224026 /* ProfileUserInfoTableViewCell.xib */; };
 		B7D9B54C1ABBA35A0068B759 /* RGCommonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B54B1ABBA35A0068B759 /* RGCommonTools.swift */; };
 		B86CB0E85FF7DB258B90F316 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9A3A84537473FDBBAD0C7F /* libPods.a */; };
 		F39DEADD1AB34B9D00BED9DA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DEADB1AB34B9D00BED9DA /* SearchViewController.swift */; };
@@ -140,8 +140,8 @@
 		B7D7FDA21AD8B6A300224026 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		B7D7FDA31AD8B6A300224026 /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
 		B7D7FDA61AD8F9DB00224026 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		B7D7FDA81AD8FA2500224026 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
-		B7D7FDA91AD8FA2500224026 /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
+		B7D7FDA81AD8FA2500224026 /* ProfileUserInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		B7D7FDA91AD8FA2500224026 /* ProfileUserInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileUserInfoTableViewCell.xib; sourceTree = "<group>"; };
 		B7D9B54B1ABBA35A0068B759 /* RGCommonTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGCommonTools.swift; sourceTree = "<group>"; };
 		CB9A3A84537473FDBBAD0C7F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CE534FD793BA35B6C43C5E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -270,8 +270,8 @@
 		4A0AE8ED1AB1742F00A637FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B7D7FDA81AD8FA2500224026 /* UserInfoTableViewCell.swift */,
-				B7D7FDA91AD8FA2500224026 /* UserInfoTableViewCell.xib */,
+				B7D7FDA81AD8FA2500224026 /* ProfileUserInfoTableViewCell.swift */,
+				B7D7FDA91AD8FA2500224026 /* ProfileUserInfoTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -616,7 +616,7 @@
 			files = (
 				4A0AE9021AB1742F00A637FE /* SearchView.xib in Resources */,
 				4A1707991AB556130030FD27 /* ContactListView.xib in Resources */,
-				B7D7FDAB1AD8FA2500224026 /* UserInfoTableViewCell.xib in Resources */,
+				B7D7FDAB1AD8FA2500224026 /* ProfileUserInfoTableViewCell.xib in Resources */,
 				4A22FB0F1AC13A6600A855B1 /* profile_blank.png in Resources */,
 				B7D7FDA71AD8F9DB00224026 /* ProfileViewController.xib in Resources */,
 				4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */,
@@ -704,7 +704,7 @@
 				4A1707971AB555EE0030FD27 /* ContactListViewController.swift in Sources */,
 				4AC56BE31ABACEED002D1598 /* PursueMessage.swift in Sources */,
 				F39DEAE51AB353F500BED9DA /* AddSearchViewController.swift in Sources */,
-				B7D7FDAA1AD8FA2500224026 /* UserInfoTableViewCell.swift in Sources */,
+				B7D7FDAA1AD8FA2500224026 /* ProfileUserInfoTableViewCell.swift in Sources */,
 				4A0AE8FB1AB1742F00A637FE /* MessageViewController.swift in Sources */,
 				4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */,
 				4A22FB071AC1355F00A855B1 /* ChatRoomViewModel.swift in Sources */,

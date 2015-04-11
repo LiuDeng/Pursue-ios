@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var headImageView: UIImageView!
     @IBOutlet weak var nickNameLabel: UILabel!
     
-    //  MARK:初始化
+    //  MARK: 初始化
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -28,7 +28,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    //  MARK:生命周期
+    //  MARK: 生命周期
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         basicSetup()
     }
     
-    //  MARK:界面绘制
+    //  MARK: 界面绘制
     func buildUI() {
         self.navigationItem.title = "我的资料"
         
@@ -46,7 +46,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         RGCommonTools.customViewAddBorder(headImageView, width: 1.0, cornerRadius: headImageView.frame.size.width / 2, color: UIColor.clearColor())
     }
     
-    //  MARK:基本设置
+    //  MARK: 基本设置
     func basicSetup() {
         self.tableView.registerNib(UINib(nibName: "ProfileUserInfoCell", bundle: nil),
             forCellReuseIdentifier: UserInfoCellIdentifier)
@@ -57,8 +57,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         stretchView.addGestureRecognizer(tapGR)
     }
     
-    //  MARK:响应方法
-    func tapAction(#sender:UITapGestureRecognizer) {
+    //  MARK: 响应方法
+    func tapAction(sender:UITapGestureRecognizer) {
         println("tap action")
     }
     

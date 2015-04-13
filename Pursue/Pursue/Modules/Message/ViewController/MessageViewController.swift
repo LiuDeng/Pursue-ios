@@ -16,6 +16,7 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         fatalError("init(coder:) has not been implemented")
     }
     
+    //  MARK:初始化
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -44,14 +45,7 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
-    func sessionUpdated(notification: NSNotification){
-        messageListTableView.reloadData()
-    }
-    
-    func toContactListView(sender: AnyObject?){
-        self.navigationController?.pushViewController(ContactListViewController(nibName: "ContactListView", bundle: nil), animated: true)
-    }
-    
+    //  MARK:TableView 代理
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 40
     }
@@ -62,6 +56,15 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         return UITableViewCell()
+    }
+    
+    //  MARK:业务方法
+    func sessionUpdated(notification: NSNotification){
+        messageListTableView.reloadData()
+    }
+    
+    func toContactListView(sender: AnyObject?){
+        self.navigationController?.pushViewController(ContactListViewController(nibName: "ContactListView", bundle: nil), animated: true)
     }
     
 }

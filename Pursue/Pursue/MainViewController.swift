@@ -35,7 +35,7 @@ class MainViewController: UITabBarController {
         
         //我的资料
         var profileBarItem = UITabBarItem(title: "我的资料", image: nil, selectedImage: nil)
-        var profileViewController = UINavigationController(rootViewController: ProfileViewController(nibName: "ProfileView", bundle: nil))
+        var profileViewController = UINavigationController(rootViewController: ProfileViewController(nibName: "ProfileViewController", bundle: nil))
         profileViewController.tabBarItem = profileBarItem
         
         self.viewControllers = [searchViewController, recordViewController, messageViewController, profileViewController]

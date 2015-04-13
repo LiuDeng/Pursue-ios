@@ -16,7 +16,6 @@
 		4A0AE8FB1AB1742F00A637FE /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8E71AB1742F00A637FE /* MessageViewController.swift */; };
 		4A0AE8FC1AB1742F00A637FE /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8E91AB1742F00A637FE /* MessageView.xib */; };
 		4A0AE8FD1AB1742F00A637FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8EC1AB1742F00A637FE /* ProfileViewController.swift */; };
-		4A0AE8FE1AB1742F00A637FE /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8EE1AB1742F00A637FE /* ProfileView.xib */; };
 		4A0AE8FF1AB1742F00A637FE /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F11AB1742F00A637FE /* RecordViewController.swift */; };
 		4A0AE9001AB1742F00A637FE /* RecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F31AB1742F00A637FE /* RecordView.xib */; };
 		4A0AE9021AB1742F00A637FE /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F81AB1742F00A637FE /* SearchView.xib */; };
@@ -50,6 +49,11 @@
 		4A8CB5D31AA5958700BE8F5E /* PursueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */; };
 		4AC56BE31ABACEED002D1598 /* PursueMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC56BE21ABACEED002D1598 /* PursueMessage.swift */; };
 		B7493B6B1AC2162D00BA9790 /* HFStretchableTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7493B6A1AC2162D00BA9790 /* HFStretchableTableHeaderView.m */; };
+		B7D7FDA41AD8B6A300224026 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7FDA21AD8B6A300224026 /* UserInfoViewController.swift */; };
+		B7D7FDA51AD8B6A300224026 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D7FDA31AD8B6A300224026 /* UserInfoViewController.xib */; };
+		B7D7FDA71AD8F9DB00224026 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D7FDA61AD8F9DB00224026 /* ProfileViewController.xib */; };
+		B7D7FDAA1AD8FA2500224026 /* ProfileUserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7FDA81AD8FA2500224026 /* ProfileUserInfoTableViewCell.swift */; };
+		B7D7FDAB1AD8FA2500224026 /* ProfileUserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D7FDA91AD8FA2500224026 /* ProfileUserInfoTableViewCell.xib */; };
 		B7D9B54C1ABBA35A0068B759 /* RGCommonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B54B1ABBA35A0068B759 /* RGCommonTools.swift */; };
 		B86CB0E85FF7DB258B90F316 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9A3A84537473FDBBAD0C7F /* libPods.a */; };
 		F39DEADD1AB34B9D00BED9DA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DEADB1AB34B9D00BED9DA /* SearchViewController.swift */; };
@@ -78,7 +82,6 @@
 		4A0AE8E71AB1742F00A637FE /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		4A0AE8E91AB1742F00A637FE /* MessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
 		4A0AE8EC1AB1742F00A637FE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		4A0AE8EE1AB1742F00A637FE /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		4A0AE8F11AB1742F00A637FE /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		4A0AE8F31AB1742F00A637FE /* RecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordView.xib; sourceTree = "<group>"; };
 		4A0AE8F81AB1742F00A637FE /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
@@ -134,6 +137,11 @@
 		AEA428CCDD7D74DB76D9666D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B7493B691AC2162D00BA9790 /* HFStretchableTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFStretchableTableHeaderView.h; sourceTree = "<group>"; };
 		B7493B6A1AC2162D00BA9790 /* HFStretchableTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFStretchableTableHeaderView.m; sourceTree = "<group>"; };
+		B7D7FDA21AD8B6A300224026 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		B7D7FDA31AD8B6A300224026 /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
+		B7D7FDA61AD8F9DB00224026 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		B7D7FDA81AD8FA2500224026 /* ProfileUserInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		B7D7FDA91AD8FA2500224026 /* ProfileUserInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileUserInfoTableViewCell.xib; sourceTree = "<group>"; };
 		B7D9B54B1ABBA35A0068B759 /* RGCommonTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGCommonTools.swift; sourceTree = "<group>"; };
 		CB9A3A84537473FDBBAD0C7F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CE534FD793BA35B6C43C5E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -252,6 +260,9 @@
 			isa = PBXGroup;
 			children = (
 				4A0AE8EC1AB1742F00A637FE /* ProfileViewController.swift */,
+				B7D7FDA61AD8F9DB00224026 /* ProfileViewController.xib */,
+				B7D7FDA21AD8B6A300224026 /* UserInfoViewController.swift */,
+				B7D7FDA31AD8B6A300224026 /* UserInfoViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -259,7 +270,8 @@
 		4A0AE8ED1AB1742F00A637FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4A0AE8EE1AB1742F00A637FE /* ProfileView.xib */,
+				B7D7FDA81AD8FA2500224026 /* ProfileUserInfoTableViewCell.swift */,
+				B7D7FDA91AD8FA2500224026 /* ProfileUserInfoTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -604,13 +616,15 @@
 			files = (
 				4A0AE9021AB1742F00A637FE /* SearchView.xib in Resources */,
 				4A1707991AB556130030FD27 /* ContactListView.xib in Resources */,
+				B7D7FDAB1AD8FA2500224026 /* ProfileUserInfoTableViewCell.xib in Resources */,
 				4A22FB0F1AC13A6600A855B1 /* profile_blank.png in Resources */,
+				B7D7FDA71AD8F9DB00224026 /* ProfileViewController.xib in Resources */,
 				4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */,
 				4A0AE8FA1AB1742F00A637FE /* FocusView.xib in Resources */,
-				4A0AE8FE1AB1742F00A637FE /* ProfileView.xib in Resources */,
 				4A0AE9001AB1742F00A637FE /* RecordView.xib in Resources */,
 				4A0AE8FC1AB1742F00A637FE /* MessageView.xib in Resources */,
 				4A03480A1ABA61E500D3B7B3 /* ContactDetailView.xib in Resources */,
+				B7D7FDA51AD8B6A300224026 /* UserInfoViewController.xib in Resources */,
 				F39DEADE1AB34B9D00BED9DA /* SearchViewController.xib in Resources */,
 				F39DEAE61AB353F500BED9DA /* AddSearchViewController.xib in Resources */,
 				4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */,
@@ -677,6 +691,7 @@
 				4A0AE8F91AB1742F00A637FE /* FocusViewController.swift in Sources */,
 				4A0AE8DF1AB1742000A637FE /* MainViewController.swift in Sources */,
 				F39DEADD1AB34B9D00BED9DA /* SearchViewController.swift in Sources */,
+				B7D7FDA41AD8B6A300224026 /* UserInfoViewController.swift in Sources */,
 				4A5EE07C1AB6D99B004FA336 /* SessionManager.swift in Sources */,
 				4A0AE8FD1AB1742F00A637FE /* ProfileViewController.swift in Sources */,
 				4A22FB111AC1468A00A855B1 /* RemoteObjectDefined.swift in Sources */,
@@ -689,6 +704,7 @@
 				4A1707971AB555EE0030FD27 /* ContactListViewController.swift in Sources */,
 				4AC56BE31ABACEED002D1598 /* PursueMessage.swift in Sources */,
 				F39DEAE51AB353F500BED9DA /* AddSearchViewController.swift in Sources */,
+				B7D7FDAA1AD8FA2500224026 /* ProfileUserInfoTableViewCell.swift in Sources */,
 				4A0AE8FB1AB1742F00A637FE /* MessageViewController.swift in Sources */,
 				4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */,
 				4A22FB071AC1355F00A855B1 /* ChatRoomViewModel.swift in Sources */,

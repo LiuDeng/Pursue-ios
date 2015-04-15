@@ -117,8 +117,6 @@
 		4A22FB0E1AC13A6600A855B1 /* profile_blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_blank.png; sourceTree = "<group>"; };
 		4A22FB101AC1468A00A855B1 /* RemoteObjectDefined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteObjectDefined.swift; sourceTree = "<group>"; };
 		4A2E77521AB6C35300A46F45 /* PursueDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PursueDatabase.swift; sourceTree = "<group>"; };
-		4A32610C1AB009D1009E705F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		4A32610E1AB009DB009E705F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		4A3261101AB00A19009E705F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4A5EE0771AB6C680004FA336 /* PursueIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PursueIO.swift; sourceTree = "<group>"; };
 		4A5EE07B1AB6D99B004FA336 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
@@ -525,8 +523,6 @@
 			isa = PBXGroup;
 			children = (
 				4A3261101AB00A19009E705F /* Security.framework */,
-				4A32610E1AB009DB009E705F /* Crashlytics.framework */,
-				4A32610C1AB009D1009E705F /* Fabric.framework */,
 				CB9A3A84537473FDBBAD0C7F /* libPods.a */,
 			);
 			name = Frameworks;

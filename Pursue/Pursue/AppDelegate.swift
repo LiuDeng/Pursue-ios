@@ -7,8 +7,6 @@
 //
 
 import UIKit
-//import Fabric
-//import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,8 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AVOSCloud.setApplicationId(CommonConfig.AVOSCloudApplicationId, clientKey: CommonConfig.AVOSCloudKey)
 
         toMainView()
-        
-//        Fabric.with([Crashlytics()])
         
         
         //注册消息推送

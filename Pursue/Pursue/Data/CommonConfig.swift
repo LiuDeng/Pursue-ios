@@ -19,5 +19,5 @@ class CommonConfig {
     static var FaceppSecret = "sTjfmhNwDPXLFc_jcvKzuzRzvZb9rCBe"
     
     
-    
+    static var BaseColor = UIColor(red: 58.0 / 255.0, green: 160.0 / 255.0, blue: 1.0, alpha: 1.0)
 }

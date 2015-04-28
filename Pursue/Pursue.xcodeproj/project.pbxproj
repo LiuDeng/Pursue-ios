@@ -16,6 +16,9 @@
 		4A00FE821AEF0D200047C6ED /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE771AEF0D200047C6ED /* search.png */; };
 		4A00FE831AEF0D200047C6ED /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE781AEF0D200047C6ED /* search@2x.png */; };
 		4A00FE841AEF0D200047C6ED /* profile_blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE7B1AEF0D200047C6ED /* profile_blank.png */; };
+		4A00FE891AEF4C110047C6ED /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE861AEF4C110047C6ED /* logo.png */; };
+		4A00FE8A1AEF4C110047C6ED /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE871AEF4C110047C6ED /* logo@2x.png */; };
+		4A00FE8B1AEF4C110047C6ED /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE881AEF4C110047C6ED /* logo@3x.png */; };
 		4A0348061ABA5C5A00D3B7B3 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0348051ABA5C5A00D3B7B3 /* ContactDetailViewController.swift */; };
 		4A0348081ABA5CAD00D3B7B3 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0348071ABA5CAD00D3B7B3 /* ChatRoomViewController.swift */; };
 		4A03480A1ABA61E500D3B7B3 /* ContactDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0348091ABA61E500D3B7B3 /* ContactDetailView.xib */; };
@@ -90,6 +93,9 @@
 		4A00FE771AEF0D200047C6ED /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		4A00FE781AEF0D200047C6ED /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
 		4A00FE7B1AEF0D200047C6ED /* profile_blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_blank.png; sourceTree = "<group>"; };
+		4A00FE861AEF4C110047C6ED /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		4A00FE871AEF4C110047C6ED /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		4A00FE881AEF4C110047C6ED /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
 		4A0348051ABA5C5A00D3B7B3 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		4A0348071ABA5CAD00D3B7B3 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		4A0348091ABA61E500D3B7B3 /* ContactDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactDetailView.xib; sourceTree = "<group>"; };
@@ -203,6 +209,9 @@
 		4A00FE701AEF0D200047C6ED /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				4A00FE861AEF4C110047C6ED /* logo.png */,
+				4A00FE871AEF4C110047C6ED /* logo@2x.png */,
+				4A00FE881AEF4C110047C6ED /* logo@3x.png */,
 				4A00FE711AEF0D200047C6ED /* message.png */,
 				4A00FE721AEF0D200047C6ED /* message@2x.png */,
 				4A00FE731AEF0D200047C6ED /* profile.png */,
@@ -667,6 +676,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A0AE9021AB1742F00A637FE /* SearchView.xib in Resources */,
+				4A00FE8A1AEF4C110047C6ED /* logo@2x.png in Resources */,
+				4A00FE891AEF4C110047C6ED /* logo.png in Resources */,
+				4A00FE8B1AEF4C110047C6ED /* logo@3x.png in Resources */,
 				4A00FE811AEF0D200047C6ED /* record@2x.png in Resources */,
 				4A00FE821AEF0D200047C6ED /* search.png in Resources */,
 				4A00FE801AEF0D200047C6ED /* record.png in Resources */,

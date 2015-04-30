@@ -11,15 +11,12 @@ import Foundation
 class ChatRoomViewModel{
     
     var isLoading: Bool = false
+    var sender: PursueUser
     var users = [PursueUser]()
-    var messages = [PursueMessage]()
+    var messages = [ChatMessage]()
     
-    //头像
-    var avatars = Dictionary<String, JSQMessagesAvatarImage>()
-    var blankAvatarImage: JSQMessagesAvatarImage!
-    
-    init(){
-        blankAvatarImage = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "profile_blank"), diameter: 30)
+    init(sender: PursueUser){
+        self.sender = sender
     }
     
     /**
@@ -48,10 +45,11 @@ class ChatRoomViewModel{
     :param: message 消息对象
     :param: block   回调
     */
-    func saveMessage(message: PursueMessage, block: (success: Bool, error: NSError!)->()){
+    func saveMessage(message: ChatMessage, block: (success: Bool, error: NSError!)->()){
         var avObject = AVObject(className: RemoteObjectDefined.ChatMessage)
         avObject.setObject(message.text(), forKey: "content")
         avObject.setObject(message.senderId(), forKey: "senderId")
+        avObject.setObject("\(message.date())", forKey: "createdAt")
         avObject.saveInBackgroundWithBlock(block)
     }
 }

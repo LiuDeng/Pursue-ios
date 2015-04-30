@@ -10,7 +10,7 @@ import Foundation
 
 class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSource, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var chatRoomViewModel = ChatRoomViewModel()
+    var chatRoomViewModel = ChatRoomViewModel(sender: Current.User)
     
     var timer: NSTimer = NSTimer()
     
@@ -31,11 +31,11 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
         self.senderId = user.userName
         self.senderDisplayName = user.userName
         
-        outgoingBubbleImage = bubbleFactory.outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleBlueColor())
-        incomingBubbleImage = bubbleFactory.incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleLightGrayColor())
+        outgoingBubbleImage = bubbleFactory.outgoingMessagesBubbleImageWithColor(Theme.ForegroundColor)
+        incomingBubbleImage = bubbleFactory.incomingMessagesBubbleImageWithColor(Theme.BackgroundColor)
         
         chatRoomViewModel.isLoading = false
-        chatRoomViewModel.loadMessagesWithBlock(loadedMessage)
+        loadMessages()
         
         //        Messages.clearMessageCounter(groupId);
     }
@@ -61,7 +61,7 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
     func loadedMessage(objects: [AnyObject]!, error: NSError!){
         if error == nil {
             self.automaticallyScrollsToMostRecentMessage = false
-            for object in (objects as! [AVObject]!).reverse() {
+            for object in (objects as! [AVObject]!) {
                 self.addMessage(object)
             }
             if objects.count > 0 {
@@ -72,19 +72,16 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
         } else {
             println("Network error")
         }
-
     }
     
     func addMessage(object: AVObject) {
-        var message = PursueMessage(text: (object.objectForKey("content") as! String), senderId: "222222", senderDisplayName: "Luce", isMediaMessage: false)
+        var message = ChatMessage(text: (object.objectForKey("content") as! String), senderId: (object.objectForKey("senderId") as! String),senderDisplayName: "Luce")
         
 //        var user = object[PF_CHAT_USER] as PFUser
 //        var name = user[PF_USER_FULLNAME] as String
 //        
 //        var videoFile = object[PF_CHAT_VIDEO] as? PFFile
 //        var pictureFile = object[PF_CHAT_PICTURE] as? PFFile
-        
-        var name = "111111"
         
         var videoFile: AVFile? = nil
         var pictureFile: AVFile? = nil
@@ -115,7 +112,7 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
         chatRoomViewModel.messages.append(message)
     }
     
-    func sendMessage(var text: String, video: NSURL?, picture: UIImage?) {
+    func sendMessage(receiveId: String, text: String, video: NSURL?, picture: UIImage?) {
 //        var videoFile: PFFile!
 //        var pictureFile: PFFile!
 //        
@@ -162,10 +159,10 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
 //        PushNotication.sendPushNotification(groupId, text: text)
 //        Messages.updateMessageCounter(groupId, lastMessage: text)
         
-        var message = PursueMessage(text: text, senderId: Current.User.userName, senderDisplayName: "Luce", isMediaMessage: false)
+        var message = ChatMessage(text: text, senderId: Current.User.userName, senderDisplayName: "Luce")
         chatRoomViewModel.users.append(Current.User)
+        self.chatRoomViewModel.messages.append(message)
         chatRoomViewModel.saveMessage(message, block: { (success, error) -> () in
-            self.chatRoomViewModel.messages.append(message)
             self.loadMessages()
             self.finishSendingMessage()
         })
@@ -174,12 +171,12 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
     // MARK: - JSQMessagesViewController method overrides
     
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
-        self.sendMessage(text, video: nil, picture: nil)
+        self.sendMessage("222222", text: text, video: nil, picture: nil)
     }
     
     override func didPressAccessoryButton(sender: UIButton!) {
-        var action = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Take photo", "Choose existing photo", "Choose existing video")
-        action.showInView(self.view)
+//        var action = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Take photo", "Choose existing photo", "Choose existing video")
+//        action.showInView(self.view)
     }
     
     // MARK: - JSQMessages CollectionView DataSource
@@ -198,18 +195,7 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
         var user = chatRoomViewModel.users[indexPath.item]
-        if chatRoomViewModel.avatars[user.userName] == nil {
-//            var thumbnailFile = user[PF_USER_THUMBNAIL] as? PFFile
-//            thumbnailFile?.getDataInBackgroundWithBlock({ (imageData: NSData!, error: NSError!) -> Void in
-//                if error == nil {
-//                    self.avatars[user.objectId as String] = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(data: imageData), diameter: 30)
-//                    self.collectionView.reloadData()
-//                }
-//            })
-            return chatRoomViewModel.blankAvatarImage
-        } else {
-            return chatRoomViewModel.avatars[user.userName]
-        }
+        return user.avatar
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, attributedTextForCellTopLabelAtIndexPath indexPath: NSIndexPath!) -> NSAttributedString! {
@@ -331,7 +317,7 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
         var video = info[UIImagePickerControllerMediaURL] as? NSURL
         var picture = info[UIImagePickerControllerEditedImage] as? UIImage
         
-        self.sendMessage("", video: video, picture: picture)
+        self.sendMessage("222222", text: "", video: video, picture: picture)
         
         picker.dismissViewControllerAnimated(true, completion: nil)
     }

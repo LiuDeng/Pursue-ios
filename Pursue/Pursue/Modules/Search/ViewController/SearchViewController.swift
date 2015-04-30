@@ -15,7 +15,7 @@ class SearchViewController: UIViewController {
     {
         super.viewDidLoad();
 
-        var rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Compose,target: self, action:"rightBarButtonPressed:");
+        var rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "pen"), style: UIBarButtonItemStyle.Done,target: self, action:"rightBarButtonPressed:");
         
         self.navigationItem.rightBarButtonItem = rightBarButtonItem;
         

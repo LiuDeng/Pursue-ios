@@ -24,10 +24,9 @@ class SessionManager:NSObject, AVSessionDelegate, AVSignatureDelegate, AVGroupDe
     }
     
     var session: AVSession
-    var chatRooms: NSMutableArray
+    var chatRooms = [ChatRoom]()
     
     private override init(){
-        chatRooms = NSMutableArray()
         session = AVSession()
         super.init()
         
@@ -51,9 +50,9 @@ class SessionManager:NSObject, AVSessionDelegate, AVSignatureDelegate, AVGroupDe
             var type = results.intForColumn("type").hashValue
             var otherId = results.stringForColumn("other_id")
             
-            var dic = NSMutableDictionary()
-            dic.setObject(type, forKey: "type")
-            dic.setObject(otherId, forKey: "otherId")
+            var dic = ChatRoom()
+//            dic.setObject(type, forKey: "type")
+//            dic.setObject(otherId, forKey: "otherId")
             
             if (type == ChatRoomType.Single.rawValue) {
                 peerIds.addObject(otherId)
@@ -63,7 +62,7 @@ class SessionManager:NSObject, AVSessionDelegate, AVSignatureDelegate, AVGroupDe
                 group.join()
             }
             
-            chatRooms.addObject(dic)
+            chatRooms.append(dic)
         }
         
         session.watchPeerIds(peerIds as [AnyObject], callback: { (success, error) -> Void in

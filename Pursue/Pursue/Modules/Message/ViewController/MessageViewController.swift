@@ -25,7 +25,7 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         self.title = "消息"
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "联系人", style: UIBarButtonItemStyle.Done, target: self, action: "toContactListView:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "contact"), style: UIBarButtonItemStyle.Done, target: self, action: "toContactListView:")
         
         messageListTableView.delegate = self
         messageListTableView.dataSource = self

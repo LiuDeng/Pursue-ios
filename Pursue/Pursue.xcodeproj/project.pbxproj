@@ -19,6 +19,15 @@
 		4A00FE891AEF4C110047C6ED /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE861AEF4C110047C6ED /* logo.png */; };
 		4A00FE8A1AEF4C110047C6ED /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE871AEF4C110047C6ED /* logo@2x.png */; };
 		4A00FE8B1AEF4C110047C6ED /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE881AEF4C110047C6ED /* logo@3x.png */; };
+		4A00FE8D1AF1F29B0047C6ED /* contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE8C1AF1F29B0047C6ED /* contact.png */; };
+		4A00FE8F1AF1F4230047C6ED /* contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE8E1AF1F4230047C6ED /* contact@2x.png */; };
+		4A00FE921AF1F54C0047C6ED /* pen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE901AF1F54C0047C6ED /* pen.png */; };
+		4A00FE931AF1F54C0047C6ED /* pen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE911AF1F54C0047C6ED /* pen@2x.png */; };
+		4A00FE951AF1F5F20047C6ED /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A00FE941AF1F5F20047C6ED /* Theme.swift */; };
+		4A00FE981AF1F97E0047C6ED /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE961AF1F97E0047C6ED /* back.png */; };
+		4A00FE991AF1F97E0047C6ED /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE971AF1F97E0047C6ED /* back@2x.png */; };
+		4A00FE9B1AF1FB620047C6ED /* TableCellWithArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A00FE9A1AF1FB620047C6ED /* TableCellWithArrow.swift */; };
+		4A00FE9F1AF22A5C0047C6ED /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A00FE9E1AF22A5C0047C6ED /* ChatRoom.swift */; };
 		4A0348061ABA5C5A00D3B7B3 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0348051ABA5C5A00D3B7B3 /* ContactDetailViewController.swift */; };
 		4A0348081ABA5CAD00D3B7B3 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0348071ABA5CAD00D3B7B3 /* ChatRoomViewController.swift */; };
 		4A03480A1ABA61E500D3B7B3 /* ContactDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0348091ABA61E500D3B7B3 /* ContactDetailView.xib */; };
@@ -58,7 +67,7 @@
 		4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C31AA5958700BE8F5E /* Images.xcassets */; };
 		4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C51AA5958700BE8F5E /* LaunchScreen.xib */; };
 		4A8CB5D31AA5958700BE8F5E /* PursueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */; };
-		4AC56BE31ABACEED002D1598 /* PursueMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC56BE21ABACEED002D1598 /* PursueMessage.swift */; };
+		4AC56BE31ABACEED002D1598 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC56BE21ABACEED002D1598 /* ChatMessage.swift */; };
 		B7493B6B1AC2162D00BA9790 /* HFStretchableTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7493B6A1AC2162D00BA9790 /* HFStretchableTableHeaderView.m */; };
 		B7D7FDA41AD8B6A300224026 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7FDA21AD8B6A300224026 /* UserInfoViewController.swift */; };
 		B7D7FDA51AD8B6A300224026 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D7FDA31AD8B6A300224026 /* UserInfoViewController.xib */; };
@@ -96,6 +105,15 @@
 		4A00FE861AEF4C110047C6ED /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		4A00FE871AEF4C110047C6ED /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		4A00FE881AEF4C110047C6ED /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
+		4A00FE8C1AF1F29B0047C6ED /* contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact.png; sourceTree = "<group>"; };
+		4A00FE8E1AF1F4230047C6ED /* contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact@2x.png"; sourceTree = "<group>"; };
+		4A00FE901AF1F54C0047C6ED /* pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen.png; sourceTree = "<group>"; };
+		4A00FE911AF1F54C0047C6ED /* pen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pen@2x.png"; sourceTree = "<group>"; };
+		4A00FE941AF1F5F20047C6ED /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		4A00FE961AF1F97E0047C6ED /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		4A00FE971AF1F97E0047C6ED /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		4A00FE9A1AF1FB620047C6ED /* TableCellWithArrow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellWithArrow.swift; sourceTree = "<group>"; };
+		4A00FE9E1AF22A5C0047C6ED /* ChatRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		4A0348051ABA5C5A00D3B7B3 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		4A0348071ABA5CAD00D3B7B3 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		4A0348091ABA61E500D3B7B3 /* ContactDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactDetailView.xib; sourceTree = "<group>"; };
@@ -153,7 +171,7 @@
 		4A8CB5D11AA5958700BE8F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PursueTests.swift; sourceTree = "<group>"; };
 		4A8CB5DC1AA5999700BE8F5E /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		4AC56BE21ABACEED002D1598 /* PursueMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PursueMessage.swift; sourceTree = "<group>"; };
+		4AC56BE21ABACEED002D1598 /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		AEA428CCDD7D74DB76D9666D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B7493B691AC2162D00BA9790 /* HFStretchableTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFStretchableTableHeaderView.h; sourceTree = "<group>"; };
 		B7493B6A1AC2162D00BA9790 /* HFStretchableTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFStretchableTableHeaderView.m; sourceTree = "<group>"; };
@@ -199,16 +217,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		4A00FE6F1AEF0D200047C6ED /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Buttons;
-			sourceTree = "<group>";
-		};
 		4A00FE701AEF0D200047C6ED /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				4A00FE961AF1F97E0047C6ED /* back.png */,
+				4A00FE971AF1F97E0047C6ED /* back@2x.png */,
+				4A00FE901AF1F54C0047C6ED /* pen.png */,
+				4A00FE911AF1F54C0047C6ED /* pen@2x.png */,
+				4A00FE8E1AF1F4230047C6ED /* contact@2x.png */,
+				4A00FE8C1AF1F29B0047C6ED /* contact.png */,
 				4A00FE861AEF4C110047C6ED /* logo.png */,
 				4A00FE871AEF4C110047C6ED /* logo@2x.png */,
 				4A00FE881AEF4C110047C6ED /* logo@3x.png */,
@@ -463,6 +480,7 @@
 				4A5EE0771AB6C680004FA336 /* PursueIO.swift */,
 				4A681CD01AB96DEA00B68611 /* Current.swift */,
 				4A22FB101AC1468A00A855B1 /* RemoteObjectDefined.swift */,
+				4A00FE941AF1F5F20047C6ED /* Theme.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -478,7 +496,6 @@
 		4A22FB0D1AC13A6600A855B1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4A00FE6F1AEF0D200047C6ED /* Buttons */,
 				4A00FE701AEF0D200047C6ED /* Icons */,
 				4A00FE791AEF0D200047C6ED /* Layout */,
 				4A00FE7A1AEF0D200047C6ED /* Placeholder */,
@@ -490,8 +507,9 @@
 			isa = PBXGroup;
 			children = (
 				4A5EE07B1AB6D99B004FA336 /* SessionManager.swift */,
+				4A00FE9E1AF22A5C0047C6ED /* ChatRoom.swift */,
+				4AC56BE21ABACEED002D1598 /* ChatMessage.swift */,
 				4A681CCE1AB96D3F00B68611 /* ContactViewModel.swift */,
-				4AC56BE21ABACEED002D1598 /* PursueMessage.swift */,
 				4A22FB061AC1355F00A855B1 /* ChatRoomViewModel.swift */,
 			);
 			path = Core;
@@ -563,6 +581,7 @@
 		4AA2FAE21AB1527F00146CC6 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				4A00FE9A1AF1FB620047C6ED /* TableCellWithArrow.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -675,6 +694,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A00FE931AF1F54C0047C6ED /* pen@2x.png in Resources */,
 				4A0AE9021AB1742F00A637FE /* SearchView.xib in Resources */,
 				4A00FE8A1AEF4C110047C6ED /* logo@2x.png in Resources */,
 				4A00FE891AEF4C110047C6ED /* logo.png in Resources */,
@@ -684,19 +704,24 @@
 				4A00FE801AEF0D200047C6ED /* record.png in Resources */,
 				4A1707991AB556130030FD27 /* ContactListView.xib in Resources */,
 				B7D7FDAB1AD8FA2500224026 /* ProfileUserInfoTableViewCell.xib in Resources */,
+				4A00FE991AF1F97E0047C6ED /* back@2x.png in Resources */,
+				4A00FE921AF1F54C0047C6ED /* pen.png in Resources */,
 				4A00FE7D1AEF0D200047C6ED /* message@2x.png in Resources */,
 				4A00FE7E1AEF0D200047C6ED /* profile.png in Resources */,
 				4A00FE831AEF0D200047C6ED /* search@2x.png in Resources */,
 				B7D7FDA71AD8F9DB00224026 /* ProfileViewController.xib in Resources */,
+				4A00FE8F1AF1F4230047C6ED /* contact@2x.png in Resources */,
 				4A00FE841AEF0D200047C6ED /* profile_blank.png in Resources */,
 				4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */,
 				4A0AE8FA1AB1742F00A637FE /* FocusView.xib in Resources */,
+				4A00FE8D1AF1F29B0047C6ED /* contact.png in Resources */,
 				4A00FE7F1AEF0D200047C6ED /* profile@2x.png in Resources */,
 				4A00FE7C1AEF0D200047C6ED /* message.png in Resources */,
 				4A0AE9001AB1742F00A637FE /* RecordView.xib in Resources */,
 				4A0AE8FC1AB1742F00A637FE /* MessageView.xib in Resources */,
 				4A03480A1ABA61E500D3B7B3 /* ContactDetailView.xib in Resources */,
 				B7D7FDA51AD8B6A300224026 /* UserInfoViewController.xib in Resources */,
+				4A00FE981AF1F97E0047C6ED /* back.png in Resources */,
 				F39DEADE1AB34B9D00BED9DA /* SearchViewController.xib in Resources */,
 				F39DEAE61AB353F500BED9DA /* AddSearchViewController.xib in Resources */,
 				4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */,
@@ -753,6 +778,7 @@
 				4A1B77C61AAFFD4F008BF9A4 /* FaceppGroup.m in Sources */,
 				4A8CB5BD1AA5958700BE8F5E /* AppDelegate.swift in Sources */,
 				4A1B77CC1AAFFD4F008BF9A4 /* FaceppError.m in Sources */,
+				4A00FE9B1AF1FB620047C6ED /* TableCellWithArrow.swift in Sources */,
 				4A1B77C71AAFFD4F008BF9A4 /* FaceppGrouping.m in Sources */,
 				B7493B6B1AC2162D00BA9790 /* HFStretchableTableHeaderView.m in Sources */,
 				4A1B77C51AAFFD4F008BF9A4 /* FaceppFaceset.m in Sources */,
@@ -763,6 +789,7 @@
 				4A0AE8F91AB1742F00A637FE /* FocusViewController.swift in Sources */,
 				4A0AE8DF1AB1742000A637FE /* MainViewController.swift in Sources */,
 				F39DEADD1AB34B9D00BED9DA /* SearchViewController.swift in Sources */,
+				4A00FE951AF1F5F20047C6ED /* Theme.swift in Sources */,
 				B7D7FDA41AD8B6A300224026 /* UserInfoViewController.swift in Sources */,
 				4A5EE07C1AB6D99B004FA336 /* SessionManager.swift in Sources */,
 				4A0AE8FD1AB1742F00A637FE /* ProfileViewController.swift in Sources */,
@@ -774,7 +801,7 @@
 				4A1B77CB1AAFFD4F008BF9A4 /* FaceppTrainer.m in Sources */,
 				B7D9B54C1ABBA35A0068B759 /* RGCommonTools.swift in Sources */,
 				4A1707971AB555EE0030FD27 /* ContactListViewController.swift in Sources */,
-				4AC56BE31ABACEED002D1598 /* PursueMessage.swift in Sources */,
+				4AC56BE31ABACEED002D1598 /* ChatMessage.swift in Sources */,
 				F39DEAE51AB353F500BED9DA /* AddSearchViewController.swift in Sources */,
 				B7D7FDAA1AD8FA2500224026 /* ProfileUserInfoTableViewCell.swift in Sources */,
 				4A0AE8FB1AB1742F00A637FE /* MessageViewController.swift in Sources */,
@@ -786,6 +813,7 @@
 				4A1B77CA1AAFFD4F008BF9A4 /* FaceppRecognition.m in Sources */,
 				4A1B77C91AAFFD4F008BF9A4 /* FaceppPerson.m in Sources */,
 				4A681CD11AB96DEA00B68611 /* Current.swift in Sources */,
+				4A00FE9F1AF22A5C0047C6ED /* ChatRoom.swift in Sources */,
 				4A0348061ABA5C5A00D3B7B3 /* ContactDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

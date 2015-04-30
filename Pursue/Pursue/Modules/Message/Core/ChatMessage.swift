@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PursueMessage : NSObject, JSQMessageData {
+class ChatMessage : NSObject, JSQMessageData {
     var _text : String
     var _senderId : String
     var _senderDisplayName : String
@@ -17,16 +17,12 @@ class PursueMessage : NSObject, JSQMessageData {
     
     var _imageUrl : String?
     
-    convenience init(text: String?, senderId: String?, senderDisplayName : String?, isMediaMessage : Bool) {
-        self.init(text: text, senderId: senderId, senderDisplayName: senderDisplayName,  isMediaMessage : isMediaMessage, imageUrl: nil)
-    }
-    
-    init(text: String?, senderId: String?, senderDisplayName : String?, isMediaMessage : Bool, imageUrl: String?) {
+    init(text: String?, senderId: String, senderDisplayName : String, isMediaMessage : Bool = false, imageUrl: String? = nil) {
         self._text = text!
-        self._senderId = senderId!
+        self._senderId = senderId
         self._date = NSDate()
         self._imageUrl = imageUrl
-        self._senderDisplayName = senderDisplayName!
+        self._senderDisplayName = senderDisplayName
         self._isMediaMessage = isMediaMessage
         
     }

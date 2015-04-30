@@ -43,14 +43,14 @@ class MainViewController: UITabBarController {
         profileViewController.tabBarItem = profileBarItem
         
         self.viewControllers = [searchViewController, recordViewController, messageViewController, profileViewController]
-        self.tabBar.tintColor = CommonConfig.BaseColor
+        self.tabBar.tintColor = Theme.ForegroundColor
     }
     
     func setNavigationBarStyle(bar: UINavigationBar){
         //标题样式
         var titleAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         
-        bar.barTintColor = CommonConfig.BaseColor
+        bar.barTintColor = Theme.ForegroundColor
         bar.tintColor = UIColor.whiteColor()
         bar.titleTextAttributes = titleAttributes
     }

@@ -21,6 +21,8 @@ class PursueUser: NSObject {
         }
     }
     
+    var avatar: JSQMessagesAvatarImage = JSQMessagesAvatarImageFactory.avatarImageWithImage(UIImage(named: "profile_blank"), diameter: 30)
+    
     override init(){
         super.init()
     }

@@ -14,9 +14,14 @@ class ChatRoomViewModel{
     var sender: PursueUser
     var users = [PursueUser]()
     var messages = [ChatMessage]()
+    var chatRoom: ChatRoom
     
-    init(sender: PursueUser){
-        self.sender = sender
+    init(chatRoom: ChatRoom ){
+        self.chatRoom = chatRoom
+        self.chatRoom.save { (success, error) -> () in
+            println("保存成功")
+        }
+        self.sender = Current.User
     }
     
     /**
@@ -37,19 +42,5 @@ class ChatRoomViewModel{
                 self.isLoading = false
             })
         }
-    }
-    
-    /**
-    保存消息
-    
-    :param: message 消息对象
-    :param: block   回调
-    */
-    func saveMessage(message: ChatMessage, block: (success: Bool, error: NSError!)->()){
-        var avObject = AVObject(className: RemoteObjectDefined.ChatMessage)
-        avObject.setObject(message.text(), forKey: "content")
-        avObject.setObject(message.senderId(), forKey: "senderId")
-        avObject.setObject("\(message.date())", forKey: "createdAt")
-        avObject.saveInBackgroundWithBlock(block)
     }
 }

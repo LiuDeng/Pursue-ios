@@ -10,7 +10,7 @@ import Foundation
 
 class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSource, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var chatRoomViewModel = ChatRoomViewModel(sender: Current.User)
+    var chatRoomViewModel = ChatRoomViewModel(chatRoom: ChatRoom(from: Current.User, to: PursueUser(userName: "222222")))
     
     var timer: NSTimer = NSTimer()
     
@@ -27,12 +27,12 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var user = Current.User
-        self.senderId = user.userName
-        self.senderDisplayName = user.userName
+        self.senderId = Current.User.userName
+        self.senderDisplayName = Current.User.userName
         
         outgoingBubbleImage = bubbleFactory.outgoingMessagesBubbleImageWithColor(Theme.ForegroundColor)
-        incomingBubbleImage = bubbleFactory.incomingMessagesBubbleImageWithColor(Theme.BackgroundColor)
+        incomingBubbleImage = bubbleFactory.incomingMessagesBubbleImageWithColor(Theme.ContentBackgroundColor)
+        collectionView.backgroundColor = Theme.BackgroundColor
         
         chatRoomViewModel.isLoading = false
         loadMessages()
@@ -162,7 +162,7 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
         var message = ChatMessage(text: text, senderId: Current.User.userName, senderDisplayName: "Luce")
         chatRoomViewModel.users.append(Current.User)
         self.chatRoomViewModel.messages.append(message)
-        chatRoomViewModel.saveMessage(message, block: { (success, error) -> () in
+        message.save({ (success, error) -> () in
             self.loadMessages()
             self.finishSendingMessage()
         })
@@ -175,8 +175,8 @@ class ChatRoomViewController: JSQMessagesViewController, UICollectionViewDataSou
     }
     
     override func didPressAccessoryButton(sender: UIButton!) {
-//        var action = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Take photo", "Choose existing photo", "Choose existing video")
-//        action.showInView(self.view)
+        var action = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Take photo", "Choose existing photo", "Choose existing video")
+        action.showInView(self.view)
     }
     
     // MARK: - JSQMessages CollectionView DataSource

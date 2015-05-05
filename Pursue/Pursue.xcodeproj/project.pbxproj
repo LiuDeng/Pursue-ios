@@ -28,6 +28,7 @@
 		4A00FE991AF1F97E0047C6ED /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A00FE971AF1F97E0047C6ED /* back@2x.png */; };
 		4A00FE9B1AF1FB620047C6ED /* TableCellWithArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A00FE9A1AF1FB620047C6ED /* TableCellWithArrow.swift */; };
 		4A00FE9F1AF22A5C0047C6ED /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A00FE9E1AF22A5C0047C6ED /* ChatRoom.swift */; };
+		4A00FEA11AF6F0EF0047C6ED /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A00FEA01AF6F0EF0047C6ED /* ChatUser.swift */; };
 		4A0348061ABA5C5A00D3B7B3 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0348051ABA5C5A00D3B7B3 /* ContactDetailViewController.swift */; };
 		4A0348081ABA5CAD00D3B7B3 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0348071ABA5CAD00D3B7B3 /* ChatRoomViewController.swift */; };
 		4A03480A1ABA61E500D3B7B3 /* ContactDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0348091ABA61E500D3B7B3 /* ContactDetailView.xib */; };
@@ -114,6 +115,7 @@
 		4A00FE971AF1F97E0047C6ED /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		4A00FE9A1AF1FB620047C6ED /* TableCellWithArrow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellWithArrow.swift; sourceTree = "<group>"; };
 		4A00FE9E1AF22A5C0047C6ED /* ChatRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
+		4A00FEA01AF6F0EF0047C6ED /* ChatUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		4A0348051ABA5C5A00D3B7B3 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		4A0348071ABA5CAD00D3B7B3 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		4A0348091ABA61E500D3B7B3 /* ContactDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactDetailView.xib; sourceTree = "<group>"; };
@@ -507,6 +509,7 @@
 			isa = PBXGroup;
 			children = (
 				4A5EE07B1AB6D99B004FA336 /* SessionManager.swift */,
+				4A00FEA01AF6F0EF0047C6ED /* ChatUser.swift */,
 				4A00FE9E1AF22A5C0047C6ED /* ChatRoom.swift */,
 				4AC56BE21ABACEED002D1598 /* ChatMessage.swift */,
 				4A681CCE1AB96D3F00B68611 /* ContactViewModel.swift */,
@@ -805,6 +808,7 @@
 				F39DEAE51AB353F500BED9DA /* AddSearchViewController.swift in Sources */,
 				B7D7FDAA1AD8FA2500224026 /* ProfileUserInfoTableViewCell.swift in Sources */,
 				4A0AE8FB1AB1742F00A637FE /* MessageViewController.swift in Sources */,
+				4A00FEA11AF6F0EF0047C6ED /* ChatUser.swift in Sources */,
 				4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */,
 				4A22FB071AC1355F00A855B1 /* ChatRoomViewModel.swift in Sources */,
 				4A1B77C31AAFFD4F008BF9A4 /* FaceppClient.m in Sources */,

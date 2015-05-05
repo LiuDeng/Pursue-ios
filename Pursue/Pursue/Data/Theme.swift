@@ -19,4 +19,9 @@ class Theme{
     *  默认主前景色
     */
     static var ForegroundColor = UIColor(red: 58.0 / 255.0, green: 160.0 / 255.0, blue: 1.0, alpha: 1.0)
+    
+    /**
+    *  内容背景色
+    */
+    static var ContentBackgroundColor = UIColor.whiteColor()
 }

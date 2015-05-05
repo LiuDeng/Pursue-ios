@@ -50,4 +50,18 @@ class ChatMessage : NSObject, JSQMessageData {
     func messageHash() -> UInt {
         return UInt(super.hash)
     }
+    
+    
+    /**
+    保存消息
+    
+    :param: message 消息对象
+    :param: block   回调
+    */
+    func save(block: (success: Bool, error: NSError!)->()){
+        var avObject = AVObject(className: RemoteObjectDefined.ChatMessage)
+        avObject.setObject(text(), forKey: "content")
+        avObject.setObject(senderId(), forKey: "senderId")
+        avObject.saveInBackgroundWithBlock(block)
+    }
 }

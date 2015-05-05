@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         AVOSCloud.setApplicationId(CommonConfig.AVOSCloudApplicationId, clientKey: CommonConfig.AVOSCloudKey)
-
+        var user = Current.User
         toMainView()
         
         

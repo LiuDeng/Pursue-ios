@@ -7,6 +7,7 @@
 //
 
 #import "FaceppAPI.h"
+#import "HFStretchableTableHeaderView.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import <SSKeychain/SSKeychain.h>
 #import <TMCache/TMCache.h>
@@ -15,4 +16,3 @@
 #import <FMDBHelpers/FMDBHelpers.h>
 #import <JSQMessagesViewController/JSQMessages.h>
 #import <JSQSystemSoundPlayer/JSQSystemSoundPlayer.h>
-#import "HFStretchableTableHeaderView.h"

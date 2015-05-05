@@ -32,28 +32,48 @@ class PursueUser: NSObject {
         avUser = user
     }
     
+    init(userName: String){
+        super.init()
+        avUser = loadUser(userName)
+    }
+    
+    func loadUser(userName: String) -> AVUser?{
+        var query = AVUser.query()
+        query.whereKey("username", equalTo: userName)
+        var user = query.getFirstObject()
+        return user as? AVUser
+    }
+    
     
     /**
-    基于 UUID 创建一个未注册认证的用户
-    
-    :returns: PursueUser
+    加载用户
     */
-    func initUnregisteredUser(){
-        
+    func initUser(){
         if(AVUser.currentUser() == nil){
-            var userName: AnyObject? = TMCache.sharedCache().objectForKey("CurrentUserName")
-            if(userName == nil){
-                userName = "111111"
-            }
-            
-            var password = SSKeychain.passwordForService("PursueUser", account: userName as! String)
-            if(password == nil){
-                password = "111111"
-            }
-            login(userName as! String, password: password)
+            loginWithAnonymous()
         }else{
             avUser = AVUser.currentUser()
             println(avUser!.username)
+        }
+    }
+    
+    /**
+    登录为未注册的匿名帐号，未做异常处理
+    */
+    func loginWithAnonymous(){
+        //判断用户是否存在
+        var query = AVUser.query()
+        query.whereKey(Current.IDFV, equalTo: "userName")
+        var user = query.getFirstObject() as? AVUser
+        if(user != nil){
+            login(Current.IDFV, password: Current.IDFV)
+        }else{
+            user = AVUser()
+            user!.username = Current.IDFV
+            user!.password = Current.IDFV
+            if(user!.signUp(nil)){
+                login(Current.IDFV, password: Current.IDFV)
+            }
         }
     }
     
@@ -72,7 +92,7 @@ class PursueUser: NSObject {
                 self.avUser = AVUser.currentUser()
                 var delegate = UIApplication.sharedApplication().delegate as! AppDelegate
                 delegate.toMainView()
-                
+                println(self.avUser?.username)
             }else{
 
 //                NSString *errorString = [[error userInfo] objectForKey:@"error"];

@@ -1,6 +1,6 @@
 PODS:
-  - AVOSCloud (2.6.11.2)
-  - AVOSCloudSNS (2.6.11.2):
+  - AVOSCloud (3.1.0)
+  - AVOSCloudSNS (3.1.0):
     - AVOSCloud
   - FMDB (2.5):
     - FMDB/standard (= 2.5)
@@ -9,15 +9,15 @@ PODS:
     - FMDB/common
   - FMDBHelpers (0.0.7):
     - FMDB (~> 2.3)
-  - JSQMessagesViewController (7.0.0):
+  - JSQMessagesViewController (7.0.1):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
-  - MJRefresh (1.4.0)
+  - MJRefresh (1.4.6)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
-  - SSKeychain (1.2.2)
-  - TMCache (1.2.3)
+  - SSKeychain (1.2.3)
+  - TMCache (2.0.0)
 
 DEPENDENCIES:
   - AVOSCloud
@@ -31,15 +31,15 @@ DEPENDENCIES:
   - TMCache
 
 SPEC CHECKSUMS:
-  AVOSCloud: c4e261f5d68f42c6e4c4a64934490b2f38c9cff7
-  AVOSCloudSNS: bbeb6d2e21cb7971850565e41e0b4c0f2a9ce7d5
-  FMDB: 0efa188cf0dd1ce82c27a478cd5f5fa245308677
-  FMDBHelpers: 418755fc89a6a6f43140c103fddc0e0f4658b707
-  JSQMessagesViewController: 9fd7e9ac96e9fc91f2deca86928e2cc916aeebaa
-  JSQSystemSoundPlayer: 55528c699a283aae2220d3ae7b8b527d2ecef4b4
-  MJRefresh: 85e093e1986091e4930c027b709cbd2b764e6866
+  AVOSCloud: fadaba350e8f28c371da50e056991ca774db8310
+  AVOSCloudSNS: 0b3e7285227634f575b22f0c9c7bddb021ed1c84
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  FMDBHelpers: c6bd06c59049d51d9072180f253b6ee53f695bf3
+  JSQMessagesViewController: 03fba8a3021a3ddc1c91847f180ffe549f2e8cf2
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  MJRefresh: 2eaa3fd8f67fbb86497840fb0167446f7eb61dc7
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
-  SSKeychain: cc48bd3ad24fcd9125adb9e0d23dd50b8bbd08b9
-  TMCache: 11589ef8c40909114a5e60132711c9a559e01d97
+  SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d
+  TMCache: 126b131e986f359be95c50d4816661b64f43f98c
 
-COCOAPODS: 0.36.4
+COCOAPODS: 0.37.0

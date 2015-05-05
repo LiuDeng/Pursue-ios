@@ -8,11 +8,6 @@
 
 import Foundation
 
-enum ChatRoomType: Int{
-    case Single = 1
-    case Group
-}
-
 class SessionManager:NSObject, AVSessionDelegate, AVSignatureDelegate, AVGroupDelegate {
     
     class var sharedInstance: SessionManager {
@@ -30,8 +25,8 @@ class SessionManager:NSObject, AVSessionDelegate, AVSignatureDelegate, AVGroupDe
         session = AVSession()
         super.init()
         
-        PursueDatabase.createTable("messages", createSql: "create table \"messages\" (\"from_id\" text, \"to_id\" text, \"type\" text, \"message\" text, \"object\" text, \"time\" integer)", overWrite: true)
-        PursueDatabase.createTable("sessions", createSql: "create table \"sessions\" (\"type\" integer, \"self_id\" text, \"other_id\" text)", overWrite: true)
+//        PursueDatabase.createTable("messages", createSql: "create table \"messages\" (\"from_id\" text, \"to_id\" text, \"type\" text, \"message\" text, \"object\" text, \"time\" integer)", overWrite: true)
+//        PursueDatabase.createTable("sessions", createSql: "create table \"sessions\" (\"type\" integer, \"self_id\" text, \"other_id\" text)", overWrite: true)
         
         session.sessionDelegate = self
         session.signatureDelegate = self
@@ -50,7 +45,7 @@ class SessionManager:NSObject, AVSessionDelegate, AVSignatureDelegate, AVGroupDe
             var type = results.intForColumn("type").hashValue
             var otherId = results.stringForColumn("other_id")
             
-            var dic = ChatRoom()
+            var dic = ChatRoom(from: Current.User, to: PursueUser(userName: otherId))
 //            dic.setObject(type, forKey: "type")
 //            dic.setObject(otherId, forKey: "otherId")
             
@@ -93,7 +88,7 @@ class SessionManager:NSObject, AVSessionDelegate, AVSignatureDelegate, AVGroupDe
     }
     
     func session(session: AVSession!, messageSendFinished message: AVMessage!) {
-        
+
     }
     
     func session(session: AVSession!, messageSendFailed message: AVMessage!, error: NSError!) {

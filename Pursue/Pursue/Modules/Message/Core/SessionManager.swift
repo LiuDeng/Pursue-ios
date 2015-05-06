@@ -66,7 +66,7 @@ class SessionManager:NSObject, AVSessionDelegate, AVSignatureDelegate, AVGroupDe
     }
     
     
-    //pragma mark - AVSessionDelegate
+    //MARK: - AVSessionDelegate
     func sessionOpened(session: AVSession!) {
         
     }

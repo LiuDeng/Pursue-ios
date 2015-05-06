@@ -64,6 +64,7 @@
 		4A5EE07C1AB6D99B004FA336 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EE07B1AB6D99B004FA336 /* SessionManager.swift */; };
 		4A681CCF1AB96D3F00B68611 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A681CCE1AB96D3F00B68611 /* ContactViewModel.swift */; };
 		4A681CD11AB96DEA00B68611 /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A681CD01AB96DEA00B68611 /* Current.swift */; };
+		4A8584581AF9E8E600DAB74F /* LeanChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8584571AF9E8E600DAB74F /* LeanChatManager.swift */; };
 		4A8CB5BD1AA5958700BE8F5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CB5BC1AA5958700BE8F5E /* AppDelegate.swift */; };
 		4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C31AA5958700BE8F5E /* Images.xcassets */; };
 		4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C51AA5958700BE8F5E /* LaunchScreen.xib */; };
@@ -164,6 +165,7 @@
 		4A5EE07B1AB6D99B004FA336 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		4A681CCE1AB96D3F00B68611 /* ContactViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
 		4A681CD01AB96DEA00B68611 /* Current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
+		4A8584571AF9E8E600DAB74F /* LeanChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeanChatManager.swift; sourceTree = "<group>"; };
 		4A8CB5B71AA5958700BE8F5E /* Pursue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pursue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A8CB5BB1AA5958700BE8F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A8CB5BC1AA5958700BE8F5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				4A5EE07B1AB6D99B004FA336 /* SessionManager.swift */,
+				4A8584571AF9E8E600DAB74F /* LeanChatManager.swift */,
 				4A00FEA01AF6F0EF0047C6ED /* ChatUser.swift */,
 				4A00FE9E1AF22A5C0047C6ED /* ChatRoom.swift */,
 				4AC56BE21ABACEED002D1598 /* ChatMessage.swift */,
@@ -799,6 +802,7 @@
 				4A22FB111AC1468A00A855B1 /* RemoteObjectDefined.swift in Sources */,
 				4A5EE0781AB6C680004FA336 /* PursueIO.swift in Sources */,
 				4A108A531AB4314E00FE1FCD /* PursueUser.swift in Sources */,
+				4A8584581AF9E8E600DAB74F /* LeanChatManager.swift in Sources */,
 				4A681CCF1AB96D3F00B68611 /* ContactViewModel.swift in Sources */,
 				4A0348081ABA5CAD00D3B7B3 /* ChatRoomViewController.swift in Sources */,
 				4A1B77CB1AAFFD4F008BF9A4 /* FaceppTrainer.m in Sources */,

@@ -9,10 +9,12 @@
 #import "FaceppAPI.h"
 #import "HFStretchableTableHeaderView.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import <AVOSCloudIM/AVOSCloudIM.h>
 #import <SSKeychain/SSKeychain.h>
 #import <TMCache/TMCache.h>
 #import <MJRefresh/MJRefresh.h>
 #import <FMDB/FMDB.h>
 #import <FMDBHelpers/FMDBHelpers.h>
+//#import <MessageDisplayKit/MessageDisplayKit.h>
 #import <JSQMessagesViewController/JSQMessages.h>
 #import <JSQSystemSoundPlayer/JSQSystemSoundPlayer.h>

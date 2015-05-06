@@ -10,6 +10,9 @@ import Foundation
 
 class Current{
     
+    /// 当前系统版本
+    static let SystemVersion : Double = (UIDevice.currentDevice().systemVersion as NSString).doubleValue
+    
     class var IDFV: String{
         get{
             var idfv = SSKeychain.passwordForService(NSBundle.mainBundle().bundleIdentifier, account: "IDFV")

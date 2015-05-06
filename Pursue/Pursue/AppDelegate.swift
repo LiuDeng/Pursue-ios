@@ -12,7 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let iosVersion : NSString = UIDevice.currentDevice().systemVersion
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -26,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //注册消息推送
-        if(iosVersion.doubleValue < 8.0){
+        if(Current.SystemVersion < 8.0){
             application.registerForRemoteNotificationTypes(.Badge | .Alert | .Sound)
         }else{
             let types: UIUserNotificationType = .Badge | .Sound | .Alert

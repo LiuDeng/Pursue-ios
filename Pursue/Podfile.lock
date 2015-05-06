@@ -1,5 +1,7 @@
 PODS:
   - AVOSCloud (3.1.0)
+  - AVOSCloudIM (3.1.0):
+    - AVOSCloud
   - AVOSCloudSNS (3.1.0):
     - AVOSCloud
   - FMDB (2.5):
@@ -12,6 +14,7 @@ PODS:
   - JSQMessagesViewController (7.0.1):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
+  - MessageDisplayKit (3.0.2)
   - MJRefresh (1.4.6)
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
@@ -21,10 +24,12 @@ PODS:
 
 DEPENDENCIES:
   - AVOSCloud
+  - AVOSCloudIM
   - AVOSCloudSNS
   - FMDB
   - FMDBHelpers
   - JSQMessagesViewController
+  - MessageDisplayKit
   - MJRefresh
   - SDWebImage
   - SSKeychain
@@ -32,11 +37,13 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AVOSCloud: fadaba350e8f28c371da50e056991ca774db8310
+  AVOSCloudIM: 49fd16c0d203edc1090f58a62aa00e2ae6682be2
   AVOSCloudSNS: 0b3e7285227634f575b22f0c9c7bddb021ed1c84
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   FMDBHelpers: c6bd06c59049d51d9072180f253b6ee53f695bf3
   JSQMessagesViewController: 03fba8a3021a3ddc1c91847f180ffe549f2e8cf2
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  MessageDisplayKit: e92beb7729c548280e52eff1ed5e505d7468f3e3
   MJRefresh: 2eaa3fd8f67fbb86497840fb0167446f7eb61dc7
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
   SSKeychain: 3f42991739c6c60a9cf1bbd4dff6c0d3694bcf3d

@@ -32,9 +32,9 @@ class SessionManager:NSObject, AVSessionDelegate, AVSignatureDelegate, AVGroupDe
         session.signatureDelegate = self
         
         AVGroup.setDefaultDelegate(self)
-        session.openWithPeerId(Current.User.userName)
-        
-        loadSessionsFromDb()
+//        session.openWithPeerId(Current.User.userName)
+//        
+//        loadSessionsFromDb()
         
     }
     
@@ -49,9 +49,9 @@ class SessionManager:NSObject, AVSessionDelegate, AVSignatureDelegate, AVGroupDe
 //            dic.setObject(type, forKey: "type")
 //            dic.setObject(otherId, forKey: "otherId")
             
-            if (type == ChatRoomType.Single.rawValue) {
+            if (type == ConversationType.Single.rawValue) {
                 peerIds.addObject(otherId)
-            } else if (type == ChatRoomType.Group.rawValue) {
+            } else if (type == ConversationType.Group.rawValue) {
                 var group = AVGroup.getGroupWithGroupId(otherId, session: session)
                 group.delegate = self
                 group.join()

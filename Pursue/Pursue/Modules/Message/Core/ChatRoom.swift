@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ChatRoomType : Int{
+enum ConversationType : Int{
     case Single = 0
     case Group
 }
@@ -33,7 +33,7 @@ class ChatRoom: NSObject {
     /**
     *  单聊还是群聊
     */
-    var roomType = ChatRoomType.Single
+    var roomType = ConversationType.Single
     
     /**
     创建单聊
@@ -44,7 +44,7 @@ class ChatRoom: NSObject {
     :returns: 房间对象
     */
     init(from: PursueUser, to: PursueUser){
-        roomType = ChatRoomType.Single
+        roomType = ConversationType.Single
         
         //判断是否已经创建了聊天房间
         

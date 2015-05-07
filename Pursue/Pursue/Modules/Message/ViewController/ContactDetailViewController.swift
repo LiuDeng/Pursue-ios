@@ -20,6 +20,17 @@ class ContactDetailViewController: UIViewController{
     }
     
     @IBAction func sendMessage(sender: AnyObject) {
+//        LeanChatManager.sharedInstance.openSessionWithClientId(Current.IDFV, completion: { (success, error) -> Void in
+//            println(error)
+//            
+//            if(success){
+//                LeanChatManager.sharedInstance.createConversationsWithClientIds(["111111"], conversationType: ConversationType.Single, completion: { (success, conversation) -> Void in
+//                    
+//                })
+//            }
+//        })
+        
+        
         var rootController = self.tabBarController?.childViewControllers[2] as! UINavigationController
         
         var nav = rootController

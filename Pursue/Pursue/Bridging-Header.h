@@ -15,6 +15,6 @@
 #import <MJRefresh/MJRefresh.h>
 #import <FMDB/FMDB.h>
 #import <FMDBHelpers/FMDBHelpers.h>
-//#import <MessageDisplayKit/MessageDisplayKit.h>
+#import <MessageDisplayKit/XHMessageTableViewController.h>
 #import <JSQMessagesViewController/JSQMessages.h>
 #import <JSQSystemSoundPlayer/JSQSystemSoundPlayer.h>

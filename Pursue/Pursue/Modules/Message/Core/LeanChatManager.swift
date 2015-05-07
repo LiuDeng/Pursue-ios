@@ -20,6 +20,7 @@ class LeanChatManager : NSObject, AVIMClientDelegate{
     
     var leanClient: AVIMClient
     var selfClientId: String?
+    var delegate: LeanChatManagerDelegate?
     
     override init(){
         self.leanClient = AVIMClient()
@@ -39,62 +40,47 @@ class LeanChatManager : NSObject, AVIMClientDelegate{
             })
         }
     }
-
-//    - (void)createConversationsWithClientIDs:(NSArray *)clientIDs
-//    conversationType:(ConversationType)conversationType
-//    completion:(void (^)(BOOL succeeded, AVIMConversation *createConversation))completion {
-//    NSMutableArray *targetClientIDs = [[NSMutableArray alloc] initWithArray:clientIDs];
-//    [targetClientIDs insertObject:self.selfClientID atIndex:0];
-//    [self createConversationsOnClientIDs:targetClientIDs conversationType:conversationType completion:completion];
-//    }
-//    
-//    - (void)createConversationsOnClientIDs:(NSArray *)clientIDs
-//    conversationType:(int)conversationType
-//    completion:(void (^)(BOOL, AVIMConversation *))completion {
-//    AVIMConversationQuery *query = [self.leanClient conversationQuery];
-//    NSMutableArray *queryClientIDs = [[NSMutableArray alloc] initWithArray:clientIDs];
-//    [queryClientIDs insertObject:self.selfClientID atIndex:0];
-//    [query whereKey:kAVIMKeyMember containsAllObjectsInArray:queryClientIDs];
-//    [query whereKey:AVIMAttr(@"type") equalTo:[NSNumber numberWithInt:conversationType]];
-//    [query findConversationsWithCallback:^(NSArray *objects, NSError *error) {
-//    if (error) {
-//    // 出错了，请稍候重试
-//    if (completion) {
-//    completion(NO, nil);
-//    }
-//    } else if (!objects || [objects count] < 1) {
-//    // 新建一个对话
-//    [self.leanClient createConversationWithName:nil
-//    clientIds:queryClientIDs
-//    attributes:@{@"type":[NSNumber numberWithInt:conversationType]}
-//    options:AVIMConversationOptionNone
-//    callback:^(AVIMConversation *conversation, NSError *error) {
-//    BOOL succeeded = YES;
-//    if (error) {
-//    succeeded = NO;
-//    }
-//    if (completion) {
-//    completion(succeeded, conversation);
-//    }
-//    }];
-//    } else {
-//    // 已经有一个对话存在，继续在这一对话中聊天
-//    AVIMConversation *conversation = [objects lastObject];
-//    if (completion) {
-//    completion(YES, conversation);
-//    }
-//    }
-//    }];
-//    }
+    
+    func createConversationsWithClientIds(clientIds: [String], conversationType: ConversationType, completion: (success: Bool, conversation:AVIMConversation?) -> Void){
+        createConversationsWithClientIds(clientIds, conversationType: conversationType.rawValue, completion: completion)
+    }
+    
+    func createConversationsWithClientIds(clientIds: [String], conversationType: Int, completion: (success: Bool, conversation:AVIMConversation?) -> Void){
+        var query = self.leanClient.conversationQuery()
+        var queryClientIds = NSMutableArray(array: clientIds)
+        queryClientIds.insertObject(self.selfClientId!, atIndex: 0)
+        query.whereKey(kAVIMKeyMember, containsAllObjectsInArray: queryClientIds as [AnyObject])
+        query.whereKey("attr.type", equalTo: conversationType)
+        query.findConversationsWithCallback { (objects, error) -> Void in
+            if(error != nil){
+                //出错了，请稍候重试
+                completion(success: false, conversation: nil)
+            }else if(objects == nil || objects.count < 1 ){
+                // 新建一个对话
+                self.leanClient.createConversationWithName("聊天", clientIds: queryClientIds as [AnyObject], attributes: ["type": conversationType], options: AVIMConversationOptionNone, callback: { (conversation, error) -> Void in
+                    var success = true
+                    if(error != nil){
+                        success = false
+                    }
+                    completion(success: success, conversation: conversation)
+                })
+            }else{
+                // 已经有一个对话存在，继续在这一对话中聊天
+                var conversation = objects.last as! AVIMConversation
+                completion(success: true, conversation: conversation)
+            }
+        }
+    }
 
     
     //MARK: - AVIMClientDelegate
     
     func conversation(conversation: AVIMConversation!, didReceiveCommonMessage message: AVIMMessage!) {
-        
+        delegate?.didReceiveCommonMessageCompletion(conversation, message: message)
     }
     
     func conversation(conversation: AVIMConversation!, didReceiveTypedMessage message: AVIMTypedMessage!) {
+        delegate?.didReceiveTypedMessageCompletion(conversation, message: message)
         
     }
     

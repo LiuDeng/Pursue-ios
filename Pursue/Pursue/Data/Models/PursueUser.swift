@@ -49,6 +49,7 @@ class PursueUser: NSObject {
     加载用户
     */
     func initUser(){
+        AVUser.logOut()
         if(AVUser.currentUser() == nil){
             loginWithAnonymous()
         }else{

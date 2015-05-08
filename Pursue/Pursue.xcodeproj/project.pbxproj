@@ -38,7 +38,6 @@
 		4A0AE8FD1AB1742F00A637FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8EC1AB1742F00A637FE /* ProfileViewController.swift */; };
 		4A0AE8FF1AB1742F00A637FE /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F11AB1742F00A637FE /* RecordViewController.swift */; };
 		4A0AE9001AB1742F00A637FE /* RecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F31AB1742F00A637FE /* RecordView.xib */; };
-		4A0AE9021AB1742F00A637FE /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0AE8F81AB1742F00A637FE /* SearchView.xib */; };
 		4A0FA8481AFC3E3200664615 /* ChatRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0FA8471AFC3E3200664615 /* ChatRoomViewModel.swift */; };
 		4A108A531AB4314E00FE1FCD /* PursueUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A108A521AB4314E00FE1FCD /* PursueUser.swift */; };
 		4A1707971AB555EE0030FD27 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1707961AB555EE0030FD27 /* ContactListViewController.swift */; };
@@ -67,6 +66,9 @@
 		4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C31AA5958700BE8F5E /* Images.xcassets */; };
 		4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A8CB5C51AA5958700BE8F5E /* LaunchScreen.xib */; };
 		4A8CB5D31AA5958700BE8F5E /* PursueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */; };
+		B5C234AA1AFCD32000AF5267 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C234A91AFCD32000AF5267 /* SearchViewController.swift */; };
+		B5F4778A1AFCDB7E0022A457 /* SearchInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F477881AFCDB7E0022A457 /* SearchInfoCell.swift */; };
+		B5F4778B1AFCDB7E0022A457 /* SearchInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F477891AFCDB7E0022A457 /* SearchInfoCell.xib */; };
 		B7493B6B1AC2162D00BA9790 /* HFStretchableTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7493B6A1AC2162D00BA9790 /* HFStretchableTableHeaderView.m */; };
 		B7D7FDA41AD8B6A300224026 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7FDA21AD8B6A300224026 /* UserInfoViewController.swift */; };
 		B7D7FDA51AD8B6A300224026 /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D7FDA31AD8B6A300224026 /* UserInfoViewController.xib */; };
@@ -75,10 +77,6 @@
 		B7D7FDAB1AD8FA2500224026 /* ProfileUserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7D7FDA91AD8FA2500224026 /* ProfileUserInfoTableViewCell.xib */; };
 		B7D9B54C1ABBA35A0068B759 /* RGCommonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9B54B1ABBA35A0068B759 /* RGCommonTools.swift */; };
 		B86CB0E85FF7DB258B90F316 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9A3A84537473FDBBAD0C7F /* libPods.a */; };
-		F39DEADD1AB34B9D00BED9DA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DEADB1AB34B9D00BED9DA /* SearchViewController.swift */; };
-		F39DEADE1AB34B9D00BED9DA /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39DEADC1AB34B9D00BED9DA /* SearchViewController.xib */; };
-		F39DEAE51AB353F500BED9DA /* AddSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DEAE31AB353F500BED9DA /* AddSearchViewController.swift */; };
-		F39DEAE61AB353F500BED9DA /* AddSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39DEAE41AB353F500BED9DA /* AddSearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +121,6 @@
 		4A0AE8EC1AB1742F00A637FE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4A0AE8F11AB1742F00A637FE /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		4A0AE8F31AB1742F00A637FE /* RecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordView.xib; sourceTree = "<group>"; };
-		4A0AE8F81AB1742F00A637FE /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		4A0FA8471AFC3E3200664615 /* ChatRoomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewModel.swift; sourceTree = "<group>"; };
 		4A108A521AB4314E00FE1FCD /* PursueUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PursueUser.swift; sourceTree = "<group>"; };
 		4A1707961AB555EE0030FD27 /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +168,9 @@
 		4A8CB5D21AA5958700BE8F5E /* PursueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PursueTests.swift; sourceTree = "<group>"; };
 		4A8CB5DC1AA5999700BE8F5E /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		AEA428CCDD7D74DB76D9666D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B5C234A91AFCD32000AF5267 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B5F477881AFCDB7E0022A457 /* SearchInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchInfoCell.swift; path = Pursue/Modules/Search/Views/SearchInfoCell.swift; sourceTree = SOURCE_ROOT; };
+		B5F477891AFCDB7E0022A457 /* SearchInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchInfoCell.xib; path = Pursue/Modules/Search/Views/SearchInfoCell.xib; sourceTree = SOURCE_ROOT; };
 		B7493B691AC2162D00BA9790 /* HFStretchableTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFStretchableTableHeaderView.h; sourceTree = "<group>"; };
 		B7493B6A1AC2162D00BA9790 /* HFStretchableTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFStretchableTableHeaderView.m; sourceTree = "<group>"; };
 		B7D7FDA21AD8B6A300224026 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
@@ -181,10 +181,6 @@
 		B7D9B54B1ABBA35A0068B759 /* RGCommonTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGCommonTools.swift; sourceTree = "<group>"; };
 		CB9A3A84537473FDBBAD0C7F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CE534FD793BA35B6C43C5E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		F39DEADB1AB34B9D00BED9DA /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		F39DEADC1AB34B9D00BED9DA /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		F39DEAE31AB353F500BED9DA /* AddSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSearchViewController.swift; sourceTree = "<group>"; };
-		F39DEAE41AB353F500BED9DA /* AddSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddSearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,10 +384,7 @@
 		4A0AE8F51AB1742F00A637FE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F39DEADB1AB34B9D00BED9DA /* SearchViewController.swift */,
-				F39DEADC1AB34B9D00BED9DA /* SearchViewController.xib */,
-				F39DEAE31AB353F500BED9DA /* AddSearchViewController.swift */,
-				F39DEAE41AB353F500BED9DA /* AddSearchViewController.xib */,
+				B5C234A91AFCD32000AF5267 /* SearchViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -399,7 +392,8 @@
 		4A0AE8F71AB1742F00A637FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4A0AE8F81AB1742F00A637FE /* SearchView.xib */,
+				B5F477881AFCDB7E0022A457 /* SearchInfoCell.swift */,
+				B5F477891AFCDB7E0022A457 /* SearchInfoCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -692,7 +686,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A00FE931AF1F54C0047C6ED /* pen@2x.png in Resources */,
-				4A0AE9021AB1742F00A637FE /* SearchView.xib in Resources */,
 				4A00FE8A1AEF4C110047C6ED /* logo@2x.png in Resources */,
 				4A00FE891AEF4C110047C6ED /* logo.png in Resources */,
 				4A00FE8B1AEF4C110047C6ED /* logo@3x.png in Resources */,
@@ -710,6 +703,7 @@
 				4A00FE8F1AF1F4230047C6ED /* contact@2x.png in Resources */,
 				4A00FE841AEF0D200047C6ED /* profile_blank.png in Resources */,
 				4A8CB5C71AA5958700BE8F5E /* LaunchScreen.xib in Resources */,
+				B5F4778B1AFCDB7E0022A457 /* SearchInfoCell.xib in Resources */,
 				4A0AE8FA1AB1742F00A637FE /* FocusView.xib in Resources */,
 				4A00FE8D1AF1F29B0047C6ED /* contact.png in Resources */,
 				4A00FE7F1AEF0D200047C6ED /* profile@2x.png in Resources */,
@@ -719,8 +713,6 @@
 				4A03480A1ABA61E500D3B7B3 /* ContactDetailView.xib in Resources */,
 				B7D7FDA51AD8B6A300224026 /* UserInfoViewController.xib in Resources */,
 				4A00FE981AF1F97E0047C6ED /* back.png in Resources */,
-				F39DEADE1AB34B9D00BED9DA /* SearchViewController.xib in Resources */,
-				F39DEAE61AB353F500BED9DA /* AddSearchViewController.xib in Resources */,
 				4A8CB5C41AA5958700BE8F5E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -781,12 +773,12 @@
 				B7493B6B1AC2162D00BA9790 /* HFStretchableTableHeaderView.m in Sources */,
 				4A1B77C51AAFFD4F008BF9A4 /* FaceppFaceset.m in Sources */,
 				4A1B77C41AAFFD4F008BF9A4 /* FaceppDetection.m in Sources */,
+				B5F4778A1AFCDB7E0022A457 /* SearchInfoCell.swift in Sources */,
 				4A1B77C81AAFFD4F008BF9A4 /* FaceppInfo.m in Sources */,
 				4A0AE8FF1AB1742F00A637FE /* RecordViewController.swift in Sources */,
 				4A2E77531AB6C35300A46F45 /* PursueDatabase.swift in Sources */,
 				4A0AE8F91AB1742F00A637FE /* FocusViewController.swift in Sources */,
 				4A0AE8DF1AB1742000A637FE /* MainViewController.swift in Sources */,
-				F39DEADD1AB34B9D00BED9DA /* SearchViewController.swift in Sources */,
 				4A00FE951AF1F5F20047C6ED /* Theme.swift in Sources */,
 				B7D7FDA41AD8B6A300224026 /* UserInfoViewController.swift in Sources */,
 				4A0AE8FD1AB1742F00A637FE /* ProfileViewController.swift in Sources */,
@@ -794,11 +786,11 @@
 				4A5EE0781AB6C680004FA336 /* PursueIO.swift in Sources */,
 				4A108A531AB4314E00FE1FCD /* PursueUser.swift in Sources */,
 				4A681CCF1AB96D3F00B68611 /* ContactViewModel.swift in Sources */,
+				B5C234AA1AFCD32000AF5267 /* SearchViewController.swift in Sources */,
 				4A0348081ABA5CAD00D3B7B3 /* ChatRoomViewController.swift in Sources */,
 				4A1B77CB1AAFFD4F008BF9A4 /* FaceppTrainer.m in Sources */,
 				B7D9B54C1ABBA35A0068B759 /* RGCommonTools.swift in Sources */,
 				4A1707971AB555EE0030FD27 /* ContactListViewController.swift in Sources */,
-				F39DEAE51AB353F500BED9DA /* AddSearchViewController.swift in Sources */,
 				B7D7FDAA1AD8FA2500224026 /* ProfileUserInfoTableViewCell.swift in Sources */,
 				4A0AE8FB1AB1742F00A637FE /* MessageViewController.swift in Sources */,
 				4A1B77CD1AAFFD4F008BF9A4 /* FaceppResult.m in Sources */,

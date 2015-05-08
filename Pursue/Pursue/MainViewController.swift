@@ -19,7 +19,7 @@ class MainViewController: UITabBarController {
 
         //寻人
         var searchBarItem = UITabBarItem(title: "寻人", image: UIImage(named: "search"), selectedImage: nil)
-        var searchViewController = UINavigationController(rootViewController: SearchViewController(nibName: "SearchViewController", bundle: nil))
+        var searchViewController = UINavigationController(rootViewController: SearchViewController())
         setNavigationBarStyle(searchViewController.navigationBar)
         searchViewController.tabBarItem = searchBarItem
         

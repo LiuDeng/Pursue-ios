@@ -93,9 +93,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func toMainView(){
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        var nvc = UINavigationController(rootViewController: MainViewController())
-        nvc.navigationBarHidden = true
-        self.window!.rootViewController = nvc
+        var mainVC = MainViewController()
+        self.window!.rootViewController = mainVC
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
         

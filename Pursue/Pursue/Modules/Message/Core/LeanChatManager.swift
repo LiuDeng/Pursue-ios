@@ -8,6 +8,11 @@
 
 import Foundation
 
+protocol LeanChatManagerDelegate{
+    func didReceiveCommonMessageCompletion(conversation: AVIMConversation, message: AVIMMessage)
+    func didReceiveTypedMessageCompletion(conversation: AVIMConversation, message: AVIMTypedMessage)
+}
+
 class LeanChatManager : NSObject, AVIMClientDelegate{
     
     class var sharedInstance: LeanChatManager {
@@ -30,21 +35,40 @@ class LeanChatManager : NSObject, AVIMClientDelegate{
     
     //MARK: 会话处理
     
-    func openSessionWithClientId(clientId: String, completion: AVIMBooleanResultBlock){
-        selfClientId = clientId
+    /**
+    打开当前用户的聊天连接
+    
+    :param: completion 回调
+    */
+    func openSessionWithClientId(completion: AVIMBooleanResultBlock){
+        selfClientId = Current.User.objectId
         if(leanClient.status.value == AVIMClientStatusNone.value){
-            self.leanClient.openWithClientId(clientId, callback: completion)
+            self.leanClient.openWithClientId(selfClientId, callback: completion)
         }else{
             self.leanClient.closeWithCallback({ (success, error) -> Void in
-                self.leanClient.openWithClientId(clientId, callback: completion)
+                self.leanClient.openWithClientId(self.selfClientId, callback: completion)
             })
         }
     }
     
+    /**
+    创建会话
+    
+    :param: clientIds        参与人
+    :param: conversationType 会话类型
+    :param: completion       回调
+    */
     func createConversationsWithClientIds(clientIds: [String], conversationType: ConversationType, completion: (success: Bool, conversation:AVIMConversation?) -> Void){
         createConversationsWithClientIds(clientIds, conversationType: conversationType.rawValue, completion: completion)
     }
     
+    /**
+    创建会话
+    
+    :param: clientIds        参与人
+    :param: conversationType 会话类型
+    :param: completion       回调
+    */
     func createConversationsWithClientIds(clientIds: [String], conversationType: Int, completion: (success: Bool, conversation:AVIMConversation?) -> Void){
         var query = self.leanClient.conversationQuery()
         var queryClientIds = NSMutableArray(array: clientIds)
@@ -74,11 +98,22 @@ class LeanChatManager : NSObject, AVIMClientDelegate{
 
     
     //MARK: - AVIMClientDelegate
+    /**
+    收到消息
     
+    :param: conversation 会话对象
+    :param: message      消息对象
+    */
     func conversation(conversation: AVIMConversation!, didReceiveCommonMessage message: AVIMMessage!) {
         delegate?.didReceiveCommonMessageCompletion(conversation, message: message)
     }
+        
+    /**
+    收到多媒体消息
     
+    :param: conversation 会话对象
+    :param: message      消息对象
+    */
     func conversation(conversation: AVIMConversation!, didReceiveTypedMessage message: AVIMTypedMessage!) {
         delegate?.didReceiveTypedMessageCompletion(conversation, message: message)
         

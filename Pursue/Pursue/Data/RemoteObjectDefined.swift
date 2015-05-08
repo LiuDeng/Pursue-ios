@@ -9,18 +9,10 @@
 import Foundation
 
 class RemoteObjectDefined{
-    /**
-    *  聊天对象
-    */
-    static let ChatUser = "ChatUser"
     
     /**
-    *  聊天房间
+    *  用户对象
     */
-    static let ChatRoom = "ChatRoom"
+    static let PursueUser = "PursueUser"
     
-    /**
-    *  聊天消息记录
-    */
-    static let ChatMessage = "ChatMessage"
 }

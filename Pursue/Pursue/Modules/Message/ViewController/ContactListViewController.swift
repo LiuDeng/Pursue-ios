@@ -50,7 +50,7 @@ class ContactListViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
-        cell.textLabel?.text = contactViewModel.contacts[indexPath.row].userName
+        cell.textLabel?.text = contactViewModel.contacts[indexPath.row].username
         return cell
     }
     

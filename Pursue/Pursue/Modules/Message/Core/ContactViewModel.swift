@@ -10,7 +10,7 @@ import Foundation
 
 class ContactViewModel {
     
-    var contacts: [PursueUser] = []
+    var contacts: [AVUser] = []
     
     func startFetchContactList(block:()->()) {
         var query = AVUser.query()
@@ -19,8 +19,8 @@ class ContactViewModel {
             if(error == nil){
                 for item in objects {
                     var user = item as! AVUser
-                    if(user.username != Current.User.userName){
-                        self.contacts.append(PursueUser(avUser: user))
+                    if(user.username != AVUser.currentUser()){
+                        self.contacts.append(user)
                     }
                 }
                 block()

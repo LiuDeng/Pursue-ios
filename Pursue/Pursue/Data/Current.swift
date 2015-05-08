@@ -28,10 +28,36 @@ class Current{
     class var User: PursueUser {
         struct Static {
             // 定义静态的常量属性
-            static let instance: PursueUser = PursueUser()
+            static var instance: PursueUser {
+                get {
+                    
+                    /**
+                    *  没有用户登录
+                    */
+                    if(AVUser.currentUser() == nil){
+                        //登录为匿名用户
+                        var idfvPwd = SSKeychain.passwordForService("PursueUser", account: Current.IDFV)
+                        if(idfvPwd != nil){
+                            PursueUser.logInWithUsername(Current.IDFV, password: Current.IDFV, error: nil)
+                        }else{
+                            var user = PursueUser()
+                            user.username = Current.IDFV
+                            user.password = Current.IDFV
+                            if(user.signUp(nil)){
+                                PursueUser.logInWithUsername(Current.IDFV, password: Current.IDFV, error: nil)
+                            }else{
+                                println("注册失败")
+                            }
+                        }
+                        println("登录匿名")
+                    }else{
+                        println("已经登录")
+                    }
+                    return AVUser.currentUser() as! PursueUser
+                }
+            }
         }
         
-        Static.instance.initUser()
         return Static.instance
     }
 }

@@ -58,5 +58,13 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createView()
+        
+        LeanChatManager.sharedInstance.openSessionWithClientId { (success, error) -> Void in
+            if(success && error == nil){
+                println("聊天连接成功！")
+            }else{
+                println(error)
+            }
+        }
     }
 }

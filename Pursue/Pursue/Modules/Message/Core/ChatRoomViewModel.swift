@@ -13,7 +13,7 @@ class ChatRoomViewModel{
     var isLoading: Bool = false
     var sender: PursueUser
     var users = [PursueUser]()
-    var messages = [ChatMessage]()
+    var messages = [AVIMMessage]()
     var chatRoom: ChatRoom
     
     init(chatRoom: ChatRoom ){
@@ -25,22 +25,11 @@ class ChatRoomViewModel{
     }
     
     /**
-    从服务器加载消息
+    从本地加载消息
     
     :param: block 回调
     */
     func loadMessagesWithBlock(block: (objects: [AnyObject]!, error: NSError!)->()) {
-        if isLoading == false {
-            isLoading = true
-            var lastMessage = messages.last
-            var query = AVQuery(className: RemoteObjectDefined.ChatMessage)
-            if(lastMessage != nil){
-                query.whereKey("createdAt", greaterThan: lastMessage!.date())
-            }
-            query.findObjectsInBackgroundWithBlock({ (objects: [AnyObject]!, error: NSError!) -> Void in
-                block(objects: objects, error: error)
-                self.isLoading = false
-            })
-        }
+        
     }
 }

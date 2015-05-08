@@ -20,9 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         AVOSCloud.setApplicationId(CommonConfig.AVOSCloudApplicationId, clientKey: CommonConfig.AVOSCloudKey)
-        var user = Current.User
-        toMainView()
         
+        toMainView()
         
         //注册消息推送
         if(Current.SystemVersion < 8.0){

@@ -95,7 +95,18 @@ class LeanChatManager : NSObject, AVIMClientDelegate{
             }
         }
     }
-
+    
+    /**
+    加载历史会话
+    
+    :param: block 回调
+    */
+    func findRecentConversationsWithBlock(block: AVIMArrayResultBlock){
+        var query = self.leanClient.conversationQuery()
+        query.whereKey(kAVIMKeyMember, containedIn: [self.selfClientId!])
+        query.limit = 1000
+        query.findConversationsWithCallback(block)
+    }
     
     //MARK: - AVIMClientDelegate
     /**

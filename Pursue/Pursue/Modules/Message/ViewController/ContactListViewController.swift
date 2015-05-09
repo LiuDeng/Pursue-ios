@@ -50,12 +50,12 @@ class ContactListViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
-        cell.textLabel?.text = contactViewModel.contacts[indexPath.row].username
+        cell.textLabel?.text = contactViewModel.contacts[indexPath.row].objectId
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.navigationController?.pushViewController(ContactDetailViewController(nibName: "ContactDetailView", bundle: nil), animated: true)
+        self.navigationController?.pushViewController(ContactDetailViewController(userId: contactViewModel.contacts[indexPath.row].objectId, nibName: "ContactDetailView", bundle: nil), animated: true)
     }
     
 }

@@ -10,12 +10,13 @@ import Foundation
 
 class ContactDetailViewController: UIViewController{
     
-    
+    var userId: String
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    init(userId: String ,nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        self.userId = userId
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
@@ -35,14 +36,15 @@ class ContactDetailViewController: UIViewController{
         
         var nav = rootController
         var controller = ChatRoomViewController()
-        controller.hidesBottomBarWhenPushed = true
-//        [[CDSessionManager sharedInstance] addChatWithPeerId:self.user.username];
-//        controller.otherId = self.user.username;
-//        controller.type = CDChatRoomTypeSingle;
-        self.tabBarController?.selectedIndex = 2;
-        nav.popToRootViewControllerAnimated(false)
-        
-        rootController.pushViewController(controller, animated: true)
-        self.navigationController?.popToRootViewControllerAnimated(false)
+        controller.openConversation([self.userId], completion: { (success, conversation) -> Void in
+            if(success){
+                controller.hidesBottomBarWhenPushed = true
+                self.tabBarController?.selectedIndex = 2;
+                nav.popToRootViewControllerAnimated(false)
+                
+                rootController.pushViewController(controller, animated: true)
+                self.navigationController?.popToRootViewControllerAnimated(false)
+            }
+        })
     }
 }

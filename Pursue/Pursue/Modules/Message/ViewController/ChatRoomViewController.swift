@@ -13,42 +13,21 @@ class ChatRoomViewController: XHMessageTableViewController, LeanChatManagerDeleg
     var conversation: AVIMConversation?
     var conversationType: ConversationType = ConversationType.Single
 
-//   init(clientIds: [String]){
-//        super.init(nibName: nil, bundle: nil)
-//        self.clientIds = clientIds
-//        if(self.clientIds.count > 1){
-//            self.conversationType = ConversationType.Group
-//        }
-//        LeanChatManager.sharedInstance.delegate = self
-//        allowsSendVoice = true
-//        allowsSendMultiMedia = true
-//        allowsSendFace = true
-//    }
-//
-//    required init(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//    }
-//    
     override func viewDidLoad() {
         super.viewDidLoad()
         LeanChatManager.sharedInstance.delegate = self
-        
-        //创建一个会话
-        LeanChatManager.sharedInstance.openSessionWithClientId({ (success, error) -> Void in
-            println(error)
-
-            if(success){
-                println("\(Current.User.objectId)打开会话")
-                LeanChatManager.sharedInstance.createConversationsWithClientIds(["55473c54e4b0f83f4d8fddc5"], conversationType: ConversationType.Single, completion: { (success, conversation) -> Void in
-                    self.conversation = conversation
-                    println(conversation)
-                })
-            }
-        })
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    func openConversation(clientIds: [String], completion: (success: Bool, conversation:AVIMConversation?) -> Void){
+        println("\(Current.User.objectId)打开会话")
+        LeanChatManager.sharedInstance.createConversationsWithClientIds(clientIds, conversationType: ConversationType.Single, completion: { (success, conversation) -> Void in
+            self.conversation = conversation
+            completion(success: success, conversation: conversation)
+        })
     }
     
     func didReceiveCommonMessageCompletion(conversation: AVIMConversation, message: AVIMMessage){
@@ -58,6 +37,7 @@ class ChatRoomViewController: XHMessageTableViewController, LeanChatManagerDeleg
         self.messages.addObject(new_message!)
         println(new_message)
         self.messageTableView.reloadData()
+        scrollToBottomAnimated(true)
     }
     
     func didReceiveTypedMessageCompletion(conversation: AVIMConversation, message: AVIMTypedMessage){
@@ -65,6 +45,7 @@ class ChatRoomViewController: XHMessageTableViewController, LeanChatManagerDeleg
         self.messages.addObject(new_message!)
         println("收到富媒体消息")
         self.messageTableView.reloadData()
+        scrollToBottomAnimated(true)
     }
     
     
@@ -97,21 +78,13 @@ class ChatRoomViewController: XHMessageTableViewController, LeanChatManagerDeleg
                 self.messages.addObject(message!)
                 println(message)
                 self.messageTableView.reloadData()
+                self.scrollToBottomAnimated(true)
+                self.finishSendMessageWithBubbleMessageType(XHBubbleMessageMediaType.Text)
             }else{
                 println("消息发送错误")
                 println(error)
             }
         })
-        
-
-//        messageTableView.reloadData()
-//        WEAKSELF
-//        [self.conversation sendMessage:sendTextMessage callback:^(BOOL succeeded, NSError *error) {
-//            if([weakSelf filterError:error]){
-//            [weakSelf insertAVIMTypedMessage:sendTextMessage];
-//            [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeText];
-//            }
-//            }];
     }
     
     override func shouldLoadMoreMessagesScrollToTop() -> Bool {

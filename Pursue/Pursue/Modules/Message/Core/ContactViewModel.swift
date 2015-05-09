@@ -13,13 +13,13 @@ class ContactViewModel {
     var contacts: [AVUser] = []
     
     func startFetchContactList(block:()->()) {
-        var query = AVUser.query()
+        var query = PursueUser.query()
         query.cachePolicy = AVCachePolicy.IgnoreCache
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if(error == nil){
                 for item in objects {
                     var user = item as! AVUser
-                    if(user.username != AVUser.currentUser()){
+                    if(user.objectId != Current.User.objectId){
                         self.contacts.append(user)
                     }
                 }

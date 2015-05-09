@@ -16,6 +16,8 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         fatalError("init(coder:) has not been implemented")
     }
     
+    var conversations = []
+    
     //  MARK:初始化
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -29,6 +31,7 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         messageListTableView.delegate = self
         messageListTableView.dataSource = self
+        loadData()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -45,22 +48,44 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
+    func loadData(){
+        LeanChatManager.sharedInstance.findRecentConversationsWithBlock { (objects, error) -> Void in
+            if(error == nil){
+                self.conversations = objects
+                self.messageListTableView.reloadData()
+            }
+        }
+    }
+    
     //  MARK:TableView 代理
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 40
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0//SessionManager.sharedInstance.chatRooms.count
+        return self.conversations.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        var cell = UITableViewCell()
+        cell.textLabel?.text = (self.conversations[indexPath.row] as! AVIMConversation).members.first as? String
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var userId = (self.conversations[indexPath.row] as! AVIMConversation).members.first as! String
+    
+        var controller = ChatRoomViewController()
+        controller.openConversation([userId], completion: { (success, conversation) -> Void in
+            if(success){
+                controller.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(controller, animated: true)            }
+        })
     }
     
     //  MARK:业务方法
     func sessionUpdated(notification: NSNotification){
-        messageListTableView.reloadData()
+        
     }
     
     func toContactListView(sender: AnyObject?){

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4A8CB5B61AA5958700BE8F5E"
+               BlueprintIdentifier = "4A18B1D01B1F151B00F60AC6"
                BuildableName = "Pursue.app"
                BlueprintName = "Pursue"
                ReferencedContainer = "container:Pursue.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4A8CB5CB1AA5958700BE8F5E"
+               BlueprintIdentifier = "4A18B1E91B1F151B00F60AC6"
                BuildableName = "PursueTests.xctest"
                BlueprintName = "PursueTests"
                ReferencedContainer = "container:Pursue.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4A8CB5CB1AA5958700BE8F5E"
+               BlueprintIdentifier = "4A18B1E91B1F151B00F60AC6"
                BuildableName = "PursueTests.xctest"
                BlueprintName = "PursueTests"
                ReferencedContainer = "container:Pursue.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4A8CB5B61AA5958700BE8F5E"
+            BlueprintIdentifier = "4A18B1D01B1F151B00F60AC6"
             BuildableName = "Pursue.app"
             BlueprintName = "Pursue"
             ReferencedContainer = "container:Pursue.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4A8CB5B61AA5958700BE8F5E"
+            BlueprintIdentifier = "4A18B1D01B1F151B00F60AC6"
             BuildableName = "Pursue.app"
             BlueprintName = "Pursue"
             ReferencedContainer = "container:Pursue.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4A8CB5B61AA5958700BE8F5E"
+            BlueprintIdentifier = "4A18B1D01B1F151B00F60AC6"
             BuildableName = "Pursue.app"
             BlueprintName = "Pursue"
             ReferencedContainer = "container:Pursue.xcodeproj">

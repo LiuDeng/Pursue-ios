@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pursue/Modules/Security/LoginViewController.m"
-            timestampString = "459096558.612509"
+            timestampString = "459174505.658205"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "-toRegister:"
             landmarkType = "5">
          </BreakpointContent>

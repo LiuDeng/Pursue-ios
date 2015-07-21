@@ -19,6 +19,8 @@ typedef void (^CDUpgradeBlock)(BOOL upgrade, NSString *oldVersion, NSString *new
 
 @interface CDUtils : NSObject
 
++ (BOOL)validEmail:(NSString *)s;
+
 + (NSString *)md5OfString:(NSString *)s;
 
 + (UIActivityIndicatorView *)showIndicatorAtView:(UIView *)hookView;

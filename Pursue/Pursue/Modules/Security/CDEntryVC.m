@@ -76,7 +76,7 @@
         _usernameField.background = [UIImage imageNamed:@"input_bg_top"];
         _usernameField.horizontalPadding = kEntryVCTextFieldPadding;
         _usernameField.verticalPadding = kEntryVCTextFieldPadding;
-        _usernameField.placeholder = @"用户名";
+        _usernameField.placeholder = @"邮箱";
         _usernameField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         _usernameField.delegate = self;
         _usernameField.returnKeyType = UIReturnKeyNext;

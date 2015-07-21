@@ -76,6 +76,13 @@
 
 #pragma mark - Actions
 - (void)login:(id)sender {
+    if (![CDUtils validEmail:self.usernameField.text]) {
+        
+        [self showHUDText:@"邮箱格式不正确，请填写有效邮箱！"];
+        
+        return;
+    }
+    
     [PursueUser logOut];
     [PursueUser logInWithUsernameInBackground:self.usernameField.text password:self.passwordField.text block: ^(AVUser *user, NSError *error) {
         if (error) {

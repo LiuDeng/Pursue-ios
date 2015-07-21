@@ -107,6 +107,7 @@
     
     [CDAddRequest registerSubclass];
     [CDAbuseReport registerSubclass];
+    [PursueUser registerSubclass];
 #if USE_US
     [AVOSCloud useAVCloudUS];
 #endif

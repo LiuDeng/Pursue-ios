@@ -11,6 +11,44 @@
 
 @implementation PursueUser
 
+/**
+ *  昵称
+ */
+@dynamic displayName;
+/**
+ *  性别,0-未知,1-男,2-女
+ */
+@dynamic sex;
+/**
+ *  签名
+ */
+@dynamic signature;
+/**
+ *  头像
+ */
+@dynamic avatar;
+
+/**
+ *  积分
+ */
+@dynamic credits;
+/**
+ *  收藏数量
+ */
+@dynamic collection;
+/**
+ *  寻人数量
+ */
+@dynamic search;
+/**
+ *  随拍数量
+ */
+@dynamic record;
+
++ (NSString *)parseClassName {
+    return @"_User";
+}
+
 + (void) registeAnonymous: (AVBooleanResultBlock)block;
 {
     PursueUser *user = [PursueUser user];

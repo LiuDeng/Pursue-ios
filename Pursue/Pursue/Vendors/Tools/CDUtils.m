@@ -25,6 +25,17 @@
     return [[NSMutableArray alloc] initWithArray:[set allObjects]];
 }
 
++ (BOOL)validEmail:(NSString *)s {
+    //邮箱的格式
+    NSString * patternEmail = @"^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9])+\.)+([a-zA-Z0-9]{2,4})+$";
+    NSError *err = nil;
+    NSRegularExpression *EmailExp =[NSRegularExpression regularExpressionWithPattern:patternEmail options:0 error:&err];
+    
+    NSTextCheckingResult *isMatchEmail = [EmailExp firstMatchInString:s options:0 range:NSMakeRange(0, [s length])];
+    
+    return isMatchEmail;
+}
+
 + (NSString *)md5OfString:(NSString *)s {
     const char *ptr = [s UTF8String];
     unsigned char md5Buffer[CC_MD5_DIGEST_LENGTH];

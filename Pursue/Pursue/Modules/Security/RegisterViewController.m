@@ -57,9 +57,20 @@
 }
 
 - (void)registerAVUser:(id)sender {
+    if (![CDUtils validEmail:self.usernameField.text]) {
+        
+        [self showHUDText:@"邮箱格式不正确，请填写有效邮箱！"];
+        
+        return;
+    }
+    
     PursueUser *user = [PursueUser user];
     user.username = self.usernameField.text;
+    user.displayName = [user.username componentsSeparatedByString:@"@"][0];
     user.password = self.passwordField.text;
+    user.email = self.usernameField.text;
+    user.collection = 0;
+    
     [user setFetchWhenSave:YES];
     WEAKSELF
     [user signUpInBackgroundWithBlock: ^(BOOL succeeded, NSError *error) {

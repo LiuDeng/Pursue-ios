@@ -10,10 +10,11 @@
 
 @interface PursueUser : AVUser<AVSubclassing>
 
+
 /**
  *  昵称
  */
-@property (nonatomic, strong) NSString *displayName;
+@property (retain) NSString *displayName;
 /**
  *  性别,0-未知,1-男,2-女
  */
@@ -21,11 +22,11 @@
 /**
  *  签名
  */
-@property (nonatomic, strong) NSString *signature;
+@property (retain) NSString *signature;
 /**
  *  头像
  */
-@property (nonatomic, strong) AVFile *avatar;
+@property (retain) AVFile *avatar;
 
 /**
  *  积分

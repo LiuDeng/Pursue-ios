@@ -13,6 +13,7 @@
 #import "AboutPage.h"
 #import "OSLicensePage.h"
 #import "FeedbackPage.h"
+#import "CDSettingVC.h"
 
 #import <RESideMenu.h>
 #import <MBProgressHUD.h>
@@ -99,7 +100,7 @@
             [alertView show];
 
         } else if (row == 1){
-            
+            [self.navigationController pushViewController:[CDSettingVC new] animated:YES];
         }
     } else if (section == 1) {
         if (row == 0) {

@@ -12,6 +12,7 @@
 #import "CDFriendListVC.h"
 #import "AppDelegate.h"
 #import "PursueUser.h"
+#import "LoginViewController.h"
 
 @interface CDConvsVC () <CDChatListVCDelegate>
 
@@ -40,6 +41,17 @@
         
     }
 
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    if([PursueUser currentUser] == nil){
+        //显示登录
+        LoginViewController *controller = [[LoginViewController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
+        [self presentViewController:nav animated:YES completion:nil];
+    }
 }
 
 - (void)pushSearchViewController

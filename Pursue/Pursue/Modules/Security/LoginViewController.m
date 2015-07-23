@@ -11,11 +11,13 @@
 #import "CDEntryBottomButton.h"
 #import "CDEntryActionButton.h"
 #import "CDBaseNavC.h"
+#import "Current.h"
 #import "AppDelegate.h"
 #import "PursueUser.h"
 
 @interface LoginViewController () <CDEntryVCDelegate>
 
+@property (nonatomic, strong) UIBarButtonItem *cancelBarButtonItem;
 @property (nonatomic, strong) CDEntryActionButton *loginButton;
 @property (nonatomic, strong) CDEntryBottomButton *registerButton;
 @property (nonatomic, strong) CDEntryBottomButton *forgotPasswordButton;
@@ -28,9 +30,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"登录";
+    self.navigationItem.leftBarButtonItem = self.cancelBarButtonItem;
     [self.view addSubview:self.loginButton];
     [self.view addSubview:self.registerButton];
     [self.view addSubview:self.forgotPasswordButton];
+}
+
+- (UIBarButtonItem *)cancelBarButtonItem {
+    if (_cancelBarButtonItem == nil) {
+        UIImage *image = [UIImage imageNamed:@"cancel"];
+        UIImage *selectedImage = [UIImage imageNamed:@"cancel_selected"];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+        [button setImage:image forState:UIControlStateNormal];
+        [button setImage:selectedImage forState:UIControlStateHighlighted];
+        [button addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
+        _cancelBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    }
+    return _cancelBarButtonItem;
+}
+
+- (void)cancel:(id)sender {
+    //显示 tab 页首页
+    
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate toFirstViewController];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -93,7 +119,7 @@
             AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
             [delegate openChatConnect:^(BOOL succeeded, NSError *error) {
                 [[NSUserDefaults standardUserDefaults] setObject:self.usernameField.text forKey:KEY_USERNAME];
-                [self.navigationController popViewControllerAnimated: YES];
+                [self dismissViewControllerAnimated:YES completion:nil];
             }];
         }
     }];
@@ -101,8 +127,9 @@
 
 - (void)toRegister:(id)sender {
     RegisterViewController *vc = [[RegisterViewController alloc] init];
-    CDBaseNavC *nav = [[CDBaseNavC alloc] initWithRootViewController:vc];
-    [self presentViewController:nav animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+//    CDBaseNavC *nav = [[CDBaseNavC alloc] initWithRootViewController:vc];
+//    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)changeButtonState {

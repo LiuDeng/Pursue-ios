@@ -296,69 +296,10 @@
             [self.selectedViewController presentViewController:recordEditNav animated:YES completion:nil];
             break;
         }
-//        case 2: {
-//            if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-//                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
-//                                                                    message:@"Device has no camera"
-//                                                                   delegate:nil
-//                                                          cancelButtonTitle:@"OK"
-//                                                          otherButtonTitles: nil];
-//                
-//                [alertView show];
-//            } else {
-//                UIImagePickerController *imagePickerController = [UIImagePickerController new];
-//                imagePickerController.delegate = self;
-//                imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
-//                imagePickerController.allowsEditing = NO;
-//                imagePickerController.showsCameraControls = YES;
-//                imagePickerController.cameraDevice = UIImagePickerControllerCameraDeviceRear;
-//                imagePickerController.mediaTypes = @[(NSString *)kUTTypeImage];
-//                
-//                [self presentViewController:imagePickerController animated:YES completion:nil];
-//            }
-//            break;
-//        }
-//        case 3: {
-//            /*
-//             ShakingViewController *shakingVC = [ShakingViewController new];
-//             UINavigationController *shakingNav = [[UINavigationController alloc] initWithRootViewController:shakingVC];
-//             [self.selectedViewController presentViewController:shakingNav animated:NO completion:nil];
-//             */
-//            
-//            VoiceTweetEditingVC *voiceTweetVC = [VoiceTweetEditingVC new];
-//            UINavigationController *voiceTweetNav = [[UINavigationController alloc] initWithRootViewController:voiceTweetVC];
-//            [self.selectedViewController presentViewController:voiceTweetNav animated:NO completion:nil];
-//            
-//            break;
-//        }
-//        case 4: {
-//            ScanViewController *scanVC = [ScanViewController new];
-//            UINavigationController *scanNav = [[UINavigationController alloc] initWithRootViewController:scanVC];
-//            [self.selectedViewController presentViewController:scanNav animated:NO completion:nil];
-//            break;
-//        }
-//        case 5: {
-//            PersonSearchViewController *personSearchVC = [PersonSearchViewController new];
-//            UINavigationController *personSearchNav = [[UINavigationController alloc] initWithRootViewController:personSearchVC];
-//            [self.selectedViewController presentViewController:personSearchNav animated:YES completion:nil];
-//            break;
-//        }
         default: break;
     }
     
     [self buttonPressed];
-}
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    //如果是拍照的照片，则需要手动保存到本地，系统不会自动保存拍照成功后的照片
-    //UIImageWriteToSavedPhotosAlbum(edit, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-    
-//    [picker dismissViewControllerAnimated:NO completion:^{
-//        TweetEditingVC *tweetEditingVC = [[TweetEditingVC alloc] initWithImage:info[UIImagePickerControllerOriginalImage]];
-//        UINavigationController *tweetEditingNav = [[UINavigationController alloc] initWithRootViewController:tweetEditingVC];
-//        [self.selectedViewController presentViewController:tweetEditingNav animated:NO completion:nil];
-//    }];
 }
 
 

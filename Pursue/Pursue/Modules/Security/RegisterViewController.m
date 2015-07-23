@@ -12,7 +12,6 @@
 
 @interface RegisterViewController () <CDEntryVCDelegate>
 
-@property (nonatomic, strong) UIBarButtonItem *cancelBarButtonItem;
 @property (nonatomic, strong) CDEntryActionButton *registerButton;
 
 @end
@@ -22,22 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"注册";
-    self.navigationItem.leftBarButtonItem = self.cancelBarButtonItem;
     [self.view addSubview:self.registerButton];
-}
-
-- (UIBarButtonItem *)cancelBarButtonItem {
-    if (_cancelBarButtonItem == nil) {
-        UIImage *image = [UIImage imageNamed:@"cancel"];
-        UIImage *selectedImage = [UIImage imageNamed:@"cancel_selected"];
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0, 0, image.size.width, image.size.height);
-        [button setImage:image forState:UIControlStateNormal];
-        [button setImage:selectedImage forState:UIControlStateHighlighted];
-        [button addTarget:self action:@selector(cancel:) forControlEvents:UIControlEventTouchUpInside];
-        _cancelBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-    }
-    return _cancelBarButtonItem;
 }
 
 - (UIButton *)registerButton {
@@ -51,10 +35,6 @@
 }
 
 #pragma mark - Actions
-
-- (void)cancel:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 - (void)registerAVUser:(id)sender {
     if (![CDUtils validEmail:self.usernameField.text]) {

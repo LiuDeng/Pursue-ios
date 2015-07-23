@@ -12,8 +12,6 @@
 
 @implementation Current
 
-NSString *const anonymousPassword = @"findmylove";
-
 + (NSString *) IDFV
 {
     NSString *idfv = [SSKeychain passwordForService:[NSBundle mainBundle].bundleIdentifier account:@"IDFV"];

@@ -18,7 +18,6 @@
 #import "CDBaseNavC.h"
 #import "CDConvsVC.h"
 #import "CDFriendListVC.h"
-#import "CDProfileVC.h"
 #import "CDAbuseReport.h"
 #import "CDCacheManager.h"
 #import "PursueUser.h"
@@ -43,7 +42,7 @@
     
     MainViewController *tabBarController = [MainViewController new];
 //    tabBarController.delegate = self;
-    
+
     RESideMenu *sideMenuTabBarViewController = [[RESideMenu alloc] initWithContentViewController:tabBarController
                                                                           leftMenuViewController:[SideMenuViewController new]
                                                                          rightMenuViewController:nil];
@@ -156,4 +155,9 @@
 
 }
 
+- (void)toFirstViewController{
+    RESideMenu *menu = self.window.rootViewController;
+    UITabBarController *tabbar = menu.contentViewController;
+    [tabbar setSelectedIndex:0];
+}
 @end

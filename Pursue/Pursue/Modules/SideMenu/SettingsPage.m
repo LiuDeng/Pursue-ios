@@ -12,8 +12,10 @@
 //#import "MyInfoViewController.h"
 #import "AboutPage.h"
 #import "OSLicensePage.h"
-#import "FeedbackPage.h"
+#import "LCUserFeedbackViewController.h"
 #import "CDSettingVC.h"
+#import "PursueUser.h"
+#import "CDBaseNavC.h"
 
 #import <RESideMenu.h>
 #import <MBProgressHUD.h>
@@ -56,10 +58,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-//    if ([Config getOwnID] == 0) {
-//        return 2;
-//    }
-    return 3;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -67,7 +66,6 @@
     switch (section) {
         case 0: return 2;
         case 1: return 4;
-        case 2: return 1;
             
         default: return 0;
     }
@@ -80,7 +78,6 @@
     NSArray *titles = @[
                         @[@"清除缓存", @"消息通知"],
                         @[@"意见反馈", @"给应用评分", @"关于", @"开源许可"],
-                        @[@"注销登录"],
                         ];
     cell.textLabel.text = titles[indexPath.section][indexPath.row];
     cell.backgroundColor = [UIColor whiteColor];
@@ -104,7 +101,16 @@
         }
     } else if (section == 1) {
         if (row == 0) {
-            [self.navigationController pushViewController:[FeedbackPage new] animated:YES];
+//            [self.navigationController pushViewController:[LCUserFeedbackViewController new] animated:YES];
+            LCUserFeedbackViewController *feedbackViewController = [[LCUserFeedbackViewController alloc] init];
+            feedbackViewController.feedbackTitle = [PursueUser currentUser].username;
+            feedbackViewController.contact = [AVUser currentUser].objectId;
+            CDBaseNavC *navigationController = [[CDBaseNavC alloc] initWithRootViewController:feedbackViewController];
+            [self presentViewController:navigationController animated:YES completion: ^{
+            }];
+//            [self performSelector:@selector(loadDataSource) withObject:nil afterDelay:1];
+            
+            
         } else if (row == 1) {
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/cn/app/kai-yuan-zhong-guo/id524298520?mt=8"]];
         } else if (row == 2) {
@@ -112,27 +118,6 @@
         } else if (row == 3) {
             [self.navigationController pushViewController:[OSLicensePage new] animated:YES];
         }
-    } else if (section == 2) {
-//        [Config saveOwnID:0 userName:@"点击头像登录" score:0 favoriteCount:0 fansCount:0 andFollowerCount:0];
-//        [Config savePortrait:nil];
-//        [Config clearCookie];
-        
-        NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-        for (NSHTTPCookie *cookie in [cookieStorage cookies]) {
-            [cookieStorage deleteCookie:cookie];
-        }
-        
-        MBProgressHUD *HUD = [Utils createHUD];
-        HUD.mode = MBProgressHUDModeCustomView;
-        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"HUD-done"]];
-        HUD.labelText = @"注销成功";
-        [HUD hide:YES afterDelay:0.5];
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"userRefresh" object:@(YES)];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
     }
 }
 

@@ -167,7 +167,6 @@
 		4A48A3021B587E8F00E446F2 /* CDFriendListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48A2E81B587E8F00E446F2 /* CDFriendListVC.m */; };
 		4A48A3031B587E8F00E446F2 /* CDNewFriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48A2EA1B587E8F00E446F2 /* CDNewFriendVC.m */; };
 		4A48A3101B59F5E800E446F2 /* CDProfileNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48A3091B59F5E800E446F2 /* CDProfileNameVC.m */; };
-		4A48A3111B59F5E800E446F2 /* CDProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48A30B1B59F5E800E446F2 /* CDProfileVC.m */; };
 		4A48A3121B59F5E800E446F2 /* CDSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48A30D1B59F5E800E446F2 /* CDSettingVC.m */; };
 		4A48A3131B59F5E800E446F2 /* CDUserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48A30F1B59F5E800E446F2 /* CDUserInfoVC.m */; };
 		4A48A3161B59F60600E446F2 /* CDEntryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48A3151B59F60600E446F2 /* CDEntryVC.m */; };
@@ -446,8 +445,6 @@
 		4A48A2EA1B587E8F00E446F2 /* CDNewFriendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDNewFriendVC.m; sourceTree = "<group>"; };
 		4A48A3081B59F5E800E446F2 /* CDProfileNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDProfileNameVC.h; sourceTree = "<group>"; };
 		4A48A3091B59F5E800E446F2 /* CDProfileNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDProfileNameVC.m; sourceTree = "<group>"; };
-		4A48A30A1B59F5E800E446F2 /* CDProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDProfileVC.h; sourceTree = "<group>"; };
-		4A48A30B1B59F5E800E446F2 /* CDProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDProfileVC.m; sourceTree = "<group>"; };
 		4A48A30C1B59F5E800E446F2 /* CDSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDSettingVC.h; sourceTree = "<group>"; };
 		4A48A30D1B59F5E800E446F2 /* CDSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDSettingVC.m; sourceTree = "<group>"; };
 		4A48A30E1B59F5E800E446F2 /* CDUserInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDUserInfoVC.h; sourceTree = "<group>"; };
@@ -704,8 +701,6 @@
 			children = (
 				4A48A3081B59F5E800E446F2 /* CDProfileNameVC.h */,
 				4A48A3091B59F5E800E446F2 /* CDProfileNameVC.m */,
-				4A48A30A1B59F5E800E446F2 /* CDProfileVC.h */,
-				4A48A30B1B59F5E800E446F2 /* CDProfileVC.m */,
 				4A48A30C1B59F5E800E446F2 /* CDSettingVC.h */,
 				4A48A30D1B59F5E800E446F2 /* CDSettingVC.m */,
 				4A48A30E1B59F5E800E446F2 /* CDUserInfoVC.h */,
@@ -1345,7 +1340,6 @@
 				4A48A3031B587E8F00E446F2 /* CDNewFriendVC.m in Sources */,
 				4A18B26C1B2055F800F60AC6 /* Utils.m in Sources */,
 				4A48A2311B587A0700E446F2 /* LCUserFeedbackRightCell.m in Sources */,
-				4A48A3111B59F5E800E446F2 /* CDProfileVC.m in Sources */,
 				4A18B2971B2142A900F60AC6 /* RecordViewController.m in Sources */,
 				4A48A2B31B587D8E00E446F2 /* CDPopMenuItemCell.m in Sources */,
 				4A48A2BC1B587E0800E446F2 /* MCPhotographyHelper.m in Sources */,

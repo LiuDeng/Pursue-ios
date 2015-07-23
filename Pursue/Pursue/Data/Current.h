@@ -10,12 +10,6 @@
 
 @interface Current : NSObject
 
-#ifndef CURRENT
-#define CURRENT
-
-extern NSString *const anonymousPassword;
-#endif
-
 + (NSString *) IDFV;
 
 @end

@@ -111,7 +111,7 @@ static NSString *const reuseIdentifier = @"Cell";
 - (LZMember *)memberFromUser:(AVUser *)user {
     LZMember *member = [[LZMember alloc] init];
     member.memberId = user.objectId;
-    member.memberName = user.username;
+    member.memberName = [user objectForKey:@"displayName"];
     return member;
 }
 

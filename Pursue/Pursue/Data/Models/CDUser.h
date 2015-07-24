@@ -17,4 +17,6 @@
 
 @property (nonatomic, strong) NSString *avatarUrl;
 
+@property (nonatomic, strong) NSString *displayName;
+
 @end

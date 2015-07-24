@@ -199,7 +199,7 @@ static NSString *kCellSelectorKey = @"selector";
     } else {
         AVUser *user = [self.dataSource objectAtIndex:indexPath.row];
         [[CDUserManager manager] displayAvatarOfUser:user avatarView:cell.myImageView];
-        cell.myLabel.text = user.username;
+        cell.myLabel.text = [user objectForKey:@"displayName"];
     }
     return cell;
 }

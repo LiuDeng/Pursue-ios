@@ -69,7 +69,7 @@
     }
     CDLabelButtonTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     CDAddRequest *addRequest = [_addRequests objectAtIndex:indexPath.row];
-    cell.nameLabel.text = addRequest.fromUser.username;
+    cell.nameLabel.text = [addRequest.fromUser objectForKey:@"displayName"];
     [[CDUserManager manager] displayAvatarOfUser:addRequest.fromUser avatarView:cell.leftImageView];
     if (addRequest.status == CDAddRequestStatusWait) {
         cell.actionBtn.enabled = true;

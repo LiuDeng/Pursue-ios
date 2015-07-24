@@ -58,7 +58,7 @@ static NSString *cellIndentifier = @"cellIndentifier";
         cell = [[CDImageLabelTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
     }
     AVUser *user = self.users[indexPath.row];
-    cell.myLabel.text = user.username;
+    cell.myLabel.text = [user objectForKey:@"displayName"];
     [[CDUserManager manager] displayAvatarOfUser:user avatarView:cell.myImageView];
     return cell;
 }

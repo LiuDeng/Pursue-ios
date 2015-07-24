@@ -26,7 +26,7 @@
 - (void)displayAvatarOfUser:(AVUser *)user avatarView:(UIImageView *)avatarView;
 - (void)getAvatarImageOfUser:(AVUser *)user block:(void (^)(UIImage *image))block;
 - (void)saveAvatar:(UIImage *)image callback:(AVBooleanResultBlock)callback;
-- (void)updateUsername:(NSString *)username block:(AVBooleanResultBlock)block;
+- (void)updateUsername:(NSString *)displayName block:(AVBooleanResultBlock)block;
 
 - (void)addFriend:(AVUser *)user callback:(AVBooleanResultBlock)callback;
 - (void)removeFriend:(AVUser *)user callback:(AVBooleanResultBlock)callback;

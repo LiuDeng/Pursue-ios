@@ -11,6 +11,7 @@
 #import "CDCacheManager.h"
 #import "CDAbuseReport.h"
 #import "UIImage+Icon.h"
+#import "PursueUser.h"
 
 static UIImage *defaultAvatar;
 
@@ -137,9 +138,9 @@ static CDUserManager *userManager;
     }];
 }
 
-- (void)updateUsername:(NSString *)username block:(AVBooleanResultBlock)block{
-    AVUser *user = [AVUser currentUser];
-    user.username = username;
+- (void)updateUsername:(NSString *)displayName block:(AVBooleanResultBlock)block{
+    PursueUser *user = [PursueUser currentUser];
+    user.displayName = displayName;
     [user saveInBackgroundWithBlock:block];
 }
 

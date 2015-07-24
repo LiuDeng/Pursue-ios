@@ -52,7 +52,7 @@
     NSString *userId = [self.dataSource objectAtIndex:indexPath.row];
     AVUser *user = [[CDCacheManager manager] lookupUser:userId];
     [[CDUserManager manager] displayAvatarOfUser:user avatarView:cell.myImageView];
-    cell.myLabel.text = user.username;
+    cell.myLabel.text = [user objectForKey:@"displayName"];
     return cell;
 }
 

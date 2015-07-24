@@ -43,6 +43,7 @@
     }
     user.userId = userId;
     user.username = avUser.username;
+    user.displayName = [avUser objectForKey:@"displayName"];
     AVFile *avatarFile = [avUser objectForKey:@"avatar"];
     user.avatarUrl = avatarFile.url;
     return user;
